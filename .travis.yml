@@ -20,7 +20,7 @@ script:
  - mkdir _book
  - cd _book
  - git init
- - git remote add origin ssh://git@github.com:skhu-sss/skhu-sss.github.io.git
+ - git remote add origin ssh://git@github.com:skhu-sss/skhu-sss.github.hub.io.git
  - git checkout --orphan master
  - git pull origin master
  - echo "Building Pages"
@@ -28,6 +28,8 @@ script:
  - gitbook build
  - cd _book
  - echo "Pushing Updates"
+ - git remote get-url origin
+ - git remote set url origin ssh://git@github.com:skhu-sss/skhu-sss.github.io.git
  - git add .
  - git commit -m "Updated Contents - via Travis CI"
  - git push origin master
