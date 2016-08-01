@@ -9,6 +9,7 @@ before_install:
 install:
  - npm install -g gitbook-cli
 script:
+ - git --version
  - echo "Importing SSH Key"
  - eval "$(ssh-agent -s)"
  - chmod 600 $TRAVIS_BUILD_DIR/deploy_rsa
@@ -29,7 +30,7 @@ script:
  - cd _book
  - echo "Pushing Updates"
  - git remote get-url origin
- - git remote set url origin ssh://git@github.com:skhu-sss/skhu-sss.github.io.git
+ - git remote set-url origin ssh://git@github.com:skhu-sss/skhu-sss.github.io.git
  - git add .
  - git commit -m "Updated Contents - via Travis CI"
  - git push origin master
