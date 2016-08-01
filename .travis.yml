@@ -29,6 +29,6 @@ script:
  - cd _book && ls
  - echo "Pushing Updates"
  - git remote set-url origin git@github.com:skhu-sss/skhu-sss.github.io.git
- - git add .
- - git commit -m "Updated Contents - via Travis CI"
+ - rm deploy_rsa.enc && rm deploy_rsa
+ - git commit -a -m "Updated Contents - via Travis CI"
  - git push origin master
