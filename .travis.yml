@@ -19,19 +19,16 @@ script:
  - git config --global user.email "we.sss.you@gmail.com"
  - git config --global user.name "SSS Wiki Bot (via TravisCI)"
  - echo "Fetching Repo"
- - mkdir _book
- - cd _book
- - git init
- - git remote add origin git@github.com:skhu-sss/skhu-sss.github.hub.io.git
- - git checkout --orphan master
+ - git clone git@github.com:skhu-sss/skhu-sss.github.hub.io.git
+ - ls && mv skhu-sss.github.io _book
+ - cd _book && ls
+ - git checkout master
  - echo "Building Pages"
- - cd ..
+ - cd .. && ls
  - gitbook build
- - cd _book
+ - cd _book && ls
  - echo "Pushing Updates"
  - git remote set-url origin git@github.com:skhu-sss/skhu-sss.github.io.git
  - git add .
  - git commit -m "Updated Contents - via Travis CI"
- - git pull origin master
- - git pull origin src
  - git push origin master
