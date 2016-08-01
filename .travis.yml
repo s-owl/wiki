@@ -24,6 +24,7 @@ script:
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.hub.io.git
  - git checkout --orphan master
  - git pull origin master
+ - git pull origin src
  - echo "Building Pages"
  - cd ..
  - gitbook build
