@@ -17,7 +17,7 @@ script:
  - gitbook build
  - cd _book
  - git init
- - git remote add origin https://github.com/skhu-sss/skhu-sss/github.io.git
+ - git remote add origin https://github.com/skhu-sss/skhu-sss.github.io.git
  - git checkout --orphan gh-pages
  - git add -A
  - git commit -m "Updated Contents - via Travis CI"
