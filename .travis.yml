@@ -20,7 +20,7 @@ script:
  - cd _book
  - git init
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.io.git
- - git checkout --orphan gh-pages
+ - git checkout --orphan master
  - git add -A
  - git commit -m "Updated Contents - via Travis CI"
- - git push origin gh-pages
+ - git push origin master
