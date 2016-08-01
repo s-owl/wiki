@@ -34,7 +34,7 @@ gitbook build && ls
 # Now let's go have some fun with the cloned repo
 cd _book && ls
 git branch
-git checkout -b $TRGET_BRANCH
+git checkout -b $TARGET_BRANCH
 git branch
 git config --global user.name "Travis CI"
 git config --global user.email "we.sss.you@gmail.com"
