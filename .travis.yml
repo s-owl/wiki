@@ -1,0 +1,16 @@
+language: node_js
+before_install:
+- openssl aes-256-cbc -K $encrypted_01897fd6d767_key -iv $encrypted_01897fd6d767_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+install:
+ - npm install -g gitbook-cli
+before_script:
+- git config --global user.email "we.sss.you@gmail.com"
+- git config --global user.name "SSS Wiki Bot (via TravisCI)"
+script:
+- gitbook build
+- cd _book
+- git remote add origin https://github.com/skhu-sss/skhu-sss/github.io.git
+- git add -A
+- git commit -m "Updated Contents - via Travis CI"
+- git push origin gh-pages
