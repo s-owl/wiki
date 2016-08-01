@@ -1,4 +1,5 @@
 language: node_js
+dist: trusty
 addons:
   ssh_known_hosts:
    - github.com
@@ -23,8 +24,6 @@ script:
  - git init
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.hub.io.git
  - git checkout --orphan master
- - git pull origin master
- - git pull origin src
  - echo "Building Pages"
  - cd ..
  - gitbook build
@@ -32,5 +31,7 @@ script:
  - echo "Pushing Updates"
  - git remote set-url origin git@github.com:skhu-sss/skhu-sss.github.io.git
  - git add .
+ - git pull origin master
+ - git pull origin src
  - git commit -m "Updated Contents - via Travis CI"
  - git push origin master
