@@ -61,4 +61,5 @@ eval `ssh-agent -s`
 ssh-add deploy_rsa
 
 # Now that we're all set up, we can push.
+git pull origin $TARGET_BRANCH
 git push -u $SSH_REPO $TARGET_BRANCH
