@@ -19,20 +19,20 @@ SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-git clone $REPO _book
-cd _book
+git clone $REPO _book && ls
+cd _book && ls
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-cd ..
+cd .. && ls
 
 # Clean out existing contents
 rm -rf _book/**/* || exit 0
 
 # Run our compile script
 npm install -g gitbook-cli
-gitbook build
+gitbook build && ls
 
 # Now let's go have some fun with the cloned repo
-cd _book
+cd _book && ls
 git config user.name "Travis CI"
 git config user.email "we.sss.you@gmail.com"
 
