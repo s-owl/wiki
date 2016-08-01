@@ -14,13 +14,17 @@ script:
  - echo "Configuring Git"
  - git config --global user.email "we.sss.you@gmail.com"
  - git config --global user.name "SSS Wiki Bot (via TravisCI)"
- - echo "Building Pages"
- - gitbook build
- - echo "Pushing Commits to gh-pages branch"
+ - echo "Fetching Repo"
  - cd _book
  - git init
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.io.git
- - git checkout --orphan master
- - git add -A
+ - git checkout master
+ - git pull origin master
+ - echo "Building Pages"
+ - cd ..
+ - gitbook build
+ - cd _book
+ - echo "Pushing Updates"
+ - git add .
  - git commit -m "Updated Contents - via Travis CI"
  - git push origin master
