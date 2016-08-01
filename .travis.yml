@@ -1,6 +1,8 @@
 language: node_js
 addons:
-  ssh_known_hosts: github.com
+  ssh_known_hosts:
+   - github.com
+   - 192.30.253.113
 before_install:
  - openssl aes-256-cbc -K $encrypted_01897fd6d767_key -iv $encrypted_01897fd6d767_iv
    -in deploy_rsa.enc -out deploy_rsa -d
@@ -18,7 +20,7 @@ script:
  - mkdir _book
  - cd _book
  - git init
- - git remote add origin git@github.com:skhu-sss/skhu-sss.github.io.git
+ - git remote add origin ssh://git@github.com:skhu-sss/skhu-sss.github.io.git
  - git checkout --orphan master
  - git pull origin master
  - echo "Building Pages"
