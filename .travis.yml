@@ -19,7 +19,7 @@ script:
  - cd _book
  - git init
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.io.git
- - git checkout master
+ - git checkout --orphan master
  - git pull origin master
  - echo "Building Pages"
  - cd ..
