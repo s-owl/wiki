@@ -33,8 +33,9 @@ gitbook build && ls
 
 # Now let's go have some fun with the cloned repo
 cd _book && ls
-git config user.name "Travis CI"
-git config user.email "we.sss.you@gmail.com"
+git branch
+git config --global user.name "Travis CI"
+git config --global user.email "we.sss.you@gmail.com"
 
 # If there are no changes (e.g. this is a README update) then just bail.
 # if [ -z `git diff --exit-code` ]; then
@@ -58,4 +59,4 @@ eval `ssh-agent -s`
 ssh-add deploy_rsa
 
 # Now that we're all set up, we can push.
-git push $SSH_REPO $TARGET_BRANCH
+git push -u $SSH_REPO $TARGET_BRANCH
