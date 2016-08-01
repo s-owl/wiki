@@ -15,6 +15,7 @@ script:
  - git config --global user.email "we.sss.you@gmail.com"
  - git config --global user.name "SSS Wiki Bot (via TravisCI)"
  - echo "Fetching Repo"
+ - mkdir _book
  - cd _book
  - git init
  - git remote add origin git@github.com:skhu-sss/skhu-sss.github.io.git
