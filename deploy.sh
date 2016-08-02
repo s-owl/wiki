@@ -20,5 +20,9 @@ npm install -g gitbook-cli
 ls && gitbook build && ls
 cp -a _book/. deploy/
 cd deploy && ls
+rm .travis.yml && ls
+rm deploy.sh && ls
+rm deploy_rsa.enc && ls
+rm deploy_rsa && ls
 git add . && git commit -m "Updated Contents (via Travis CI)"
 git push origin master
