@@ -2,4 +2,14 @@
   "title" : "SSS Wiki",
   "description" : "깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키",
   "language" : "ko"
+   "plugins": ["edit-link"],
+    "pluginsConfig": {
+            "edit-link": {
+                "base": "https://github.com/skhu-sss/skhu-sss.github.io/edit/src/",
+                "label": {
+                    "en": "Edit This Page",
+                    "ko": "이 페이지 수정하기"
+                }
+            }
+    }
 }
