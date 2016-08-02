@@ -5,11 +5,7 @@
    "plugins": ["edit-link"],
     "pluginsConfig": {
             "edit-link": {
-                "base": "https://github.com/skhu-sss/skhu-sss.github.io/edit/src/",
-                "label": {
-                    "en": "Edit This Page",
-                    "ko": "이 페이지 수정하기"
-                }
+                "base": "https://github.com/skhu-sss/skhu-sss.github.io/edit/src/"
             }
     }
 }
