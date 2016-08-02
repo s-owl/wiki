@@ -5,7 +5,8 @@
    "plugins": ["edit-link"],
     "pluginsConfig": {
             "edit-link": {
-                "base": "https://github.com/skhu-sss/skhu-sss.github.io/edit/src/"
+                "base": "https://github.com/skhu-sss/skhu-sss.github.io/edit/src/",
+                "label": ""
             }
     }
 }
