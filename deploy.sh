@@ -13,16 +13,27 @@ git config --global user.email "we.sss.you@gmail.com"
 
 git clone git@github.com:skhu-sss/skhu-sss.github.io.git deploy && ls
 cd deploy && ls
-git checkout master && ls
-rm -rf * && ls
-cd .. & ls
+git checkout master
+ls
+rm -rf *
+ls
+cd ..
+ls
 npm install -g gitbook-cli
-ls && gitbook build && ls
+ls
+gitbook build
+ls
 cp -a _book/. deploy/
-cd deploy && ls
-rm .travis.yml && ls
-rm deploy.sh && ls
-rm deploy_rsa.enc && ls
-rm deploy_rsa && ls
-git add . && git commit -m "Updated Contents (via Travis CI)"
+cd deploy
+ls
+rm .travis.yml
+ls
+rm deploy.sh
+ls
+rm deploy_rsa.enc
+ls
+rm deploy_rsa
+ls
+git add .
+git commit -m "Updated Contents (via Travis CI)"
 git push origin master
