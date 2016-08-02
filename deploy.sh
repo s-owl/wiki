@@ -21,6 +21,7 @@ cd ..
 ls
 npm install -g gitbook-cli
 ls
+gitbook install
 gitbook build
 ls
 cp -a _book/. deploy/
