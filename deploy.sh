@@ -34,6 +34,6 @@ rm deploy_rsa.enc
 ls
 rm deploy_rsa
 ls
-git add .
+git add --all
 git commit -m "Updated Contents (via Travis CI)"
 git push origin master
