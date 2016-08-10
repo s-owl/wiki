@@ -14,9 +14,8 @@
 
 ##4. 참고문헌
 
-- https://msdn.microsoft.com/en-us/library/hh869301\(v=vs.85\).aspx
+- https://msdn.microsoft.com/en-us/library/hh869301(v=vs.85).aspx
 - http://superuser.com/questions/98798/how-do-i-change-firefoxs-user-agent-via-aboutconfig
 - https://forest.skhu.ac.kr/Gate/Common/JavaScript/CoreIECheck.js
 - https://en.wikipedia.org/wiki/User_agent
 - http://www.whoishostingthis.com/tools/user-agent/
-
