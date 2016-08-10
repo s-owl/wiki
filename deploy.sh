@@ -38,5 +38,5 @@ ls
 rm deploy_rsa
 ls
 git add --all
-git commit -m "Updated Contents (via Travis CI) [$COMMITID]"
+git commit -m "Updated Contents (via Travis CI) [${COMMITID}]"
 git push origin master
