@@ -1,7 +1,13 @@
+branches:
+  only:
+    - src
+  except:
+    - master
+
 script: bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: 4bd4d005bc11
+    - ENCRYPTION_LABEL: 4bd4d005bc11
 language: node_js
 node_js:
-- stable
+  - stable
