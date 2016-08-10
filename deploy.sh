@@ -11,6 +11,8 @@ ssh-add deploy_rsa
 git config --global user.name "WikiUpdater"
 git config --global user.email "we.sss.you@gmail.com"
 
+COMMITID = git rev-parse --short HEAD
+
 git clone git@github.com:skhu-sss/skhu-sss.github.io.git deploy && ls
 cd deploy && ls
 git checkout master
@@ -36,5 +38,5 @@ ls
 rm deploy_rsa
 ls
 git add --all
-git commit -m "Updated Contents (via Travis CI)"
+git commit -m "Updated Contents (via Travis CI) [$COMMITID]
 git push origin master
