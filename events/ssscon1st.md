@@ -1,7 +1,8 @@
 # 제1회 SSSCon
 
 ## 상태
- - 발표자 접수 마감됨.
+ - 발표자 접수 받는중.
+ - https://docs.google.com/forms/d/e/1FAIpQLSd1QtEun3iDUm2nPPmKENFFRKb2b7vhL420X9MnmjNGP-fcMQ/viewform
 
 ## 일시
  - 2016년 09월 28일 오후 7시 ~ 오후 9시
