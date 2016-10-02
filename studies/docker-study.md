@@ -1,5 +1,8 @@
 # Docker Study
 
+> 스터디에 참여할 구성원 모집 중입니다.   
+> https://goo.gl/forms/ysTYRyR0VNX06Qil1
+
 ## 스터디 개요
  - 기간 : 2016년 10월 부터 약 5~7주
  - 스터디 리더 : 한영빈(소프16)
