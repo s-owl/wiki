@@ -1,8 +1,7 @@
 # 제1회 SSSCon
 
 ## 상태
- - 발표자 접수 받는중.
- - https://docs.google.com/forms/d/e/1FAIpQLSd1QtEun3iDUm2nPPmKENFFRKb2b7vhL420X9MnmjNGP-fcMQ/viewform
+ - 종료됨.
 
 ## 일시
  - 2016년 09월 28일 오후 7시 ~ 오후 9시
@@ -19,16 +18,16 @@
 #### 발표 내용 요약
 Node.js가 뭘까?, Node.js 의 특징, Node.js 는 누가쓸까?, Node.js 를 어디에 쓸까?, Node.js 를 쓰지 말아야 할 곳?, 데이터 가져오기 예제 (학교사이트 공지사항 제목 수집)
 #### 슬라이드 자료
-(준비되지 않음)
+https://sway.com/Zj6xNRn9PbE6B3Bs
 
 ### 새로운 정보를 얻어내는 여러가지 방법
 순번|연사
 --- | ---
 1 | 김준수
 #### 발표 내용 요약
-RSS 구독하기 , 관심있는 SLACK에 들어가기, hackerNews보기, facebook페이지 구독하기, github Trending에서 새로운 코드 보기, 메일링 리스트 등록하기
+RSS 구독하기 , 관심있는 SLACK에 들어가기, hackerNews보기, facebook페이지 구독하기, 메일링 리스트 등록하기
 #### 슬라이드 자료
-(준비되지 않음)
+https://www.slideshare.net/secret/jq8lFi0rO0LAn3
 
 ### 도커(Docker) 스터디 후기
 순번|연사
