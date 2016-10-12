@@ -20,7 +20,7 @@
 
 ## 1주차 모임
  - 2016.10.12
- - 참석자 :
+ - 참석자 : 한영빈, 김준수, 추건우, 배다슬
  - 도커 설치 : 책의 내용은 오래 되어 안 될 수도 있으므로, 도커 공식 문서 참조 권장.
   - https://www.docker.com/products/overview
  - [Docker run reference](https://docs.docker.com/engine/reference/run/)
@@ -28,3 +28,6 @@
   - `-i` 옵션은 interactive로 입력과 출력을 할 수 있게 해준다. 시각적으로는 보이나 shell의 `id@domain$` 부분이 나타나지 않는다.
   - `-t` 옵션은 tty로 shell의 `id@domain$`부분이 시각적으로 보인다. 그러나 입출력이 불가능 하다.
   - 그러므로 shell을 `run`하는 경우에는 `-it`옵션을 줘야 정상적으로 사용할 수 있다.
+ - gitlab의 registry에서 이미지를 가져오는 방법
+  - `docker login registry.gitlab.com` 명령을 통해 gitlab의 registry에 로그인을 한다.
+  - `docker pull registry.gitlab.com/<user>/<repo>:<name>` 명령을 통해 등록된 registry를 당겨올 수 있다.
