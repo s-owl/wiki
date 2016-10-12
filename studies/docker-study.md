@@ -32,3 +32,5 @@
  - gitlab의 registry에서 이미지를 가져오는 방법
   - `docker login registry.gitlab.com` 명령을 통해 gitlab의 registry에 로그인을 한다.
   - `docker pull registry.gitlab.com/<user>/<repo>:<name>` 명령을 통해 등록된 registry를 당겨올 수 있다.
+
+ - 추건우 공부 내용 링크 :https://drive.google.com/open?id=1e9U65MQRzANiSjWH1OzNx0bpe4jqX4NNXPy9BhhQb04
