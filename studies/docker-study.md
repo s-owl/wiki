@@ -29,6 +29,16 @@
   - `-t` 옵션은 tty로 shell의 `id@domain$`부분이 시각적으로 보인다. 그러나 입출력이 불가능 하다.
   - 그러므로 shell을 `run`하는 경우에는 `-it`옵션을 줘야 정상적으로 사용할 수 있다.
  - 컨테이너를 백그라운드 모드로 돌리려면, `docker run` 으로 새 컨테이너를 만들 때 `-d` 옵션 사용
+ - 컨테이너의 포트와 호스트의 포트를 연결 하려면, `-p` 옵션을 사용한다.
+  - 예시 : 호스트의 80번포트와, 컨테이너의 3000번 포트를 연결
+  - `docker run -p 80:3000 <image>:<tag>`
+ - Docker Hub 이외의 Registry 에서 이미지 가져오기.
+  - 이미지를 `pull` 할 때, 이미지 이름 앞에 해당 registry의 도메인을 붙임.
+    - 예시 : `quay.io` 에서 `letsencrypt` 이미지를 가져오려는 경우.
+    - `docker pull quay.io/letsencrypt/letsencrypt:latest`
+    - 인증이 필요한 경우, 해당 registry 에 로그인 하면 됨.
+      - 예시 : GitLab Container Registry 에 로그인.
+      - `docker login registry.gitlab.com`
  - gitlab의 registry에서 이미지를 가져오는 방법
   - `docker login registry.gitlab.com` 명령을 통해 gitlab의 registry에 로그인을 한다.
   - `docker pull registry.gitlab.com/<user>/<repo>:<name>` 명령을 통해 등록된 registry를 당겨올 수 있다.
