@@ -44,3 +44,4 @@
   - `docker pull registry.gitlab.com/<user>/<repo>:<name>` 명령을 통해 등록된 registry를 당겨올 수 있다.
 
  - 추건우 공부 내용 링크 :https://drive.google.com/open?id=1e9U65MQRzANiSjWH1OzNx0bpe4jqX4NNXPy9BhhQb04
+ - Docker 에서 관리하는 설정, 이미지, 컨테이너 등은 `/var/lib/docker` 에 보관됨
