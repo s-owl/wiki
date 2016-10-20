@@ -23,6 +23,8 @@
  - 참석자 : 한영빈, 김준수, 추건우, 배다슬
  - 도커 설치 : 책의 내용은 오래 되어 안 될 수도 있으므로, 도커 공식 문서 참조 권장.
   - https://www.docker.com/products/overview
+  - 우분투에 설치 하려는 경우 다음 문서를 참조.
+  - https://docs.docker.com/engine/installation/linux/ubuntulinux/
  - [Docker run reference](https://docs.docker.com/engine/reference/run/)
  - `docker run [image] /bin/bash`의 옵션으로 `-it`를 입력하지 않는 경우는 어떻게 될까?
   - `-i` 옵션은 interactive로 입력과 출력을 할 수 있게 해준다. 시각적으로는 보이나 shell의 `id@domain$` 부분이 나타나지 않는다.
@@ -44,3 +46,4 @@
   - `docker pull registry.gitlab.com/<user>/<repo>:<name>` 명령을 통해 등록된 registry를 당겨올 수 있다.
 
  - 추건우 공부 내용 링크 :https://drive.google.com/open?id=1e9U65MQRzANiSjWH1OzNx0bpe4jqX4NNXPy9BhhQb04
+ - Docker 에서 관리하는 설정, 이미지, 컨테이너 등은 `/var/lib/docker` 에 보관됨
