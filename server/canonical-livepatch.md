@@ -42,6 +42,10 @@
 ```bash
 canonical-livepatch status --verbose
 ```
+ - 라이브패치 서비스를 끄려면, 아래와 같은 명령줄을 실행합니다.
+ ```bash
+ sudo canonical-livepatch disable
+ ```
 
 ## 참고자료 및 유용한 링크
  - [UPDATE UBUNTU 16.04 LTS LINUX KERNEL WITHOUT REBOOTING WITH THE CANONICAL LIVEPATCH SERVICE | Web Up8](http://www.webupd8.org/2016/10/update-ubuntu-1604-lts-linux-kernel.html?m=1)
