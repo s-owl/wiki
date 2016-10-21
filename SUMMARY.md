@@ -3,7 +3,8 @@
 * [SSS Wiki](README.md)
 * [위키 수정 가이드](HowToEdit.md)
 * [행사 목록](events/index.md)
-  * [제1회 SSSCon](events/ssscon1st.md)
+  * [제1회 SSSCON](events/ssscon1st.md)
+  * [제2회 SSSCON](events/ssscon2st.md)
 * [스터디 목록](studies/index.md)
   * [Docker Study](studies/docker-study.md)
 * 서버
