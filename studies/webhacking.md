@@ -86,9 +86,9 @@ function sub(){ if(login.pw.value==unlock){ alert("Password is "+unlock/10); }el
 
 - 이를 입력칸에 넣고 체크 버튼을 누르면 다음과 같은 내용의 팝업이 나타난다.
 
-```javascript
+~~~
 Password is 999780930.7
-```
+~~~
 
 - `webhacking.kr` 의 Auth 메뉴로 들어가서, `Flag` 칸에 `999780930.7` 를 넣고 제출한다.
 - 문제가 풀리는 것을 확인할 수 있다.
