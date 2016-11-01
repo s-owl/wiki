@@ -21,6 +21,7 @@
 
 ## 1주차 모임
  - 2016.10.12
+ - 진도 : 1~5장
  - 참석자 : 한영빈, 김준수, 추건우, 배다슬
  - 도커 설치 : 책의 내용은 오래 되어 안 될 수도 있으므로, 도커 공식 문서 참조 권장.
   - https://www.docker.com/products/overview
@@ -48,3 +49,7 @@
 
  - 추건우 공부 내용 링크 :https://drive.google.com/open?id=1e9U65MQRzANiSjWH1OzNx0bpe4jqX4NNXPy9BhhQb04
  - Docker 에서 관리하는 설정, 이미지, 컨테이너 등은 `/var/lib/docker` 에 보관됨
+
+## 2주차 모임
+- 2016.11.02
+- 진도 : 6~7장
