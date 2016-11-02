@@ -61,6 +61,9 @@
   - 해당 container에 볼륨지정
    - `docker run -v /data <image_name>`
   - 호스트의 볼륨 위치
-   - `docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>`
+
+```bash
+docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
+```
    - archlinux 기준으로 `/var/lib/docker/volumes/<image_id>/_data`에 위치함
    - [`docker inspect` 포맷 관련 자료](https://docs.docker.com/engine/reference/commandline/inspect/)
