@@ -55,8 +55,11 @@
  - 진도 : 6~7장
  - 참석자 : 한영빈, 김준수, 추건우, 배다슬 (예정)
  - 도커 개인저장소 구축
-  - 개인저장소 구축시 systemd 사용자의 경우는 다음 문서를 참조
+ - 서버로 사용할 컴퓨터에 registry를 받아두고 클라이언트에서 daemon실행할 때 아래 명령을 통해서 실행해준다.
+  - `sudo docker daemon --insecure-registry=<ip_address:port_number>`
+  - systemd 사용자의 경우 daemon을 항상 이런식으로 실행할 경우는 다음 문서를 참고
    - http://www.developmentalmadness.com/2016/03/09/docker-configure-insecure-registry-for-systemd/
+  - insecure-registry를 설정해주는경우에는 http 통신이 가능하지만 권장되지는 않는다. 인증서를 가지고 https 통신을 하도록 하자.
  - 볼륨 지정 시 해당 위치 찾기
   - 해당 container에 볼륨지정
    - `docker run -v /data <image_name>`
