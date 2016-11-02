@@ -71,3 +71,8 @@ docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
 ```
    - archlinux 기준으로 `/var/lib/docker/volumes/<image_id>/_data`에 위치함
    - [`docker inspect` 포맷 관련 자료](https://docs.docker.com/engine/reference/commandline/inspect/)
+   - `Dockerfile` 에서 `CMD` 는 한번만 사용 가능.
+    - 여러번 사용할 경우, 가장 마지막에 나와있는 `CMD` 부분의 명령이 실행됨.
+    - 만약, A 라는 도커 이미지를 베이스로 도커 이미지를 만들었을 때, A 와 본인이 A 를 기반으로 만든 이미지 B 둘 다에, `CMD` 가 있는 경우,
+    A 를 기반으로 하는 B 의 `CMD` 로 덮어씌워짐.
+     - B 에 `CMD` 가 없고, A 에 있으면, A 에 있는 것으로 실행됨.
