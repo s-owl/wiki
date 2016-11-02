@@ -12,5 +12,6 @@
   * [웹해킹 스터디](studies/webhacking.md)
 * 서버
   * [캐노니컬 라이브패치 서비스](server/canonical-livepatch.md)
+  * [unattended-upgrades](server/unattended-upgrades.md)
 * [\[SKHU\]불여우와 함께 숲으로 들어가기](skhu-forest-with-firefox.md)
 * [Let's Encrypt](letsencrypt.md)
