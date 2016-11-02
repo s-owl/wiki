@@ -48,3 +48,17 @@
 
  - 추건우 공부 내용 링크 :https://drive.google.com/open?id=1e9U65MQRzANiSjWH1OzNx0bpe4jqX4NNXPy9BhhQb04
  - Docker 에서 관리하는 설정, 이미지, 컨테이너 등은 `/var/lib/docker` 에 보관됨
+
+## 2주차 모임
+ - 2016.11.02 (예정)
+ - 참석자 : 한영빈, 김준수, 추건우, 배다슬 (예정)
+ - 도커 개인저장소 구축
+  - 개인저장소 구축시 systemd 사용자의 경우는 다음 문서를 참조
+   - http://www.developmentalmadness.com/2016/03/09/docker-configure-insecure-registry-for-systemd/
+ - 볼륨 지정 시 해당 위치 찾기
+  - 해당 container에 볼륨지정
+   - `docker run -v /data <image_name>`
+  - 호스트의 볼륨 위치
+   - `docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>`
+   - archlinux 기준으로 `/var/lib/docker/volumes/<image_id>/_data`에 위치함
+   - [`docker inspect` 포맷 관련 자료](https://docs.docker.com/engine/reference/commandline/inspect/)
