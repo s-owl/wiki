@@ -7,7 +7,7 @@
  - 스터디 리더 : 한영빈(소프16)
  - 스터디 방식 : 커리큘럼에 따라 각자 미리 공부해 와서, 질문과 답변 주고받기
  - 교재 : [가장 빨리 만나는 Docker(원고 온라인상에 공개되어 있음)](http://pyrasis.com/docker.html), [Docker Docs](https://docs.docker.com/)의 일부 문서
- - 구성원 : 한영빈(소프16), 김준수(소프11), 추건우(소프15), 배다슬(소프12)
+ - 구성원 : 한영빈(소프16), 김준수(소프11), 추건우(소프15), 배다슬(소프12, 고정 참석자 아님)
  - 스터디 모임 시각 : 수요일 오후 7시 30분 ~ 오후 9시 30분
  - 모임 장소 : 스스스 랩실
 
@@ -53,14 +53,26 @@
 ## 2주차 모임
  - 2016.11.02
  - 진도 : 6~7장
- - 참석자 : 한영빈, 김준수, 추건우, 배다슬 (예정)
+ - 참석자 : 한영빈, 김준수
+ - 결석 : 추건우, 배다슬
  - 도커 개인저장소 구축
-  - 개인저장소 구축시 systemd 사용자의 경우는 다음 문서를 참조
+ - 서버로 사용할 컴퓨터에 registry를 받아두고 클라이언트에서 daemon실행할 때 아래 명령을 통해서 실행해준다.
+  - `sudo docker daemon --insecure-registry=<ip_address:port_number>`
+  - systemd 사용자의 경우 daemon을 항상 이런식으로 실행할 경우는 다음 문서를 참고
    - http://www.developmentalmadness.com/2016/03/09/docker-configure-insecure-registry-for-systemd/
+  - insecure-registry를 설정해주는경우에는 http 통신이 가능하지만 권장되지는 않는다. 인증서를 가지고 https 통신을 하도록 하자.
  - 볼륨 지정 시 해당 위치 찾기
   - 해당 container에 볼륨지정
    - `docker run -v /data <image_name>`
   - 호스트의 볼륨 위치
-   - `docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>`
+
+```bash
+docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
+```
    - archlinux 기준으로 `/var/lib/docker/volumes/<image_id>/_data`에 위치함
    - [`docker inspect` 포맷 관련 자료](https://docs.docker.com/engine/reference/commandline/inspect/)
+   - `Dockerfile` 에서 `CMD` 는 한번만 사용 가능.
+    - 여러번 사용할 경우, 가장 마지막에 나와있는 `CMD` 부분의 명령이 실행됨.
+    - 만약, A 라는 도커 이미지를 베이스로 도커 이미지를 만들었을 때, A 와 본인이 A 를 기반으로 만든 이미지 B 둘 다에, `CMD` 가 있는 경우,
+    A 를 기반으로 하는 B 의 `CMD` 로 덮어씌워짐.
+     - B 에 `CMD` 가 없고, A 에 있으면, A 에 있는 것으로 실행됨.
