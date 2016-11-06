@@ -118,10 +118,10 @@ Password is 999780930.7
 - 2016.11.07
 - 참석자 : 김지연, 박지선, 한나라, 한영빈, 송지은
 - 푼 문제
- - 김지연 : 
- - 박지선 : 
- - 한나라 : 
- - 한영빈 : 
+ - 김지연 :
+ - 박지선 :
+ - 한나라 :
+ - 한영빈 : 16
  - 송지은 : 24, 27
 
 ### 24번 문제
@@ -148,3 +148,33 @@ $ip=str_replace("0.","",$ip);
 - 입력창에 0) or no=2 을 넣어주면 필터링이 걸리므로 우회하여 0) or no like 2 -- 로 입력해준다.
 - 문제가 해결된다.
 
+### 16번 문제
+- 문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.
+- `script` 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.
+```javascript
+
+document.body.innerHTML+="<font color=yellow id=aa style=position:relative;left:0;top:0>*</font>";
+
+function mv(cd)
+{
+kk(star.style.posLeft-50,star.style.posTop-50);
+if(cd==100) star.style.posLeft=star.style.posLeft+50;
+if(cd==97) star.style.posLeft=star.style.posLeft-50;
+if(cd==119) star.style.posTop=star.style.posTop-50;
+if(cd==115) star.style.posTop=star.style.posTop+50;
+if(cd==124) location.href=String.fromCharCode(cd);
+}
+
+
+function kk(x,y)
+{
+rndc=Math.floor(Math.random()*9000000);
+document.body.innerHTML+="<font color=#"+rndc+" id=aa style=position:relative;left:"+x+";top:"+y+" onmouseover=this.innerHTML=''>*</font>";
+}
+```
+- `mv()` 함수 내부를 보면, 함수 인자인 `cd` 가 `124` 일때, `124` 로 이동하는 것을 볼 수 있다.
+- 개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.
+```javascript
+mv(124);
+```
+- 화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
