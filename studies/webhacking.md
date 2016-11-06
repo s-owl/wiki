@@ -151,6 +151,7 @@ $ip=str_replace("0.","",$ip);
 ### 16번 문제
 - 문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.
 - `script` 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.
+
 ```javascript
 
 document.body.innerHTML+="<font color=yellow id=aa style=position:relative;left:0;top:0>*</font>";
@@ -172,9 +173,12 @@ rndc=Math.floor(Math.random()*9000000);
 document.body.innerHTML+="<font color=#"+rndc+" id=aa style=position:relative;left:"+x+";top:"+y+" onmouseover=this.innerHTML=''>*</font>";
 }
 ```
+
 - `mv()` 함수 내부를 보면, 함수 인자인 `cd` 가 `124` 일때, `124` 로 이동하는 것을 볼 수 있다.
 - 개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.
+
 ```javascript
 mv(124);
 ```
+
 - 화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
