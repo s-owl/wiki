@@ -143,8 +143,8 @@ Password is 999780930.7
 - 참석자 : 김지연, 박지선, 한나라, 한영빈, 송지은
 - 푼 문제
  - 김지연 :
- - 박지선 :
- - 한나라 : 16, 38
+ - 박지선 : 18, 54
+ - 한나라 :
  - 한영빈 : 16, 14
  - 송지은 : 24, 27
 
@@ -253,32 +253,62 @@ Password is 260100
 - 이제 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
 
 
-
-###38번 문제
-
-- 웹 해킹 페이지 38번에 들어가면 login과 admin의 버튼이 등장한다
-- 우선 소스를 확인해보자
-```html
-<!--admin.php-->
-
-```
-이렇게 주석처리로 적혀있다. 그러므로 admin.php로 들어가보자.
-- 바로 admin으로 들어가면 login plz라는 문구가 뜬다
-- 다시 돌아가서 아무 값을 먼저 넣고 login을 해보자
-- 값을 넣고 로그인 버튼을 넣어도 아무변화가 없다.
-- 다시 admin으로 들어가면 내가 쓴 값앞에 무언가가 붙는다.
-- 다시 한번 소스를 확인한다.
-```html
-<!--
-
-hint : admin
-
--->
-```
-이라고 적혀있다.
-- admin만 값을 넣으면 풀이가 되지 않는다
-- 여기 앞에 적혀있던 것(아이피임)을 넣고 뒤에 admin을 넣어본다
-- 문제가 솔브된다.
-
-
 (edited)
+
+### 18번 문제
+1. index.phps를 들어가서 읽어보니 id가 guest라고 되어있는 것을 admin으로 바꾸면 solve될 것 같이 보였다.
+2. 일단 id를 아무거나 때려 넣어 보다가 no=1이라고 되어있길래 1을 넣었더니 hi guest가 떴다.
+3. burp suite를 이용해서 저 페이지를 잡아보았다.
+4. 그리고 저 no=1 부분을 수정했다. (0 or 1 limit1, 1이렇게)
+5. no=0%Aor%0A1%0Alimit%0A1,1 이런식으로 바꾸고 페이지에 반영시키면 clear!
+
+### 54번 문제
+1. burp suite로 페이지를 잡아서 소스코드를 살펴보았다.
+```html
+<html>
+<head>
+<title>Challenge 54</title>
+</head>
+<body>
+<h1><b>Password is <font id=aview></font></b></h1>
+<script>
+function run(){
+  if(window.ActiveXObject){
+   try {
+    return new ActiveXObject('Msxml2.XMLHTTP');
+   } catch (e) {
+    try {
+     return new ActiveXObject('Microsoft.XMLHTTP');
+    } catch (e) {
+     return null;
+    }
+   }
+  }else if(window.XMLHttpRequest){
+   return new XMLHttpRequest();
+ 
+  }else{
+   return null;
+  }
+ }
+
+x=run();
+
+function answer(i)
+{
+x.open('GET','?m='+i,false);
+x.send(null);
+aview.innerHTML=x.responseText;
+i++;
+if(x.responseText) setTimeout("answer("+i+")",100);
+if(x.responseText=="") aview.innerHTML="?";
+}
+
+setTimeout("answer(0)",10000);
+
+</script>
+</body>
+</html>
+```
+이라고 뜨는데 function answer(i)부분을 조금만 수정하면 될 것처럼 보였다.
+2. aview.innerHTML=x.responseText;여기를 aview.innerHTML+=x.responseText;이렇게 부호만 바꾸고,
+3. if(x.responseText=="") aview.innerHTML="?"; 여기를 if(x.responseText=="") alert(aview.innerHTML);이렇게 바꾸어서 반영시켜보면 간단하게 해결된다!
