@@ -60,6 +60,15 @@ document.cookie = "user_lv=5.1"
 ```
 - 페이지를 새로고침 하면 문제가 풀리는 것을 볼 수 있다.
 
+### 4 문제
+1. 첫 화면을 보면 YzQwMzNiZmY5NGI1NjdhMTkwZTMzZmFhNTUxZjQxMWNhZWY0NDRmMg== 라는 암호가 적혀있다.
+   암호를 풀어서 password에 입력하면 풀리는 문제이다.
+2. ==이 있는걸 보니 base64로 디코딩하고 싶어지는 기분이 들어 해보았다.
+   그러면 c4033bff94b567a190e33faa551f411caef444f2 이 나오는데 이것을 잘 살펴보면 40자리의 16진수로 이루어져있다는 것을 발견할 수 있다.
+3. 고로 40*4 = 160 bit의 해시 함수 SHA-1로 해독해 보았다.
+4. 그러면 또 40자리 a94a8fe5ccb19ba61c4c0873d391e987982fbbd3가 나와서 한번 더 돌려보았다.
+   그랬더니 아주 깔끔하게 password값이 나온다!
+
 ### 6번 문제
 - http://webhacking.kr/challenge/web/web-06/index.phps 페이지로 들어간다.
 - 쿠키를 확인해보면 user와 password라는 쿠키가 생성되어있다.
@@ -113,22 +122,6 @@ Password is 999780930.7
 
 - `webhacking.kr` 의 Auth 메뉴로 들어가서, `Flag` 칸에 `999780930.7` 를 넣고 제출한다.
 - 문제가 풀리는 것을 확인할 수 있다.
-
-### 26번 문제
-- 'index.phps' 클릭하면 소스가 나타난다.
-
-```
-<?if(eregi("admin",$_GET[id])) { echo("<p>no!"); exit();}$_GET[id]=urldecode($_GET[id]);if($_GET[id]=="admin"){@solve(26,100);}?>
-```
-
-- id의 값이 admin이면 문제 해결된다.
-- get[id]에서 admin이란 문자열이 보이면 함수가 종료된다.
-- admin을 다른 형태의 값으로 넣어줘야 한다.
-- urldecode는 해당문자열을 url디코딩하는 함수다. admin을 url인코딩한 값을 id에 넣어주면 urldecode에 의해 admin으로 바뀐다.
-- url 인코딩 표를 이용헤서 admin을 바꾸면 %61%64%6D%69%6E.
-- 그러나 %61%64%6D%69%6E를 입력하면 eregi에 의해 막힌다.(%61%64%6D%69%6E가 자동으로 디코딩되버렸기 때문에)
-- %61%64%6D%69%6E을 인코딩해서 입력하면 문제 해결
-
 
 ## 2주차 모임
 - 2016.11.07
