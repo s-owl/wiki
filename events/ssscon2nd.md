@@ -30,8 +30,8 @@ Git 과 GitHub 를 이용하여 버전관리와 협업을 하는 방법에 대�
 깃허브 스터디 자료 활용 예정
  - [1주차] http://www.slideshare.net/hanyoungbin/git-github-1-63736413
  - [2주차-A] http://www.slideshare.net/hanyoungbin/git-github-2a?qid=789a081a-b2a6-42d3-8a04-990ee729f6ca&v=&b=&from_search=6
- - [2주차-B]http://www.slideshare.net/hanyoungbin/git-github-2b
- - [3주차]http://www.slideshare.net/hanyoungbin/git-github-3
+ - [2주차-B] http://www.slideshare.net/hanyoungbin/git-github-2b
+ - [3주차] http://www.slideshare.net/hanyoungbin/git-github-3
 
 
 ---
