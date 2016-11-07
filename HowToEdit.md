@@ -9,7 +9,7 @@
   - `master` 가지에는 접근하지 않도록 합니다. 생성된 위키 페이지가 보관되는 가지입니다.
 
 ``` bash
-git clone https://github.com/skhu-sss/skhu-sss.github.io
+git clone https://github.com/skhu-sss/skhu-sss.github.io.git
 ```
 
  - 원하는 문서를 수정합니다.
