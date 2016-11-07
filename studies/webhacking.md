@@ -114,8 +114,13 @@ Password is 999780930.7
 - `webhacking.kr` 의 Auth 메뉴로 들어가서, `Flag` 칸에 `999780930.7` 를 넣고 제출한다.
 - 문제가 풀리는 것을 확인할 수 있다.
 
-### 17번 문제
+### 26번 문제
 - 'index.phps' 클릭하면 소스가 나타난다.
+
+```
+<?if(eregi("admin",$_GET[id])) { echo("<p>no!"); exit();}$_GET[id]=urldecode($_GET[id]);if($_GET[id]=="admin"){@solve(26,100);}?>
+```
+
 - id의 값이 admin이면 문제 해결된다.
 - get[id]에서 admin이란 문자열이 보이면 함수가 종료된다.
 - admin을 다른 형태의 값으로 넣어줘야 한다.
