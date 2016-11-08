@@ -381,9 +381,9 @@ setTimeout("answer(0)",10000);
 - url을 먼저 살펴보면, ?file=hello 라고 되어있다.
 
 - 아래 박스에는 hello.txt로 추정되는 것이 출력 되어있는 것으로 봐서 우리의 목표는 저곳에 password.php를 출력시키는 것으로 정해야 함을 알 수 있다.
-  (0) ?file=hello 라고 되어있을 때 hello.txt를 출력하는 것을 통해서,
-  (1) ?file=password 라고 단순히 해서는 password.txt를 출력할 것이고,
-  (2) ?file=password.php 라고 한다면 password.php.txt 라는 엉뚱한 것을 출력할 것이다.
+  - ?file=hello 라고 되어있을 때 hello.txt를 출력하는 것을 통해서,
+  - ?file=password 라고 단순히 해서는 password.txt를 출력할 것이고,
+  - ?file=password.php 라고 한다면 password.php.txt 라는 엉뚱한 것을 출력할 것이다.
 
 - 결국 확장자 .txt를 제거해야 한다는 결론에 이른다.
 
