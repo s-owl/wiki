@@ -81,7 +81,7 @@ docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
  - 2016.11.09
  - 진도 : 8~9장
  - 참석자 : 한영빈, 김준수
-
+ - docker 와 git으로 어플리케이션 자동 배포하고 모니터링하기
  - 서버의 git repo를 외부에서 push 할 수 있게 하는 경우 git repo에서 아래 명령을 입력한다.
 
  ```bash
@@ -95,3 +95,4 @@ $ sudo groupadd docker
 $ sudo gpasswd -a ${USER} docker
 ```
  - 이렇게 진행하면 그룹을 생성하고 사용자를 추가한다.
+ - 모니터링 서버와 모니터링 되는 서버가 같은 호스트여도 동작한다.(하지만 데이터 수집에 오랜시간이 걸려서 확인하긴 힘들었음)
