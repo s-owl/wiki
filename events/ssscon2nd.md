@@ -7,6 +7,7 @@
 - 라이트닝 토크 발표자 모집은 아직 시작하지 않았습니다.
 - [일반세션 연사자로 신청하기](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform)
  - 일반 세션의 발표 시간은 발표자당 약 30~40분 입니다.
+ - 2016.11.12(토) 에 연사자 접수가 마감될 예정입니다.
 - [라이트닝 토크 발표자로 신청하기](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
  - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.
  - 최대 6명까지 신청받을 예정입니다.
