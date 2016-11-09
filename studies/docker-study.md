@@ -76,3 +76,22 @@ docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
     - 만약, A 라는 도커 이미지를 베이스로 도커 이미지를 만들었을 때, A 와 본인이 A 를 기반으로 만든 이미지 B 둘 다에, `CMD` 가 있는 경우,
     A 를 기반으로 하는 B 의 `CMD` 로 덮어씌워짐.
      - B 에 `CMD` 가 없고, A 에 있으면, A 에 있는 것으로 실행됨.
+
+## 3주차 모임
+ - 2016.11.09
+ - 진도 : 8~9장
+ - 참석자 : 한영빈, 김준수
+
+ - 서버의 git repo를 외부에서 push 할 수 있게 하는 경우 git repo에서 아래 명령을 입력한다.
+
+ ```bash
+ $ git config receive.denyCurrentBranch ignore
+ ```
+ - 만약 특정 repo가 아닌 서버 전체 적용하기 위해서는 config 뒤에 `--global`을 붙여서 명령을 실행한다.
+
+ - 사용자를 docker 그룹에 추가해서 `sudo` 없이 사용하려는 경우그룹이 없는 경우없으면 정상적으로 등록되지 않는다.
+```bash
+$ sudo groupadd docker
+$ sudo gpasswd -a ${USER} docker
+```
+ - 이렇게 진행하면 그룹을 생성하고 사용자를 추가한다.
