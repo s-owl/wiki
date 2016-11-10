@@ -1,6 +1,9 @@
 # 제2회 SSSCON
 
 > SSSCON 은 각지 알고 있는 지식과 경험을 다수와 공유하기 위해 마련된 컨퍼런스로, 성공회대학교 정보보안/소프트웨어 소모임 SSS 에서 주관합니다.
+기존에는 소모임 회원 대상으로 열렸으나, 이번에는 규모를 넓혀서 더 많은 분들과 함께 하고자 합니다.   
+
+> 연사자 신청이 2016년 11월 11일 오후 9시에 마감 됩니다.
 
 ## 상태
 - 연사자 모집 중.
@@ -11,6 +14,7 @@
 - [라이트닝 토크 발표자로 신청하기](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
  - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.
  - 최대 6명까지 신청받을 예정입니다.
+- [신청하기(2016년 11월 14일 부터 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
 
 ## 일시
 - 2016년 11월 23일 수요일
