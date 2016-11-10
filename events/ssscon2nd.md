@@ -17,7 +17,7 @@
 - [신청하기(2016년 11월 14일 부터 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
 
 ## 일시
-- 2016년 11월 23일 수요일
+- 2016년 11월 23일 수요일 오후 6시 ~ 오후 10시
 
 ## 위치
 - 성공회대학교 일만관 2401
