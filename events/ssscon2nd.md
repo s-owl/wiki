@@ -3,16 +3,15 @@
 > SSSCON 은 각지 알고 있는 지식과 경험을 다수와 공유하기 위해 마련된 컨퍼런스로, 성공회대학교 정보보안/소프트웨어 소모임 SSS 에서 주관합니다.
 기존에는 소모임 회원 대상으로 열렸으나, 이번에는 규모를 넓혀서 더 많은 분들과 함께 하고자 합니다.   
 
-> 연사자 신청이 2016년 11월 11일 오후 9시에 마감 됩니다.
+> 연사자 신청이 2016년 11월 11일 오후 12시 29분에 조기 마감 되었습니다.
 
 ## 상태
 - 연사자 모집 중.
-- 라이트닝 토크 발표자 모집은 아직 시작하지 않았습니다.
-- [일반세션 연사자로 신청하기](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform)
+- [일반세션 연사자로 신청하기(조기마감됨)](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform)
  - 일반 세션의 발표 시간은 발표자당 약 30~40분 입니다.
  - 2016.11.11(금) 오후 9시에 연사자 접수가 마감됩니다.
-- [라이트닝 토크 발표자로 신청하기](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
- - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.
+- [라이트닝 토크 발표자로 신청하기(곧 신청 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
+ - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.(시간 초과시 가차 없이 다음 발표자에게 마이크가 넘겨집니다.)
  - 최대 6명까지 신청받을 예정입니다.
 - [신청하기(2016년 11월 14일 부터 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
 
@@ -25,15 +24,34 @@
 ## 프로그램
 
 ### 웹 해킹 스터디 현황
-- 연사 : 한나라, 박지선, 김지연
+- 연사
+ - 한나라(성공회대학교 정보통신공학과, 현 SSS 회원)
+ - 박지선(성공회대학교 소프트웨어공학과, 현 SSS 회원)
+ - 김지연(성공회대학교 소프트웨어공학과, 현 SSS 회원)
 - 일반 세션
 - 웹 해킹 스터디 현황 발표 및 문제풀이 시연
 - 슬라이드 자료 : (아직 없음)
 
 ---
 
+### 픽셀워치
+- 연사 : 안두현(성공회대학교 컴퓨터공학과, 현 SSS 회원)
+- 일반 세션
+- 게임프로텍트 팀 결성에 대한 소개, 향후 프로젝트 수행계획 발표
+- 슬라이드 자료 : (아직 없음)
+
+---
+
+### Move Semantics
+- 연사 : 김재경(성공회대학교 소프트웨어공학과)
+- 일반 세션
+- C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
+- 슬라이드 자료 : (아직 없음)
+
+---
+
 ### Git & GitHub 기본
-- 연사 : 한영빈
+- 연사 : 한영빈(성공회대학교 소프트웨어공학과, 현 SSS 운영진)
 - 튜토리얼 세션
 - Git 과 GitHub 를 이용하여 버전관리와 협업을 하는 방법에 대한 튜토리얼 세션을 진행합니다.
 - 슬라이드 자료 : SSS 여름방학 Git & GitHub 스터디 자료 활용 예정
@@ -50,10 +68,10 @@
 ---
 
 ### JAVASCRIPTING TUTORIAL
-- 연사 : 추건우
+- 연사 : 추건우(성공회대학교 소프트웨어공학과, 현 SSS 대표)
 - 튜토리얼 세션
 - 쉽고 재미있는 javascript 튜토리얼 입니다.
- - npm 패키지 중에 javascripting을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 예정입니다.
+ - npm 패키지 중에 javascripting을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 음예정입니다.
 - 준비물
  1. 노트북 필참
  2. Node.js 설치
