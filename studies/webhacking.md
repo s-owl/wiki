@@ -7,7 +7,7 @@
 - 구성원 : 김지연(소프16), 박지선(소프16), 한나라(정통16), 한영빈(소프16), 송지은(소프15)
 - 모임 시각 : 월요일 오후 6시 ~ 8시
 - 모임 장소 : 스스스 랩실
-- 푼 문제 : 1, 3, 4, 6, 12, 14, 15, 16, 17, 18, 24, 25, 26, 27, 32, 38, 49, 56
+- 푼 문제 : 1, 3, 4, 6, 10, 12, 14, 15, 16, 17, 18, 24, 25, 26, 27, 32, 38, 49, 56
 
 ## 1주차 모임
 - 2016.10.31
@@ -376,7 +376,7 @@ setTimeout("answer(0)",10000);
  - 김지연 :
  - 박지선 : 25
  - 한나라 :
- - 한영빈 : 3
+ - 한영빈 : 3, 10
  - 송지은 : 32, 49
 
 
@@ -457,6 +457,44 @@ setTimeout("answer(0)",10000);
  answer : <flag>
  ip : localhost
  ```
+
+### 10번 문제
+- 문제 화면에 들어가면, 빨간 사각형 하나, 회색 사각형 하나, 빨간 사각형 하나가 아래 방향으로 나열되어 있다.
+- 페이지 화면은 볼거 없고... 소스를 보자!
+- 개발자 콘솔이나, 페이지 우클릭시 나오는 컨텍스트 메뉴에서 `소스 보기` 누르면 나오는 소스는 아래와 같다.
+
+```html
+
+<html>
+<head>
+<title>Challenge 10</title>
+</head>
+
+<body>
+<hr style=height:100;background:brown;>
+<table border=0 width=900 style=background:gray>
+<tr><td>
+<a id=hackme style="position:relative;left:0;top:0" onclick="this.style.posLeft+=1;if(this.style.posLeft==800)this.href='?go='+this.style.posLeft" onmouseover=this.innerHTML='yOu' onmouseout=this.innerHTML='O'>O</a><br>
+<font style="position:relative;left:800;top:0" color=gold>|<br>|<br>|<br>|<br>buy lotto</font>
+</td></tr>
+</table>
+<hr style=height:100;background:brown;>
+
+</body>
+</html>
+
+```
+
+- `id`가 `hackme`인 `a` 태그를 보면, `a` 태그 클릭시, 해당 태그의 `style` 속성에서, `posLeft` 가 `1`씩 늘어나고, 값이 `800` 이면, 정해진 작업이 실행되는 것을 볼 수 있다.
+- `posLeft` 값을 `799` 로 바꾸고 클릭 해보자. 개발자 콘솔을 열고, 콘솔 탭에서 다음을 실행한다.
+ - `id` 가 `hackme` 인 요소에 접근하여, 해당 요소의 `style` 속성의 `posLeft` 값을 `799` 로 변경하는 코드이다.
+
+```javascript
+document.getElementById('hackme').style.posLeft=799
+```
+
+- 그리고, 회색 사각형 위의 `O` 글자를 누른다.(참고로 마우스를 올리면 `yOu` 라고 바뀌었다가, 때면 다시 `O` 로 바뀐다.)
+- 끝. 문제가 풀렸다.
 
 ### 25번 문제
 - url을 먼저 살펴보면, ?file=hello 라고 되어있다.
