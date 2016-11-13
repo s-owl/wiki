@@ -1,4 +1,4 @@
-
+﻿
 # 웹해킹 스터디
 
 ## 스터디 개요
@@ -375,7 +375,7 @@ setTimeout("answer(0)",10000);
 - 푼 문제
  - 김지연 :
  - 박지선 : 25
- - 한나라 :
+ - 한나라 : 39, 58
  - 한영빈 : 3, 10
  - 송지은 : 32, 49
 
@@ -517,6 +517,40 @@ document.getElementById('hackme').style.posLeft=799
 - 투표의 여부를 쿠키값으로 확인하는 구조인 듯 하므로, 쿠키가 생성되기 전에 페이지를 가로채서 100번이 넘어가도록 투표를 반복한다. (`burpsuite`의 `repeater` 기능을 사용함)
 - 본인 아이디의 투표 횟수가 100이 넘어가면 문제가 풀린다.
 
+###39번 문제
+
+- 우선 소스를 확인하자  
+```html
+<!-- index.phps-->
+```
+- 주석에 index.phps가 있으므로 현주소 뒤에 붙여준다  
+-  index 페이지를 보면 새로운 코드들이 있다  
+```html
+$pw="????";
+
+if($_POST[id])
+{
+$_POST[id]=str_replace("\\","",$_POST[id]);
+$_POST[id]=str_replace("'","''",$_POST[id]);
+$_POST[id]=substr($_POST[id],0,15);
+
+```
+- 여기서 입력값에 대해 replace와 substr이 된다고 한다  
+- replace는 대체라는 소리인것 같고 substr이 뭔지 몰라서 구글링을 했다.  
+- 쿼리문을 보면 '$_POST[id] 이런식으로 값이 전달되고 있다  
+- 싱글 쿼터가 $_POST[id] 앞에는 있는데 뒤에는 없다  
+- 그럼 id 값과 싱글 쿼터 (' )를 넣어서 문제를 클리어 할 수 있을 것 같아서 값을 넣었더니 틀렸다고 한다. (시무룩)  
+- 문제를 찾아보았다. 코드를 다시 한번 정독을 했다.  
+- replace에서 싱글 쿼터는 필터링이 된다. (자만하고 소스를 제대로 확인을 안한 벌을 받았다)
+- 보면 (' )를 (" )로 replace 하고 있었다.
+```html
+$_POST[id]=substr($_POST[id],0,15);
+```
+- replace랑 substr이 15자리까지만 id를 받는다고 적혀있으니까 우선 15번째는 (' )를 적어주면 된다는 사실을 발견했다.
+- 빈칸~~~~~하고나서 '만 하면 솔브가 되지 않는다.
+- 웹해킹 문제를 풀어보면 admin을 너무 좋아하길래 혹시나하고 admin         '를 적었더니 솔브가 된다(운이 좋았ㄷ...)
+
+
 ### 49번 문제
 - level에 1을 입력하면 zzibong이 뜬다.
 - http://webhacking.kr/challenge/web/web-24/index.phps 에서 소스코드를 확인한다.
@@ -524,3 +558,48 @@ document.getElementById('hackme').style.posLeft=799
 - 필터링 되는 문자들을 우회하여 id를 admin으로 만드는 값을 lv에 입력해준다.
 - 0 or id=admin 을 필터링을 우회하여 입력
 - 0%0A||%0Aid=0x61646d696e 이런식으로 입력해주면 문제가 풀린다.
+
+###58번 문제
+
+- pw: 와 login이 있다. 소스부터 확인하자
+```html
+<center>
+<script src="kk.js"><script>
+<script src="kk2.js"><script>
+<embed src="hackme.swf" width="500" height="400">
+</center>
+```
+- 여기서 js는 Java Script 코드를 가지고 있는 text 파일이라는 것을 구글링을 통해 알 수 있었다.
+- swf를 구글링하자 플래시 파일이라는 것을 알 수 있었다.
+- 주소창 뒤에 파일 이름을 적는다.
+- 그러면kk.js는 아래와 같이 나온다
+```txt
+kk=document.URL;
+kk=kk.substr(10,4);
+```
+-이것은 kk에 document.URL을 저장시키고 저장된 값에서 10번쨰 다음 숫자부터 4개의 값을 뽑고 다시 kk에 저장한다는 소리이다.
+-kk2.js를 넣으면 아래와 같이 나온다
+```txt
+kk=kk+"me.swf";
+document.write("<embed src="+kk+" width=500 height=400></embed>");
+```
+- kk에 me.swf를 더한 값을 kk에 저장시키고 그다음 embed태그(플래시를 재생하게 해주는 태그라고 합니다)와 kk를 적어 출력시킨다 
+- 동영상을 더해야 한다는 소리이다. (여기서부터 조금 어려움을 느낌)
+- 동영상을 어떻게 추가해야할지 막막했다.
+- 구글링을 하다보니 메모장에서 하이퍼링크를 통해서 추가한다는 것을 응용함
+```html
+<html>
+<body>
+<a href="http://webhacking.kr/challenge/web/web-35/hackme.swf">동영상</a>
+</body>
+</html>
+```
+- 이렇게 적고 동영상.html 저장을 해주었다.
+- 이것을 실행하면 하이퍼 링크가 나온다.
+- 동영상을 누르면 문제화면이 나온다(멘붕)
+- 동영상 글자위에 커서를 두고 오른쪽 마우스로 다른이름으로 대상을 저장한다.
+- 메모장으로 동영상을 메모장에다가 끌여놓으면
+- 정말 이상한 문자들이 미친듯이 적혀있다. 
+- 마지막에 보면 http://webhacking.kr.challenge/web/web-35/g1v2n2passw0r라고 적혀있고 줄바꿈뒤에 d.php가 있다.
+- 연결해서 주소창에 적으면 문제가 솔브된다.
+- (필자는 문법부터 모르는것이 많아서 시간이 오래걸리긴 했지만 그닥 어려운 문제는 아니었고 조금 귀찮은 유형이었다.)
