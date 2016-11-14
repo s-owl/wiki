@@ -3,6 +3,8 @@
 > SSSCON 은 각지 알고 있는 지식과 경험을 다수와 공유하기 위해 마련된 컨퍼런스로, 성공회대학교 정보보안/소프트웨어 소모임 SSS 에서 주관합니다.
 기존에는 소모임 회원 대상으로 열렸으나, 이번에는 규모를 넓혀서 더 많은 분들과 함께 하고자 합니다.
 
+![2nd_ssscon_poster](2nd_ssscon_poster.png)
+
 ## 상태
 - 참가신청 받는증.
 - [일반세션 연사자로 신청하기(조기마감됨)](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform)
