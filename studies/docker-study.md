@@ -108,3 +108,7 @@ $ sudo gpasswd -a ${USER} docker
  curl -X POST -H "Content-Type: application/json" -d @test1.json http://127.0.0.1:4243/containers/create
  ```
  - `-d` 옵션과 파일명 앞에 `@`을 붙여 `test1.json` 파일을 뒤의 주소로 보낸다.
+![start HostConfig Error](docker_api_host_config_error.png)
+ - API로 요청하는경우 `/containers/<id>/start`시 설정값을 넘겨주면 문제가 생긴다. create 할때 값을 입력해줘야 하는 것 같다.
+![start](docker_api_start.png)
+ - start는 간단히 이렇게 할 수 있다.
