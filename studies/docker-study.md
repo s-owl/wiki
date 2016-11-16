@@ -81,7 +81,7 @@ docker inspect -f "{{range .Mounts}}{{.Source}}{{end}}" <image_name>
  - 2016.11.09
  - 진도 : 8~9장
  - 참석자 : 한영빈, 김준수
-  - ~~추건우(탈주!)~~ 
+  - ~~추건우(탈주!)~~
  - docker 와 git으로 어플리케이션 자동 배포하고 모니터링하기
  - 서버의 git repo를 외부에서 push 할 수 있게 하는 경우 git repo에서 아래 명령을 입력한다.
 
@@ -97,3 +97,14 @@ $ sudo gpasswd -a ${USER} docker
 ```
  - 이렇게 진행하면 그룹을 생성하고 사용자를 추가한다.
  - 모니터링 서버와 모니터링 되는 서버가 같은 호스트여도 동작한다.(하지만 데이터 수집에 오랜시간이 걸려서 확인하긴 힘들었음)
+
+## 4주차 모임
+ - 2016.11.16
+ - 진도 : 10~14장
+ - 참석자 : 한영빈, 김준수, 추건우
+ - dockerhub와 docker remote api 사용해보기
+ - curl를 사용해서 json 형식으로 docker daemon에 POST요청을 보내는 경우 shell에서 직접입력하지 않고 아래와 같이 파일로 보낼 수 있다.
+ ```bash
+ curl -X POST -H "Content-Type: application/json" -d @test1.json http://127.0.0.1:4243/containers/create
+ ```
+ - `-d` 옵션과 파일명 앞에 `@`을 붙여 `test1.json` 파일을 뒤의 주소로 보낸다.
