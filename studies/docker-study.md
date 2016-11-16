@@ -103,18 +103,17 @@ $ sudo gpasswd -a ${USER} docker
  - 진도 : 10~14장
  - 참석자 : 한영빈, 김준수, 추건우
  - dockerhub와 docker remote api 사용해보기
+> docker api의 경우 버전별로 변화하는 점이 많아서 공식문서나 해당 client library의 문서를 참고하는게 좋다.
+
  - curl를 사용해서 json 형식으로 docker daemon에 POST요청을 보내는 경우 shell에서 직접입력하지 않고 아래와 같이 파일로 보낼 수 있다.
  ```bash
  curl -X POST -H "Content-Type: application/json" -d @test1.json http://127.0.0.1:4243/containers/create
  ```
  - `-d` 옵션과 파일명 앞에 `@`을 붙여 `test1.json` 파일을 뒤의 주소로 보낸다.
-<<<<<<< HEAD
 ![start HostConfig Error](docker_api_host_config_error.png)
  - API로 요청하는경우 `/containers/<id>/start`시 설정값을 넘겨주면 문제가 생긴다. create 할때 값을 입력해줘야 하는 것 같다.
 ![start](docker_api_start.png)
  - start는 간단히 이렇게 할 수 있다.
-=======
  - Docker Remote API Client Library 를 사용하면, 리모트 API 를 사용하여 프로그램 작성시 더 쉽게 작성 가능함.
   - 다양한 언어별 라이브러리가 있음. 자세한 사항은 아래 링크 참조
   - https://docs.docker.com/engine/reference/api/remote_api_client_libraries/
->>>>>>> 88d753f61ac8b195bdf50f114477211e9b7d000f
