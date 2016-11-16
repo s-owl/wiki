@@ -14,7 +14,8 @@
 - [라이트닝 토크 발표자로 신청하기(곧 신청 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
  - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.
  - 최대 6명까지 신청받을 예정입니다.
-- [신청하기](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
+
+#[지금 신청하세요 !](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
 
 ## 일시
 - 2016년 11월 23일 수요일 오후 6시 ~ 오후 10시
