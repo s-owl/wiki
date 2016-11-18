@@ -9,7 +9,7 @@
 연사 신청 | 참가 신청 | 라이트닝 토크
 ---|---|---
 [~~마감됨(2016.11.11 오후 12:29)~~](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform) | [**지금 신청하세요!**](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform) | [**지금 발표자로 신청하세요!**](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
-일반 세션 : 20~40분, 튜토리얼 세션 50~60분 | 2016.11.22 에 마감 예정 | 선착순 마감, 발표시간 5분 이하
+일반 세션 : 20~40분, 튜토리얼 세션 50~60분 | 마감 : 2016.11.22 | 선착순 마감, 발표시간 5분 이하
 ![2nd_ssscon_poster](2nd_ssscon_poster.png)
 
 ## 일시
