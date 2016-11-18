@@ -3,19 +3,14 @@
 > SSSCON 은 각지 알고 있는 지식과 경험을 다수와 공유하기 위해 마련된 컨퍼런스로, 성공회대학교 정보보안/소프트웨어 소모임 SSS 에서 주관합니다.
 기존에는 소모임 회원 대상으로 열렸으나, 이번에는 규모를 넓혀서 더 많은 분들과 함께 하고자 합니다.
 
-![2nd_ssscon_poster](2nd_ssscon_poster.png)
 
 ## 상태
-- 참가신청 받는증.
-- [일반세션 연사자로 신청하기(조기마감됨)](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform)
- - 일반 세션의 발표 시간은 발표자당 약 30~40분 입니다.
- - ~~2016.11.11(금) 오후 9시에 연사자 접수가 마감됩니다.~~
-  - 2016.11.11 오후 12:29 조기 마감 되었습니다.
-- [라이트닝 토크 발표자로 신청하기(곧 신청 받을 예정)](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
- - 라이트닝 토크의 발표 시간은 발표자당 5분 이내 입니다.
- - 최대 6명까지 신청받을 예정입니다.
 
-#[지금 신청하세요 !](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform)
+연사 신청 | 참가 신청 | 라이트닝 토크
+---|---|---
+[~~마감됨(2016.11.11 오후 12:29)~~](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform) | [**지금 신청하세요!**](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform) | [**지금 발표자로 신청하세요**](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
+일반 세션 : 20~40분, 튜토리얼 세션 50~60분 | | 선착순 마감, 발표시간 5분 이하
+![2nd_ssscon_poster](2nd_ssscon_poster.png)
 
 ## 일시
 - 2016년 11월 23일 수요일 오후 6시 ~ 오후 10시
