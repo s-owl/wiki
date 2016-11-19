@@ -656,16 +656,16 @@ document.write("<embed src="+kk+" width=500 height=400></embed>");
  - 송지은 : 41
 
 ###23번 문제
-- "<script>alert(1);</script>"을 인젝션 하는 문제.
+- `<script>alert(1);</script>`을 인젝션 하는 문제.
 - 특수문자를 입력했을 때 필터링되지 않는다.
 - "script", "alert", "sc" 등은 필터링된다. (no hack 표시)
-- "s%00c"을 입력했을 때, 주소창 "code=s%2500c"로 바뀐다.
-- 주소창에서 25를 지우고 "Enter" 누르면 "sc" 그대로 인젝션 된다.
-- "<script>alert(1);</script>" 을 "URL인코딩"을 한다.
-- 인코딩을 하면 "%3cscript%3ealert(1)%3b%3c%2fscript%3e" 값이 나온다.
-- 이 값에 script와 alert 글자 사이에 "%00"을 써준다. (%00은 공백 Null의 표현)
-- "%3cs%00c%00r%00i%00p%00t%3ea%00l%00e%00r%00t(1)%3b%3c%2fs%00c%00r%00i%00p%00t%3e"
-- 이것을 주소창 "code=" 뒤에 입력해주면 문제해결.
+- "s%00c"을 입력했을 때, 주소창 `code=s%2500c`로 바뀐다.
+- 주소창에서 25를 지우고 `Enter` 누르면 "sc" 그대로 인젝션 된다.
+- `<script>alert(1);</script>` 을 `URL인코딩`을 한다.
+- 인코딩을 하면 `%3cscript%3ealert(1)%3b%3c%2fscript%3e` 값이 나온다.
+- 이 값에 script와 alert 글자 사이에 `%00`을 써준다. (%00은 공백 Null의 표현)
+- `%3cs%00c%00r%00i%00p%00t%3ea%00l%00e%00r%00t(1)%3b%3c%2fs%00c%00r%00i%00p%00t%3e`
+- 이것을 주소창 `code=` 뒤에 입력해주면 문제해결.
 
 ### 41번 문제
 - "~/index.phps" 에서 소스코드를 확인한다.
