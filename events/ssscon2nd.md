@@ -6,10 +6,15 @@
 
 ## 상태
 
+### 종료 되었습니다! 참석해주신 모든 분들께 감사드립니다!
+
+---
+
 연사 신청 | 참가 신청 | 라이트닝 토크
 ---|---|---
-[~~마감됨(2016.11.11 오후 12:29)~~](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform) | [**지금 신청하세요!**](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform) | [**지금 발표자로 신청하세요!**](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
+[~~마감됨(2016.11.11 오후 12:29)~~](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform) | [~~지금 신청하세요!~~](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform) | [~~지금 발표자로 신청하세요!~~](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
 일반 세션 : 20~40분, 튜토리얼 세션 50~60분 | 마감 : 2016.11.22 | 선착순 마감, 발표시간 5분 이하
+
 ![2nd_ssscon_poster](2nd_ssscon_poster.png)
 
 ## 일시
@@ -59,7 +64,7 @@
 - 연사 : 김재경(성공회대학교 소프트웨어공학과)
 - 일반 세션
 - C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
-- 슬라이드 자료 : (아직 없음)
+- 슬라이드 자료 : http://www.slideshare.net/QooJuice/move-semantics
 
 ---
 
@@ -98,4 +103,7 @@
 >라이트닝 토크는, 30~40 분 동안 진행하는 일반 발표들과 달리, 5분 이내로 가볍게 자유로운 주제로 진행하는 발표입니다.
 참고로, 5분 지나면 마이크는 가차 없이 다음 발표자에게 넘겨집니다.
 
-- 아직 발표자 없음
+#### 아치리눅스에서 Docker로 Oracle DB 사용하기
+- 연사 : 김준수(성공회대학교 소프트웨어공학과, 현 SSS 부대표)
+- 5분간 시연과 설명, 결론은 왠만한 OS 모두 가능, docker 짱짱
+- 관련 자료 : http://blog.harveyk.me/post/arch-linux-oracle-database-docker/
