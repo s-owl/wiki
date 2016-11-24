@@ -117,3 +117,83 @@ $ sudo gpasswd -a ${USER} docker
  - Docker Remote API Client Library 를 사용하면, 리모트 API 를 사용하여 프로그램 작성시 더 쉽게 작성 가능함.
   - 다양한 언어별 라이브러리가 있음. 자세한 사항은 아래 링크 참조
   - https://docs.docker.com/engine/reference/api/remote_api_client_libraries/
+
+## 5주차 모임
+- 2016.11.16
+- 진도 : 16~19장 + Docker Swarm
+- 참석자 : 한영빈, 김준수
+
+### Docker Swarm 사용하기
+Docker Swarm 은 컨테이너를 더 쉽고 효율적으로 관리할 수 있게 해 주는 도구이다. 흔히 이런 것들을 컨테이너 오케스트레이션이라고 부른다.
+대부분의 컨테이너 오케스트레이션은 쉬운 클러스터링이나(혹은 다중 호스트 추상화) 간편한 서비스 생성 및 관리와 업데이트, 셀프 힐링(프로세스 죽었을 때 자동으로 다시 시작) 등의 유용한 기능들을 제공한다.
+Docker Swarm 또한 마찬가지로 이러한 기능들을 제공하는데, Docker Swarm 의 경우 Docker 1.12.0 부터 Docker Engine 에 Swarm Mode 로 포함이 되어서, 별도로 설치할 것 없이 빠르게 시작 할 수 있다.
+- 개방할 포트 - Docker Swarm 으로 클러스터링을 하려면 아래와 같은 포트를 개방해야 함
+- 사설망 내부의 호스트끼리는 따로 포트 개방 하지 않아도 보통 가능함.
+ - TCP 포트 2377 - 클러스터 관리 통신에 사용
+ - TCP 와 UDP 포트 7946 - 노드 사이 통신에 사용
+ - TCP 와 UDP 포트 4789 - 오버레이 네트워크 트레픽을 위한 포트
+
+다음 명령줄로 Swarm Mode 를 초기화한다. 초기화된 호스트는 swarm 네트워크에서 리더가 된다.
+
+```bash
+ docker swarm init
+```
+
+호스트에 둘 이상의 IP 가 있는 경우, IP 를 다음과 같이 지정해 줘야 한다. 그래야 노드(리더의 하위 호스트) 가 될 호스트에서 리더를 찾을 수 있다.
+
+```bash
+docker swarm init --advertise-addr <IP 주소>
+```
+
+swarm 을 초기화하면, 아래와 같은 명령어가 결과로 찍힌다. 이 명령어를 swarm 네트워크에 노드로 넣을 호스트에서 실행하면, swarm 네트워크에 노드로 추가된다.
+
+```bash
+docker swarm join \
+    --token SWMTKN-1-3pd5k9k8ydlq41ep6yrfd7kw3567zxg1tqxjt8w75tk5jzaszm-dafqo8ye39otwe19togsixgbc \
+    192.168.0.39:
+```
+
+swarm 네트워크의 호스트 목록을 확인하려면, 아래 명령줄을 실행한다.
+
+```bash
+docker node ls
+```
+
+service 를 이용하면, docker swarm 에서 자동으로 컨테이너를 리더 또는 노드에 분배해 주고, 로드 밸런싱 까지 해 준다. 셀프 힐링도 해 준다. 한번 해 보자.
+
+다음과 같은 명령줄로 서비스를 생성한다. 명령줄에 대한 상세 사항은 [여기](https://docs.docker.com/engine/reference/commandline/service_create/) 를 참고하자.
+
+```bash
+docker service create --name <서비스 이름> <도커 이미지 이름>
+```
+
+다음과 같은 명령줄로 서비스 설정을 업데이트 할 수 있다. 단순히 하나의 컨테이너를 올렸을때, 컨테이너에 대한 업데이트 기능이 없어, 컨테이너를 부수고 다시 만드는 것과는 다르다.
+명령줄에 대한 자세한 사항은 [여기](https://docs.docker.com/engine/reference/commandline/service_update/) 를 참고하자
+
+```bash
+docker service update --image <새 도커 이미지 이름> <업데이트 할 서비스 이름>
+```
+
+서비스를 스케일링 할 수도 있다. 스케일링 하면, 스케일 숫자에 따라 컨테이너가 늘어나고 줄어들며, 내장된 로드벨런서가 로드벨런싱 해 준다.
+
+```bash
+docker service scale <서비스 이름>=<스케일> nginx=3
+```
+
+서비스를 지우려면, 아래와 같은 명령줄을 이용한다
+
+```bash
+docker service rm <서비스 이름>
+```
+
+swarm 네트워크에서 떠나려면, 다음을 실행한다.
+
+```bash
+docker swarm leave
+```
+
+리더의 경우, `--force` 옵션을 줘야 한다.
+
+```bash
+docker swarm leave --force
+```
