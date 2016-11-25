@@ -683,7 +683,7 @@ document.write("<embed src="+kk+" width=500 height=400></embed>");
  - 박지선 : 
  - 한나라 : 
  - 한영빈 : 
- - 송지은 : 41
+ - 송지은 : 
  
 ### 7번문제
 
