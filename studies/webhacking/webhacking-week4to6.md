@@ -151,6 +151,7 @@ alert('Congratulation')><p>");
 > 필자 생각에, 이 문제는 끈기와 인내심을 요하는 문제인 것 같다.
 
 이 문제는 여러게의 작은 문제를 연속으로 풀어야 하는 문제다.
+100~150 점 짜리 문제 10개 연속으로 푼다고 생각하면 된다.
 
 #### 33-1
 먼저 아래와 같은 내용의 페이지가 나온다.
@@ -224,7 +225,7 @@ echo("Wrong");
 </form>
 ```
 
-## 33-3
+#### 33-3
 
 ```php
 <hr>
@@ -254,7 +255,7 @@ http://webhacking.kr/challenge/bonus/bonus-6/33.phps?myip=본인의_공인IP주�
 ```
 
 #### 33-4
-> ~~문제가 슬슬 거지같아지기 시작한다.~~
+> ~~여러분의 순발력을 시험하는 조금 거지같은 문제 되시겠다.~~
 
 이번 문제는 페이지 내용이 살짝 다른데, 아래와 같다.
 
@@ -464,7 +465,7 @@ echo("Wrong");
 ?>
 ```
 
-소스코드를 보면, 반복문에서는 97 부터 시작하여 122 까지 홀수 인 숫자들을 아스키코드 표 상에서 대응하는 문자로 바꿔서([`chr`함수](http://php.net/manual/kr/function.chr.php)), `answer` 변수의 저장된 문자열에 덧붙이는 것([`.=` - 할당연산자](http://php.net/manual/kr/language.operators.assignment.php))을 볼 수 있다. 그리고 GET 요청을 통해 온 `ans` 가 반복문을 통해 만들어진 값과 같으면, 문제가 풀리는 것을 볼 수 있다.
+소스코드를 보면, 반복문에서는 97 부터 시작하여 122 까지 홀수 인 숫자들을 아스키코드 표 상에서 대응하는 문자로 바꿔서([`chr` 함수](http://php.net/manual/kr/function.chr.php)), `answer` 변수의 저장된 문자열에 덧붙이는 것([`.=` (할당연산자)](http://php.net/manual/kr/language.operators.assignment.php))을 볼 수 있다. 그리고 GET 요청을 통해 온 `ans` 가 반복문을 통해 만들어진 값과 같으면, 문제가 풀리는 것을 볼 수 있다.
 
 일일이 아스키코드 표 보면서 값 알아내기 귀찮으므로, 다음과 같은 자바스크립트 코드를 콘솔에서 돌려보자.
 그냥 아래 코드를 콘솔에 복붙하고 엔터키를 눌러보자.
@@ -483,9 +484,9 @@ console.log("ANSWER : "+answer);
 ANSWER : acegikmoqsuwy
 ```
 
-`ans` 의 값을 `acegikmoqsuwy` 로 해보 보내주면 됨을 알 수 있다.
+`ans` 의 값을 `acegikmoqsuwy` 로 보내주면 됨을 알 수 있다.
 
-아래와 같이 주소창 뒤에 붙여서 이동하자. 그러면 문제가 풀린다.
+아래와 같이 주소 뒤에 붙여서 이동하자. 그러면 문제가 풀린다.
 
 ```
 http://webhacking.kr/challenge/bonus/bonus-6/nextt.php?ans=acegikmoqsuwy
