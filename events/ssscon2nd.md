@@ -8,10 +8,10 @@
 
 ### 종료 되었습니다! 참석해주신 모든 분들께 감사드립니다!
 
----
+----
 
 연사 신청 | 참가 신청 | 라이트닝 토크
----|---|---
+----|---|---
 [~~마감됨(2016.11.11 오후 12:29)~~](https://docs.google.com/forms/d/e/1FAIpQLSeN-Ky4amh6Zqd9r01gPpHows2cM61RkoViTUpJAB36Az8YNw/viewform) | [~~지금 신청하세요!~~](https://docs.google.com/forms/d/e/1FAIpQLSfX_ZBPn_ClXh0cE-Z5lIjl9RlnG7N22PdOvCf6EberUDJNtA/viewform) | [~~지금 발표자로 신청하세요!~~](https://docs.google.com/forms/d/e/1FAIpQLSf0IHTOtFHV7o0LAHQYS67T-8r6rOQOOQCWYH6iJR7QMThFnA/viewform)
 일반 세션 : 20~40분, 튜토리얼 세션 50~60분 | 마감 : 2016.11.22 | 선착순 마감, 발표시간 5분 이하
 
@@ -26,7 +26,7 @@
 ## 컨퍼런스 일정
 
 시간 | 제목 | 비고
----|---|---|---
+----|---|---|---
 5:50PM~6:00PM|등록|
 6:00PM~6:10PM|컨퍼런스 일정 안내|
 6:10PM~6:40PM|웹 해킹 스터디 현황 - 한나라, 박지선, 김지연|일반 세션
@@ -50,7 +50,7 @@
 - 웹 해킹 스터디 현황 발표 및 문제풀이 시연
 - 슬라이드 자료 : http://www.slideshare.net/hanyoungbin/2-ssscon
 
----
+----
 
 ### 픽셀워치
 - 연사 : 안두현(성공회대학교 컴퓨터공학과, 현 SSS 회원)
@@ -58,7 +58,7 @@
 - 게임프로젝트 팀 결성 소개 및 향후 프로젝트 수행계획 발표
 - 슬라이드 자료 : (아직 없음)
 
----
+----
 
 ### Move Semantics
 - 연사 : 김재경(성공회대학교 소프트웨어공학과)
@@ -66,7 +66,7 @@
 - C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
 - 슬라이드 자료 : http://www.slideshare.net/QooJuice/move-semantics
 
----
+----
 
 ### Git & GitHub 기본
 - 연사 : 한영빈(성공회대학교 소프트웨어공학과, 현 SSS 운영진)
@@ -83,13 +83,13 @@
  - ~~타이핑 가능한 손과 멀쩡한 정신~~
  - 텍스트 에디터
 
----
+----
 
 ### JAVASCRIPTING TUTORIAL
 - 연사 : 추건우(성공회대학교 소프트웨어공학과, 현 SSS 대표)
 - 튜토리얼 세션
 - 쉽고 재미있는 javascript 튜토리얼 입니다.
- - npm 패키지 중에 `javascripting`을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 음예정입니다.
+- npm 패키지 중에 `javascripting`을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 음예정입니다.
 - 준비물
  1. 노트북 필참
  2. Node.js 설치
@@ -97,7 +97,7 @@
  4. 서브라임, atom, 메모장 등.. 자기가 편한 에디터
 - 슬라이드 자료 : https://github.com/chugeonwoo/nodeschool_seoul/tree/master/javascripting_tutorial
 
----
+----
 
 ### 라이트닝 토크
 >라이트닝 토크는, 30~40 분 동안 진행하는 일반 발표들과 달리, 5분 이내로 가볍게 자유로운 주제로 진행하는 발표입니다.
