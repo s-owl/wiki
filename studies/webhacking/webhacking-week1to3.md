@@ -504,6 +504,20 @@ document.getElementById('hackme').style.posLeft=799
 - 1aaaaa_.IP주소.%09p%09a%09s%09s 가 나옴.
 - 이것을 주소창에 입력.(val = 1aaaaa_.IP주소.%09p%09a%09s%09s)
 
+### 21번 문제
+- 소스를 보면 히든값으로 id와 pw을 받는다.
+- `0`을 입력했을 때, 반응 없다.
+- `1`, `2`을 입력했을 때, `True`.
+-  3이상을 입력했을 때, `False`.
+- `SQL INJECTION`문제인지 알기 위해 테스트를 한다.
+- `1 and 1=1`을 입력하면 `True`.
+- `1 and 1=0`을 입력하면 `False`.
+- 테스트 결과 `Blind SQL Injection`을 실행할 수 있다.
+- 이 다음부터 어떻게 해야할지 감이 안 잡혀 구글링한 결과,
+- 웹해킹 페이지에 연결된 `파이썬`코드를 돌리면
+- `blindsqlinjectionkk`이 답인 것을 알 수 있다.
+- `Flag`에 입력하면 문제해결.
+
 ### 25번 문제
 - url을 먼저 살펴보면, ?file=hello 라고 되어있다.
 
