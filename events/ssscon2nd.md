@@ -47,32 +47,32 @@
  - 박지선(성공회대학교 소프트웨어공학과, 현 SSS 회원)
  - 김지연(성공회대학교 소프트웨어공학과, 현 SSS 회원)
 - 일반 세션
- - 웹 해킹 스터디 현황 발표 및 문제풀이 시연
- - 슬라이드 자료 : http://www.slideshare.net/hanyoungbin/2-ssscon
+- 웹 해킹 스터디 현황 발표 및 문제풀이 시연
+- 슬라이드 자료 : http://www.slideshare.net/hanyoungbin/2-ssscon
 
 ----
 
 ### 픽셀워치
 - 연사 : 안두현(성공회대학교 컴퓨터공학과, 현 SSS 회원)
- - 일반 세션
- - 게임프로젝트 팀 결성 소개 및 향후 프로젝트 수행계획 발표
- - 슬라이드 자료 : (아직 없음)
+- 일반 세션
+- 게임프로젝트 팀 결성 소개 및 향후 프로젝트 수행계획 발표
+- 슬라이드 자료 : (아직 없음)
  
 ----
 
 ### Move Semantics
 - 연사 : 김재경(성공회대학교 소프트웨어공학과)
- - 일반 세션
- - C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
- - 슬라이드 자료 : http://www.slideshare.net/QooJuice/move-semantics
+- 일반 세션
+- C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
+- 슬라이드 자료 : http://www.slideshare.net/QooJuice/move-semantics
  
 ----
  
 ### Git & GitHub 기본
 - 연사 : 한영빈(성공회대학교 소프트웨어공학과, 현 SSS 운영진)
- - 튜토리얼 세션
- - Git 과 GitHub 를 이용하여 버전관리와 협업을 하는 방법에 대한 튜토리얼 세션을 진행합니다.
- - 슬라이드 자료 : SSS 여름방학 Git & GitHub 스터디 자료 활용 예정
+- 튜토리얼 세션
+- Git 과 GitHub 를 이용하여 버전관리와 협업을 하는 방법에 대한 튜토리얼 세션을 진행합니다.
+- 슬라이드 자료 : SSS 여름방학 Git & GitHub 스터디 자료 활용 예정
  - 1주차 : http://www.slideshare.net/hanyoungbin/git-github-1-63736413
  - 2주차-A : http://www.slideshare.net/hanyoungbin/git-github-2a?qid=789a081a-b2a6-42d3-8a04-990ee729f6ca&v=&b=&from_search=6
  - 2주차-B : http://www.slideshare.net/hanyoungbin/git-github-2b
@@ -87,9 +87,9 @@
  
 ### JAVASCRIPTING TUTORIAL
 - 연사 : 추건우(성공회대학교 소프트웨어공학과, 현 SSS 대표)
- - 튜토리얼 세션
- - 쉽고 재미있는 javascript 튜토리얼 입니다.
- - npm 패키지 중에 `javascripting`을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 음예정입니다.
+- 튜토리얼 세션
+- 쉽고 재미있는 javascript 튜토리얼 입니다.
+- npm 패키지 중에 `javascripting`을 직접 풀어서 정리하였고, 워크샵 형태로 진행할 음예정입니다.
 - 준비물
  - 1. 노트북 필참
  - 2. Node.js 설치
@@ -105,5 +105,5 @@
  
 #### 아치리눅스에서 Docker로 Oracle DB 사용하기
 - 연사 : 김준수(성공회대학교 소프트웨어공학과, 현 SSS 부대표)
- - 5분간 시연과 설명, 결론은 왠만한 OS 모두 가능, docker 짱짱
- - 관련 자료 : http://blog.harveyk.me/post/arch-linux-oracle-database-docker/
+- 5분간 시연과 설명, 결론은 왠만한 OS 모두 가능, docker 짱짱
+- 관련 자료 : http://blog.harveyk.me/post/arch-linux-oracle-database-docker/
