@@ -57,7 +57,11 @@
 - 일반 세션
 - 게임프로젝트 팀 결성 소개 및 향후 프로젝트 수행계획 발표
 - 슬라이드 자료 : (아직 없음)
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
 ----
 
 ### Move Semantics
@@ -65,9 +69,15 @@
 - 일반 세션
 - C++11에서 도입된 R-value Refernece와 Move Semantics에 대해 알아봅니다.
 - 슬라이드 자료 : http://www.slideshare.net/QooJuice/move-semantics
+<<<<<<< HEAD
  
 ----
  
+=======
+
+----
+
+>>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
 ### Git & GitHub 기본
 - 연사 : 한영빈(성공회대학교 소프트웨어공학과, 현 SSS 운영진)
 - 튜토리얼 세션
@@ -82,9 +92,15 @@
  - Git 미리 설치되어 있어야 함
  - ~~타이핑 가능한 손과 멀쩡한 정신~~
  - 텍스트 에디터
+<<<<<<< HEAD
  
 ----
  
+=======
+
+----
+
+>>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
 ### JAVASCRIPTING TUTORIAL
 - 연사 : 추건우(성공회대학교 소프트웨어공학과, 현 SSS 대표)
 - 튜토리얼 세션
@@ -96,9 +112,15 @@
  - 3. 깃헙
  - 4. 서브라임, atom, 메모장 등.. 자기가 편한 에디터
 - 슬라이드 자료 : https://github.com/chugeonwoo/nodeschool_seoul/tree/master/javascripting_tutorial
+<<<<<<< HEAD
  
 ----
  
+=======
+
+----
+
+>>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
 ### 라이트닝 토크
 >라이트닝 토크는, 30~40 분 동안 진행하는 일반 발표들과 달리, 5분 이내로 가볍게 자유로운 주제로 진행하는 발표입니다.
 참고로, 5분 지나면 마이크는 가차 없이 다음 발표자에게 넘겨집니다.
