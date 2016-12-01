@@ -3,10 +3,7 @@
 ## 4주차 모임
 - 2016.11.21
 - 참석자 : 김지연, 박지선, 한나라, 한영빈
-<<<<<<< HEAD
-=======
 - 결석 : 송지은(병결)
->>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
 - 푼 문제
  - 김지연 : 23
  - 박지선 :
@@ -589,7 +586,25 @@ http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
 - 참조 메일 주소는 `cc: ... ` 혹은 `bcc: ... ` 형태로 전송된다.
 - 따라서 `email= bb@slfjl (줄바꿈) cc: hacker@webhacking.kr` 과 같은 형식으로 코드를 수정해서 넘겨주면 패스워드 값이 나온다.
 - `auth` 에 입력해주면 문제가 풀린다.
-<<<<<<< HEAD
 
-=======
->>>>>>> c9cf564becad9e2b228e9741c93b413d98ce5e60
+## 6주차 모임
+- 2016.12.05
+- 참석자 : 한나라, 김지연, 박지선, 한영빈, 송지은
+- 결석 :
+- 푼 문제
+ - 김지연 :
+ - 박지선 :
+ - 한나라 :
+ - 한영빈 :
+ - 송지은 : 34
+
+### 34번문제
+
+- 개발자도구로 소스코드를 확인한다.
+- 복잡한 코드 무시하고 끝 부분 소스코드를 확인하면 아래와 같이 써있다.
+```
+if(document.URL.indexOf('0lDz0mBi2')!=-1){location.href='Passw0RRdd.pww';}else{alert('Wrong');}
+```
+- 조건문이 참이 될 경우 `Passw0RRdd.pww` 주소로 들어감을 알 수 있다.
+- `http://webhacking.kr/challenge/javascript/Passw0RRdd.pww` URL에 그냥 바로 주소를 적어준다.
+- 나오는 패스워드를 `Auth`에 적어주면 문제가 풀린다.
