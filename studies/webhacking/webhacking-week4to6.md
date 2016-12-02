@@ -42,7 +42,7 @@
  - 한영빈 : 33
  - 송지은 : 47
 
-### 7번문제
+### 7번 문제
 
 - URL을 보면 `val=1` 확인할 수 있다.
 - `auth`을 클릭하면 `Acess_Denied`라는 안내창이 나온다.
@@ -578,7 +578,7 @@ http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
 
 화면에 나타나는 플래그를 `Auth` 에 제출하면 문제가 풀린다.
 
-### 47번문제
+### 47번 문제
 
 - `burpsuite` 툴의 `proxy` 기능을 사용해서 이메일 입력 후 제출을 눌렀을 때 넘어가는 패킷을 잡는다.
 - `email= ... ` 형태로 입력한 메일이 전송됨을 알 수 있다.
@@ -595,10 +595,85 @@ http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
  - 김지연 :
  - 박지선 :
  - 한나라 :
- - 한영빈 :
+ - 한영빈 : 5
  - 송지은 : 34
 
-### 34번문제
+## 5번 문제
+- 문제를 들어가면 두 가지 버튼이 보인다. `Login` 과 `Join`
+- `Login` 을 누르면, 로그인 화면이 나오고, `Join` 버튼은 그냥 작동하지 않고 *Access_Denied* 만 나온다.
+- 로그인 화면에서 로그인을 시도 해 보자. 본인의 ID 에 비밀번호 아무거나 입력해서 시도 해 보면 다음과 같은 메시지가 나온다.
+
+>Access Denied!   
+>id is not admin
+
+- `admin` 를 입력하고 비밀번호 아무거나 입력하면, 아래와 같은 메시지가 나온다.
+
+>Wrong password   
+
+- Join 버튼을 누르면 나와야 할 회원가입 페이지로 가 보자. 버튼도 안 먹고 주소도 모르는 데 어떻게 가냐고? 일단 추측을 해 보자.
+- 로그인 페이지는 뒤에 붙는 경로가 `/mem/login.php` 이므로, 회원가입 페이지는 경로가 `/mem/join.php` 임을 추측해서 들어가 보자.
+
+```
+http://webhacking.kr/challenge/web/web-05/mem/login.php
+```
+
+- 주소가 올바른 것 같다. 일단 빈 페이지가 나오는데, 페이지 소스를 보면 아래와 같다.
+
+```html
+<html>
+<title>Challenge 5</title></head><body bgcolor=black><center>
+<script>
+l='a';ll='b';lll='c';llll='d';lllll='e';llllll='f';lllllll='g';llllllll='h';lllllllll='i';llllllllll='j';lllllllllll='k';llllllllllll='l';lllllllllllll='m';llllllllllllll='n';lllllllllllllll='o';llllllllllllllll='p';lllllllllllllllll='q';llllllllllllllllll='r';lllllllllllllllllll='s';llllllllllllllllllll='t';lllllllllllllllllllll='u';llllllllllllllllllllll='v';lllllllllllllllllllllll='w';llllllllllllllllllllllll='x';lllllllllllllllllllllllll='y';llllllllllllllllllllllllll='z';I='1';II='2';III='3';IIII='4';IIIII='5';IIIIII='6';IIIIIII='7';IIIIIIII='8';IIIIIIIII='9';IIIIIIIIII='0';li='.';ii='<';iii='>';lIllIllIllIllIllIllIllIllIllIl=lllllllllllllll+llllllllllll+llll+llllllllllllllllllllllllll+lllllllllllllll+lllllllllllll+ll+lllllllll+lllll;
+lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+lll+lllllllllllllll+lllllllllllllll+lllllllllll+lllllllll+lllll;if(eval(lIIIIIIIIIIIIIIIIIIl).indexOf(lIllIllIllIllIllIllIllIllIllIl)==-1) { bye; }if(eval(llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+'U'+'R'+'L').indexOf(lllllllllllll+lllllllllllllll+llll+lllll+'='+I)==-1){alert('access_denied');history.go(-1);}else{document.write('<font size=2 color=white>Join</font><p>');document.write('.<p>.<p>.<p>.<p>.<p>');document.write('<form method=post action='+llllllllll+lllllllllllllll+lllllllll+llllllllllllll+li+llllllllllllllll+llllllll+llllllllllllllll
++'>');document.write('<table border=1><tr><td><font color=gray>id</font></td><td><input type=text name='+lllllllll+llll+' maxlength=5></td></tr>');document.write('<tr><td><font color=gray>pass</font></td><td><input type=text name='+llllllllllllllll+lllllllllllllllllllllll+' maxlength=10></td></tr>');document.write('<tr align=center><td colspan=2><input type=submit></td></tr></form></table>');}
+</script>
+</body>
+</html>
+```
+
+- 페이지 소스를 보면 난독화된 Javascript 소스가 들어가 있는 것을 볼 수 있다. 중간에 `document.write()` 함수가 있고, 조건문으로 감싸져 있는 것으로 보아, 특정 조건을 만족하면 페이지에 내용이 나타남을 알 수 있다.
+- 난독화된 코드를 일일이 해독할 필요는 없고, 필요한 부분만 웹 브라우저에 내장된 개발자 도구의 자바스크립트 콘솔에서 실행해 보면 된다.
+- 먼저 조건문 이전 부분의 코드를 실행해 보자. 해당 부분은 아래와 같다.
+
+```javascript
+l='a';ll='b';lll='c';llll='d';lllll='e';llllll='f';lllllll='g';llllllll='h';lllllllll='i';llllllllll='j';lllllllllll='k';llllllllllll='l';lllllllllllll='m';llllllllllllll='n';lllllllllllllll='o';llllllllllllllll='p';lllllllllllllllll='q';llllllllllllllllll='r';lllllllllllllllllll='s';llllllllllllllllllll='t';lllllllllllllllllllll='u';llllllllllllllllllllll='v';lllllllllllllllllllllll='w';llllllllllllllllllllllll='x';lllllllllllllllllllllllll='y';llllllllllllllllllllllllll='z';I='1';II='2';III='3';IIII='4';IIIII='5';IIIIII='6';IIIIIII='7';IIIIIIII='8';IIIIIIIII='9';IIIIIIIIII='0';li='.';ii='<';iii='>';lIllIllIllIllIllIllIllIllIllIl=lllllllllllllll+llllllllllll+llll+llllllllllllllllllllllllll+lllllllllllllll+lllllllllllll+ll+lllllllll+lllll;
+lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+lll+lllllllllllllll+lllllllllllllll+lllllllllll+lllllllll+lllll;
+```
+- 실행 결과로 다음과 같은 것이 나오는데, 이는 코드에서 가장 마지막 구문이 실행된 것의 결과이다. 결과는 `documents.cookie` 라는 문자열 인 것 으로 보인다.
+
+```javascript
+"document.cookie"
+```
+
+- 이번에는 조건문의 마지막 부분에 있는 페이지에 내용을 삽입하는 코드를 실행해 보자. 해당 부분은 아래와 같다.
+
+```javascript
+document.write('<font size=2 color=white>Join</font><p>');document.write('.<p>.<p>.<p>.<p>.<p>');document.write('<form method=post action='+llllllllll+lllllllllllllll+lllllllll+llllllllllllll+li+llllllllllllllll+llllllll+llllllllllllllll
++'>');document.write('<table border=1><tr><td><font color=gray>id</font></td><td><input type=text name='+lllllllll+llll+' maxlength=5></td></tr>');document.write('<tr><td><font color=gray>pass</font></td><td><input type=text name='+llllllllllllllll+lllllllllllllllllllllll+' maxlength=10></td></tr>');document.write('<tr align=center><td colspan=2><input type=submit></td></tr></form></table>');
+```
+
+- 그리고 나서, 페이지를 보면 회원 가입 입력 폼이 하나 나타나 있는 것을 볼 수 있다.
+- 본인이 원하는 데로 대충 채워넣고 제출하면, 가입 잘 되었다고 `Done!` 과 함꼐 입력한 것이 나오는 것을 볼 수 있다.
+- `admin` 과 본인이 원하는 비밀번호를 입력하면, 이미 존재한다고 나온다.
+
+>id 'admin' is already exists   
+
+- 그렇다면, `admin ` 이라는 id 로 가입을 해 보자. 참고로 id 입력칸은 최대 5자까지만 입력 되는 상태이다.
+- 개발자 콘솔을 열어 요소 검사기를 열고, 해당 입력칸 부분을 보자.
+
+```html
+<input type="text" name="id" maxlength="5">
+```
+
+- 입력 길이가 최대 5로 설정 되어 있음을 볼 수 있다. `maxlength="5"` 부분을 더블클릭해서 6 이상의 값으로 고친다. 대부분의 웹 브라우저에서는 바로 고쳐서 페이지에 적용이 가능하다.
+- 이제 id 에 `admin ` 을, pass 에는 본인이 원하는 것으로 입력한다. 필자는 `1111` 로 입력하겠다. 그리고 제출하면 다음과 같은 내용이 나타난다.
+
+>sign up   
+
+- 이제 다시 로그인 페이지로 이동해서, 방금 제출한 것으로 로그인 해 보자. 필자의 경우는 `admin` 과 `1111` 을 입력하였다.
+- 문제가 풀리는 것을 볼 수 있다.
+
+### 34번 문제
 
 - 개발자도구로 소스코드를 확인한다.
 - 복잡한 코드 무시하고 끝 부분 소스코드를 확인하면 아래와 같이 써있다.
