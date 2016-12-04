@@ -592,13 +592,13 @@ http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
 - 참석자 : 한나라, 김지연, 박지선, 한영빈, 송지은
 - 결석 :
 - 푼 문제
- - 김지연 :
+ - 김지연 : 60
  - 박지선 :
  - 한나라 :
  - 한영빈 : 5
  - 송지은 : 34
 
-## 5번 문제
+### 5번 문제
 - 문제를 들어가면 두 가지 버튼이 보인다. `Login` 과 `Join`
 - `Login` 을 누르면, 로그인 화면이 나오고, `Join` 버튼은 그냥 작동하지 않고 *Access_Denied* 만 나온다.
 - 로그인 화면에서 로그인을 시도 해 보자. 본인의 ID 에 비밀번호 아무거나 입력해서 시도 해 보면 다음과 같은 메시지가 나온다.
@@ -683,3 +683,102 @@ if(document.URL.indexOf('0lDz0mBi2')!=-1){location.href='Passw0RRdd.pww';}else{a
 - 조건문이 참이 될 경우 `Passw0RRdd.pww` 주소로 들어감을 알 수 있다.
 - `http://webhacking.kr/challenge/javascript/Passw0RRdd.pww` URL에 그냥 바로 주소를 적어준다.
 - 나오는 패스워드를 `Auth`에 적어주면 문제가 풀린다.
+
+### 60번 문제
+
+- 문제를 클릭하면 `소스` 페이지가 링크 되어있다.
+
+>Access Denied
+
+>index.phps
+
+- 소스를 보면 (소스가 길기 때문에 나눠서 해석.)
+
+```php
+<?
+sleep(1);
+
+if(eregi("[0-9]",$_COOKIE[PHPSESSID])) exit("Access Denied<br><a href=index.phps>index.phps</a>");
+
+if($_GET[mode]=="auth")
+{
+echo("Auth~<br>");
+    $f=@file("readme/$_SESSION[id].txt");
+    for($i=0;$i<=strlen($f);$i++)
+        {
+        $result.=$f[$i];
+        }
+    if(eregi("$_SESSION[id]",$result))
+    {
+    echo("Done!");
+    @unlink("readme/$_SESSION[id].txt");
+    @clear();
+    exit();
+    }
+}
+```
+
+- `sleep` 는 지연시키는 함수. 
+- `sleep(1)`은 1초를 지연시킨다라는 의미.
+- `eregi`는 문자를 찾는 함수.
+- `COOKIE(PHPSESSID)`값이 0~9일 경우 `Access Denied` 출력.
+- if문 보면 `mode`값이 `auth`일 경우 `Auth~` 라고 출력하고 `f`에 `readme/$_SESSION[id].txt`를 저장한다.
+- 그다음 for문에서 `result`에 `txt` 내용 을 저장.
+- 그다음 if문은 `$_SESSION[id]`의 값이 `result`에 있으면 `Done`을 출력하고 `unlink`를 호출해 `txt`파일을 삭제한다.
+- 그러면 문제 `clear`.
+
+- 일단 `EditThisCookie`를 사용해 쿠키값에 들어있는 숫자를 다 지워본다.
+- 그 후 `새로고침`하면 
+
+>login plz
+
+- 다시 `로그인`해서 접속하면 
+
+>hi
+
+- 첫번째 if문대로 주소 끝에 `?mode=auth`를 입력해본다.
+
+>Auth~
+
+>hi
+
+- 위처럼 출력되었지만 `Done`은 출력되지 않음.
+- 이 결과는 두번째 if문 성립조건을 충족하지 못했다는 것.
+- `txt`파일이 없어 result에 저장 되지 않은 것이다.
+
+- 남은 소스를 보면
+
+```php
+$f=@fopen("readme/$_SESSION[id].txt","w");
+@fwrite($f,"$_SESSION[id]");
+@fclose($f);
+
+if($_SERVER[REMOTE_ADDR]!="127.0.0.1")
+{
+sleep(1);
+@unlink("readme/$_SESSION[id].txt");
+}
+
+?>
+```
+
+- `fopen`을 사용해 `txt`파일을 만들어 `f`에 저장.
+- `fwrite`을 통해 `f`에 저장된 내용을 `$_SESSION[id]`에 저장한다.
+- 마지막 if문을 보면 `ip주소`과 `127.0.0.1`과 다를 경우,
+- 1초를 지연하고 파일을 삭제 `unlink`한다.
+- 그러면 파일이 삭제되기 전에 `clear`해야한다.
+- 구글 검색결과, 다른 브라우저 두개를 사용해서 문제를 해결해야한다.
+- 쿠키값을 수정한 후 들어오는 순간 if문이 실행되기 때문에,
+- 한 브라우저는 파일 생성용, 나머지는 문제해결용으로 사용한다.
+- `Chrome`과 `Internet Explorer`를 사용했다.
+- 두 브라우저로 문제를 접속한 후 쿠키값을 바꾼다.
+- 이 때 서로의 쿠키값을 달라야한다.
+- 또 쿠키값은 문자로만 이루어져야한다.
+- `Internet Explorer`의 쿠키값 먼저 변경해주고 다시 로그인해서 접속한 후
+- 주소창 맨 끝에 `?mode=auth`을 입력만 해주었다. (`Enter` 누르기 전)
+- 그 다음 `Chrome`의 쿠키값을 변경하고 다시 로그인해서 접속해서 `hi` 확인
+- `Internet Explorer`로 넘어와 `Enter` 누르고 재빠르게 `Chrome` 새로고침.
+- 이것을 반복하다 보면 문제해결.
+
+- 이 문제는 `레이스컨디션`을 이용해서 푸는 문제.
+- `레이스컨디션` = 프로세스가 서로 경쟁하는 것.
