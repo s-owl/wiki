@@ -593,7 +593,7 @@ http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
 - 결석 :
 - 푼 문제
  - 김지연 : 60
- - 박지선 :
+ - 박지선 : 52
  - 한나라 :
  - 한영빈 : 5
  - 송지은 : 34
@@ -683,6 +683,28 @@ if(document.URL.indexOf('0lDz0mBi2')!=-1){location.href='Passw0RRdd.pww';}else{a
 - 조건문이 참이 될 경우 `Passw0RRdd.pww` 주소로 들어감을 알 수 있다.
 - `http://webhacking.kr/challenge/javascript/Passw0RRdd.pww` URL에 그냥 바로 주소를 적어준다.
 - 나오는 패스워드를 `Auth`에 적어주면 문제가 풀린다.
+
+
+### 52번
+
+1. 일단 보아하니 Header injection 문제 인 것 같다.
+2. 우선 헤더 생성을 눌러보니 헤더에?id=sgs04023하고 정보가 추가되며, response 헤더에도 id: sgs04023하고 내 아이디가 추가되었다.
+3. 문제에서 id=sgs04023 쿠키를 생성하라고 힌트를 준것으로 보고서..
+	- 처음에 ?id=sgs04023 Set-Cookie: sgs04023 이렇게 적고 필터링을 우회하려고 시도했다.
+	- ?id=sgs04023%0A%0DSet-Cookie:%20sgs04023했다가 안먹혔고...
+	- 또 그냥 ?id=Set-Cookie: id=sgs04023이렇게 생각해서 역시 필터링을 우회하려고 시도해봤다.
+	- ?id=%0DSet-Cookie:%20id=sgs04023했다가 이상하게도 인터넷이 분명 잘 통하는게 분명한데 '페이지 로딩이 잠시 지연되었습니다. 인터넷 접속상태 확인 후 다시 시도하여 주시기 바랍니다.'라는 이상한 페이지가 자꾸 떴다.
+4. 그 밖에도 여러가지 뻘짓들을 하다가 알아낸 정답은..
+	- ?id=sgs04023 clear: sgs04023이라는 간단한...후우... 힌트를 더 명확하게 살폈더라면 간단히 풀 수 있었을 것 같았다.
+	- 그래서 저것 역시 필터링을 우회하면 ?id=sgs04023%0D%0Aclear:%20sgs04023이 된다.
+
++추가적으로:
+	필터링 우회를 구글링하다가 다같이 공유하면 좋을듯해서 올리는 몇가지 안되는 것들..
+	1) 개행문자
+		- Line Feed('\n', 0x0A, %0A): (커서가) 한줄 끝에서 시작 위치로 돌아가는 것 (기존 문장은 삭제)
+		- Carrige Return ('\r', 0x0D, %0D): (커서가) 다음 줄로 이동
+	2) 공백 ' ', %20: 공백
+
 
 ### 60번 문제
 
