@@ -9,10 +9,11 @@
   * [제3회 SSSCON](events/ssscon3rd.md)
   * [2016년도 소프트웨어공학과 워크샵 SSS 트랙](events/softworkshop2016ssstrack.md)
 * [스터디 목록](studies/index.md)
-  * [Docker Study](studies/docker-study.md)
+  * [파이썬 기본 스터디](studies/python-basics-study.md)
   * [웹해킹 스터디](studies/webhacking/index.md)
     * [1주차 ~ 3주차](studies/webhacking/webhacking-week1to3.md)
     * [4주차 ~ 6주차](studies/webhacking/webhacking-week4to6.md)
+  * [Docker Study](studies/docker-study.md)
 * 서버
   * [캐노니컬 라이브패치 서비스](server/canonical-livepatch.md)
   * [unattended-upgrades](server/unattended-upgrades.md)
