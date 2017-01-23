@@ -48,8 +48,13 @@
 - 연사 : 추건우(성공회대학교 소프트웨어공학과, 현 SSS 대표)
 - 일반 세션
 - SASS 를 사용하여 쉽고 빠르게 CSS 를 작성해보자
-- 슬라이드 자료 : (추후 공유)
+- 슬라이드 자료 :
 
+첫 번째 슬라이드 : https://sway.com/awOMJvsOoAMG5Uki
+
+두 번째 슬라이드 : https://sway.com/HFDuVB5yRS62l8ev
+
+github 저장소 : https://github.com/chugeonwoo/ssscon
 -----
 
 
