@@ -1,20 +1,20 @@
 # 위키 수정 가이드
 
-위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/skhu-sss/skhu-sss.github.io) 에 대한 쓰기 권한이 먼저 필요합니다. 저장소 관리자에게 문의하여 쓰기 권한을 먼저 얻으세요.
+위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/skhu-sss/wiki) 에 대한 쓰기 권한이 먼저 필요합니다. 저장소 관리자에게 문의하여 쓰기 권한을 먼저 얻으세요.
 
 ## 기본적인 컨텐츠 수정 방법
 
- - 저장소를 로컬로 복제 하고, `src` 가지로 변경합니다.
-  - 위키 컨텐츠 수정은 `src` 가지에서 이뤄집니다.
-  - `master` 가지에는 접근하지 않도록 합니다. 생성된 위키 페이지가 보관되는 가지입니다.
+ - 저장소를 로컬로 복제 하고, `master` 가지로 변경합니다.
+  - 위키 컨텐츠 수정은 `master` 가지에서 이뤄집니다.
+  - `gh-pages` 가지에는 접근하지 않도록 합니다. 생성된 위키 페이지가 보관되는 가지입니다.
 
 ``` bash
-git clone https://github.com/skhu-sss/skhu-sss.github.io.git
+git clone https://github.com/skhu-sss/wiki.git
 ```
 
  - 원하는 문서를 수정합니다.
   - 아래 파일들은 위키 페이지 생성 밒 배포 설정을 수정하는 경우가 아니라면, 수정하지 않도록 합니다.
-   - `.travis.yml`, `deploy.sh`, `deploy_rsa.enc`
+   - `.travis.yml`, `deploy.sh`, `wiki_deploy_key.enc`
  - 문서는 마크다운 문법으로 작성하도록 합니다.
  - 새로운 문서를 추가한 경우에는 사이드바에 보이도록 `SUMMARY.md` 파일을 수정합니다.
 
@@ -27,16 +27,16 @@ git clone https://github.com/skhu-sss/skhu-sss.github.io.git
  * [<사이드바에 표시할 제목>](문서_파일_경로<상대경로>.md)
 ```
 
- - 커밋하고 `src` 가지에 푸시 합니다. `master` 가지에는 푸시 하시면 안 됩니다. 웹 사이트 갱신중 오류가 발생 할 수 있습니다.
+ - 커밋하고 `master` 가지에 푸시 합니다. `gh-pages` 가지에는 푸시 하시면 안 됩니다. 웹 사이트 갱신중 오류가 발생 할 수 있습니다.
 
 ```bash
  git add .
  git commit -m "변경 사항에 대한 설명"
- git push origin src
+ git push origin master
 ```
 
- - [위키 사이트](https://skhu-sss.github.io)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
- - [여기](https://travis-ci.org/skhu-sss/skhu-sss.github.io)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
+ - [위키 사이트](https://skhu-sss.github.io/wiki)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
+ - [여기](https://travis-ci.org/skhu-sss/wiki)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
 
 ## 마크다운 문법
 ---
