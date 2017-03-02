@@ -1,5 +1,5 @@
 ![SSS LOGO](https://avatars2.githubusercontent.com/u/20768166?v=3&s=200)
-# SSS Wiki [![Build Status](https://travis-ci.org/skhu-sss/skhu-sss.github.io.svg?branch=src)](https://travis-ci.org/skhu-sss/skhu-sss.github.io)
+# SSS Wiki [![Build Status](https://travis-ci.org/skhu-sss/wiki.svg?branch=master)](https://travis-ci.org/skhu-sss/wiki)
 
 
 > 깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키
