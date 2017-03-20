@@ -1,6 +1,7 @@
 # Summary
 
 * [SSS Wiki](README.md)
+* [SSS Homepage](https://skhu-sss.github.io)
 * [위키 수정 가이드](HowToEdit.md)
 * [개인 운영 블로그 목록](blogs.md)
 * [행사 목록](events/index.md)
