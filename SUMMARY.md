@@ -21,5 +21,6 @@
   * [Let's Encrypt](letsencrypt.md)
 * 패키지 관리자
   * [Chocolatey](package-manager/choco.md)
+  * [Homebrew](package-manager/homebrew.md)
 * 기타
   * [\[SKHU\]불여우와 함께 숲으로 들어가기](skhu-forest-with-firefox.md)
