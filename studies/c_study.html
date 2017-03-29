@@ -544,27 +544,28 @@
 <li>2017.03.27</li>
 <li>&#xCD9C;&#xC11D;: &#xAE40;&#xADDC;&#xD76C;, &#xAE40;&#xBB38;&#xC218;, &#xBC15;&#xCC2C;&#xC6B0;, &#xC7A5;&#xC740;&#xC560;, &#xD5C8;&#xC218;&#xC9C4;</li>
 <li>&#xC9C4;&#xB3C4;: ~ ASCII</li>
-<li>&#xACFC;&#xC81C;: &#xC0BC;&#xAC01;&#xD615;&#xC758; &#xBC11;&#xBCC0;&#xACFC; &#xB192;&#xC774;&#xB97C; double&#xD615; &#xC815;&#xC218;&#xB85C; &#xC785;&#xB825;&#xBC1B;&#xC544; &#xC0BC;&#xAC01;&#xD615;&#xC758; &#xB113;&#xC774;&#xB97C; &#xC18C;&#xC218;&#xC810; &#xC14B;&#xC9F8;&#xC790;&#xB9AC;&#xAE4C;&#xC9C0; &#xCD9C;&#xB825;
-```c<h1 id="include-">include <stdio.h></stdio.h></h1>
-</li>
+<li>&#xACFC;&#xC81C;: &#xC0BC;&#xAC01;&#xD615;&#xC758; &#xBC11;&#xBCC0;&#xACFC; &#xB192;&#xC774;&#xB97C; double&#xD615; &#xC815;&#xC218;&#xB85C; &#xC785;&#xB825;&#xBC1B;&#xC544; &#xC0BC;&#xAC01;&#xD615;&#xC758; &#xB113;&#xC774;&#xB97C; &#xC18C;&#xC218;&#xC810; &#xC14B;&#xC9F8;&#xC790;&#xB9AC;&#xAE4C;&#xC9C0; &#xCD9C;&#xB825;</li>
 </ul>
-<p>int main(void)
-{
-    double x,y;
-    double area;</p>
-<pre><code>printf(&quot;&#xBC11;&#xBCC0;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;: &quot;);
-scanf(&quot;%lf&quot;, &amp;x);
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
 
-printf(&quot;&#xB192;&#xC774;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;: &quot;);
-scanf(&quot;%lf&quot;, &amp;y);
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">double</span> x,y;
+    <span class="hljs-keyword">double</span> area;
 
-area = (x*y)/2;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#xBC11;&#xBCC0;&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;: &quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;x);
 
-printf(&quot;&#xB113;&#xC774;&#xB294; %.3f&#xC785;&#xB2C8;&#xB2E4;.\n&quot;, area);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#xB192;&#xC774;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;: &quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lf&quot;</span>, &amp;y);
 
-return 0;
-</code></pre><p>}
-```</p>
+    area = (x*y)/<span class="hljs-number">2</span>;
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#xB113;&#xC774;&#xB294; %.3f&#xC785;&#xB2C8;&#xB2E4;.\n&quot;</span>, area);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
 <h2 id="2&#xC8FC;&#xCC28;">2&#xC8FC;&#xCC28;</h2>
 
                                 
@@ -609,7 +610,7 @@ return 0;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"C 스터디 2017","level":"1.6.1","depth":2,"next":{"title":"Algorithm Study","level":"1.6.2","depth":2,"path":"studies/algorithm/index.md","ref":"studies/algorithm/index.md","articles":[{"title":"OT","level":"1.6.2.1","depth":3,"path":"studies/algorithm/algossstudy-ot.md","ref":"studies/algorithm/algossstudy-ot.md","articles":[]}]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"C 스터디 2017","level":"1.6.1","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"Algorithm Study","level":"1.6.2","depth":2,"path":"studies/algorithm/index.md","ref":"studies/algorithm/index.md","articles":[{"title":"OT","level":"1.6.2.1","depth":3,"path":"studies/algorithm/algossstudy-ot.md","ref":"studies/algorithm/algossstudy-ot.md","articles":[]}]},{"title":"파이썬 기초 스터디","level":"1.6.3","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.4","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.4.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.4.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.5","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"https://github.com/skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/c_study.md","mtime":"2017-03-29T05:06:16.295Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-29T05:07:15.163Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"C 스터디 2017","level":"1.6.1","depth":2,"next":{"title":"Algorithm Study","level":"1.6.2","depth":2,"path":"studies/algorithm/index.md","ref":"studies/algorithm/index.md","articles":[{"title":"OT","level":"1.6.2.1","depth":3,"path":"studies/algorithm/algossstudy-ot.md","ref":"studies/algorithm/algossstudy-ot.md","articles":[]}]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"C 스터디 2017","level":"1.6.1","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"Algorithm Study","level":"1.6.2","depth":2,"path":"studies/algorithm/index.md","ref":"studies/algorithm/index.md","articles":[{"title":"OT","level":"1.6.2.1","depth":3,"path":"studies/algorithm/algossstudy-ot.md","ref":"studies/algorithm/algossstudy-ot.md","articles":[]}]},{"title":"파이썬 기초 스터디","level":"1.6.3","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.4","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.4.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.4.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.5","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"https://github.com/skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/c_study.md","mtime":"2017-03-29T05:12:44.011Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-29T05:13:46.394Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
