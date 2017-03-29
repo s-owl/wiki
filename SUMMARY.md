@@ -10,6 +10,7 @@
   * [2016년도 소프트웨어공학과 워크샵 SSS 트랙](events/softworkshop2016ssstrack.md)
   * [제1회 SSSCON](events/ssscon1st.md)
 * [스터디 목록](studies/index.md)
+  * [C 스터디 2017](studies/c_study.md)
   * [Algorithm Study](studies/algorithm/index.md)
     * [OT](studies/algorithm/algossstudy-ot.md)
   * [파이썬 기초 스터디](studies/python-basics-study.md)
