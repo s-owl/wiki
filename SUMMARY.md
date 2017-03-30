@@ -17,6 +17,7 @@
   * [Docker Study](studies/docker-study.md)
   * [Algorithm Study](studies/algorithm/index.md)
     * [OT](studies/algorithm/algossstudy-ot.md)
+    * [2주차](studies/algorithm/2-week.md)
 * 서버
   * [캐노니컬 라이브패치 서비스](server/canonical-livepatch.md)
   * [unattended-upgrades](server/unattended-upgrades.md)
