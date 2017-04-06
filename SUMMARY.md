@@ -14,6 +14,7 @@
   * [C 스터디 2017](studies/c_study.md)
   * [Algorithm Study](studies/algorithm/index.md)
     * [OT](studies/algorithm/algossstudy-ot.md)
+    * [1주차](studies/algorithm/1-week.md)
     * [2주차](studies/algorithm/2-week.md)
   * [파이썬 기초 스터디(2017.01)](studies/python-basics-study.md)
   * [웹해킹 스터디](studies/webhacking/index.md)

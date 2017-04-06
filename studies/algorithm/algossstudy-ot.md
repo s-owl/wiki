@@ -8,4 +8,4 @@
 - 일만관 세미나실1
 
 ## 맛보기 예제
-- [1000](https://www.acmicpc.net/problem/1000)
+- [1000](https://www.acmicpc.net/problem/1000) &ensp; A+B
