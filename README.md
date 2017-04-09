@@ -6,8 +6,6 @@
 
 SSS Wiki 에 오신것을 환영합니다. 위키를 처음 수정 하신다면, [위키 수정 가이드](HowToEdit.md) 를 먼저 읽어 보시기 바랍니다.
 
-![SSS POSTER](/poster.png)
-
 ## 빠른 링크(?)
 ### 위키 역사
 - [위키 수정기록(`master`가지 커밋 기록)](https://github.com/skhu-sss/wiki/commits/master)
