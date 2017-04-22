@@ -5,7 +5,7 @@
 | N | ID | Name |
 | --- | -------- | -------- |
 | 0 | @vaporise93 (Leader) | 김준수 |
-| 1 | doo9713 | 안두현 |
+| 1 | @doo9713 | 안두현 |
 | 2 | @chugeonwoo | 추건우 |
 | 3 | @songz1 | 송지은 |
 | 4 | @RyanBlackHead | 공원배 |
@@ -107,5 +107,33 @@
 - [2609](https://www.acmicpc.net/problem/2609) &ensp;&ensp; 최대공약수와 최소공배수
 - [1934](https://www.acmicpc.net/problem/1934) &ensp;&ensp; 최소공배수
 - [9613](https://www.acmicpc.net/problem/9613) &ensp;&ensp; GCD 합
+
+---
+
+# Algossstudy 3주차
+
+## 개요
+- 2017년 4월 20일
+- 참석자 : 추건우, 김준수, 공원배, 안두현, 송지은, 김미소
+
+## 장소
+- 랩실 ( 일만관 2B201 )
+
+## 알고리즘 발표
+- 안두현 : 카운팅소트&ensp;( python )
+&ensp;
+[클릭](https://github.com/skhu-sss/algossstudy/blob/master/Doo/Algo/CountingSort.py)
+- 공원배 : DES 알고리즘&ensp;( c )
+&ensp;
+[클릭](https://github.com/skhu-sss/algossstudy/blob/master/blackhead/DES%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/DES_Algorithm.c)
+
+## 도전과제
+- [10825](https://www.acmicpc.net/problem/10825) &ensp;	국영수
+- [10989](https://www.acmicpc.net/problem/10989) &ensp;	수 정렬하기 3
+- [11652](https://www.acmicpc.net/problem/11652) &ensp; 카드
+- [11004](https://www.acmicpc.net/problem/11004) &ensp; K번째 수
+- [1427](https://www.acmicpc.net/problem/1427) &ensp;&ensp;	소트인사이드
+- [1181](https://www.acmicpc.net/problem/1181) &ensp;&ensp; 단어 정렬
+- [10799](https://www.acmicpc.net/problem/10799) &ensp; 쇠막대기
 
 ---
