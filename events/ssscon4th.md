@@ -52,6 +52,7 @@
  - 연사 : 한영빈 (성공회대학교 소프트웨어공학과)
  - 일반 세션
  - GitHub Pages 를 이용한 웹페이지 호스팅과, Jekyll을 이용하여 GitHub Pages 에 블로그 호스팅하기
+ - 슬라이드 자료 : https://www.slideshare.net/hanyoungbin/jekyll-and-github-pages
 
 ## 라이트닝 토크
  - 공원배 : 알고리즘 스터디 현황 및 간단한 라이브 데모
