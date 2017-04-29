@@ -113,6 +113,32 @@
 # Algossstudy 3주차
 
 ## 개요
+- 2017년 4월 13일
+- 참석자 : 김준수, 공원배, 안두현, 송지은, 김희재
+
+## 장소
+- 랩실
+
+## 알고리즘 발표
+- 송지은 : 삽입정렬&ensp;
+&ensp;
+- 김희재 : 이진트리 삽입삭제&ensp;( java )
+&ensp;
+
+## 도전과제
+- [10825](https://www.acmicpc.net/problem/10825) &ensp;	국영수
+- [10989](https://www.acmicpc.net/problem/10989) &ensp;	수 정렬하기 3
+- [11652](https://www.acmicpc.net/problem/11652) &ensp; 카드
+- [11004](https://www.acmicpc.net/problem/11004) &ensp; K번째 수
+- [1427](https://www.acmicpc.net/problem/1427) &ensp;&ensp;	소트인사이드
+- [1181](https://www.acmicpc.net/problem/1181) &ensp;&ensp; 단어 정렬
+- [10799](https://www.acmicpc.net/problem/10799) &ensp; 쇠막대기
+
+---
+
+# Algossstudy 4주차
+
+## 개요
 - 2017년 4월 20일
 - 참석자 : 추건우, 김준수, 공원배, 안두현, 송지은, 김미소
 
@@ -128,12 +154,14 @@
 [클릭](https://github.com/skhu-sss/algossstudy/blob/master/blackhead/DES%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/DES_Algorithm.c)
 
 ## 도전과제
-- [10825](https://www.acmicpc.net/problem/10825) &ensp;	국영수
-- [10989](https://www.acmicpc.net/problem/10989) &ensp;	수 정렬하기 3
-- [11652](https://www.acmicpc.net/problem/11652) &ensp; 카드
-- [11004](https://www.acmicpc.net/problem/11004) &ensp; K번째 수
-- [1427](https://www.acmicpc.net/problem/1427) &ensp;&ensp;	소트인사이드
-- [1181](https://www.acmicpc.net/problem/1181) &ensp;&ensp; 단어 정렬
-- [10799](https://www.acmicpc.net/problem/10799) &ensp; 쇠막대기
+- [1874](https://www.acmicpc.net/problem/1874) &ensp;	스택 수열
+- [2504](https://www.acmicpc.net/problem/2504) &ensp;	괄호의 값
+- [1157](https://www.acmicpc.net/problem/1157) &ensp; 단어 공부
+- [10809](https://www.acmicpc.net/problem/10809) &ensp; 알파벳 찾기
+- [13300](https://www.acmicpc.net/problem/13300) &ensp;&ensp;	방 배정
+- [13301](https://www.acmicpc.net/problem/13301) &ensp;&ensp; 타일 장식물
+- [2920](https://www.acmicpc.net/problem/2920) &ensp; 음계
+- [1026](https://www.acmicpc.net/problem/1026) &ensp; 보물
 
 ---
+
