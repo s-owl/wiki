@@ -77,6 +77,64 @@ string = """문자열
 
 ## 4회차 모임
  - 2017.05.02
- - 참석자 :
- - 결석 :
+ - 참석자 : 김문수 , 김희수 , 장은애 , 한영빈
+ - 결석 : 김규희 , 박찬우 , 한나라 
  - 진도 : 6~9장
+
+### 질문 & 다룬 내용
+ - list를 정의하여 사용할 수 있음.
+ - for in list와 for in range를 이용한 반복문을 이해하고 사용할 수 있음.
+ - 직접 module을 만들어 사용할 수 있고 module을 가져와 사용할 수 있음.
+ - random module을 이용하여 코드를 작성할 수 있음.
+ 
+- 가위바위보 승무패 코드
+ 
+```python
+ import random
+
+def rsp():
+    return random.choice(["바위","가위","보"])
+ ```
+ 
+ ```
+ import rsp
+
+draw = 0
+win = 0
+lose = 0
+
+for i in range(0,100000000):
+    a = rsp.rsp()
+    b = rsp.rsp()
+
+    if a==b:
+        print("비김")
+        draw += 1
+
+    else:
+
+        if a=="바위":
+            if b=="가위":
+                print("승리")
+                win += 1
+            elif b=="보":
+                print("패배")
+                lose += 1
+        elif a=="가위":
+            if b=="바위":
+                print("패배")
+                lose += 1
+            elif b=="보":
+                print("승리")
+                win += 1
+
+        elif a=="보":
+            if b=="바위":
+                print("승리")
+                win += 1
+            elif b=="가위":
+                print("패배")
+                lose += 1
+
+print("a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니다.".format(win,draw,lose))
+```
