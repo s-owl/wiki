@@ -56,7 +56,7 @@
 - 튜토리얼 세션
 - 지워진 파일을 복구해보잣^^ 	포렌식이 뭔지정도?...
 - 준비물 : https://goo.gl/agZsE5
-- 슬라이드 자료 : undefined
+- 슬라이드 자료 : https://www.slideshare.net/ssuser995893/ssscon-forensic-pt
 
 ### Jekyll and GitHub Pages
  - 연사 : 한영빈 (성공회대학교 소프트웨어공학과)
