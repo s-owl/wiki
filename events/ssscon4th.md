@@ -8,7 +8,7 @@
 >각자 알고 있는 지식, 정보, 경험 등을 다수와 나누고, 새로운 사람들과 네트워킹 할 기회를 제공하는것이 SSSCON의 목표이며, 동아리 내부 컨퍼런스에서 학내 컨퍼런스로 규모를 키우고 있습니다.
 
 
-| [연사 신청(클릭)](https://goo.gl/forms/xTC5CfkMX5Am3GwU2) | [참가 신청(클릭)](https://goo.gl/forms/ibf3zxrrgyDihpCy2) |
+| [~~연사 신청(마감됨)~~](https://goo.gl/forms/xTC5CfkMX5Am3GwU2) | [참가 신청(클릭)](https://goo.gl/forms/ibf3zxrrgyDihpCy2) |
 |---|---|
 | 일반, 튜토리얼 세션(20~60분) / 라이트닝 토크(최대 5분) | 누구든지 참가 가능 |
 
