@@ -613,11 +613,66 @@ print(string.format(<span class="hljs-string">&quot;SSS&quot;</span>,<span class
 <h2 id="4&#xD68C;&#xCC28;-&#xBAA8;&#xC784;">4&#xD68C;&#xCC28; &#xBAA8;&#xC784;</h2>
 <ul>
 <li>2017.05.02</li>
-<li>&#xCC38;&#xC11D;&#xC790; :</li>
-<li>&#xACB0;&#xC11D; :</li>
+<li>&#xCC38;&#xC11D;&#xC790; : &#xAE40;&#xBB38;&#xC218; , &#xAE40;&#xD76C;&#xC218; , &#xC7A5;&#xC740;&#xC560; , &#xD55C;&#xC601;&#xBE48;</li>
+<li>&#xACB0;&#xC11D; : &#xAE40;&#xADDC;&#xD76C; , &#xBC15;&#xCC2C;&#xC6B0; , &#xD55C;&#xB098;&#xB77C;</li>
 <li>&#xC9C4;&#xB3C4; : 6~9&#xC7A5;</li>
 </ul>
+<h3 id="&#xC9C8;&#xBB38;--&#xB2E4;&#xB8EC;-&#xB0B4;&#xC6A9;">&#xC9C8;&#xBB38; &amp; &#xB2E4;&#xB8EC; &#xB0B4;&#xC6A9;</h3>
+<ul>
+<li>list&#xB97C; &#xC774;&#xD574;&#xD558;&#xACE0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</li>
+<li>for in list&#xC640; for in range&#xB97C; &#xC774;&#xD574;&#xD558;&#xACE0; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xBC18;&#xBCF5;&#xBB38;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC74C;.</li>
+<li>module&#xC744; &#xC774;&#xD574;&#xD558;&#xACE0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</li>
+<li>&#xC9C1;&#xC811; module&#xC744; &#xB9CC;&#xB4E4;&#xACE0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</li>
+</ul>
+<ul>
+<li>&#xAC00;&#xC704;&#xBC14;&#xC704;&#xBCF4; &#xC608;&#xC81C; &#xCF54;&#xB4DC;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
 
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rsp</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> random.choice([<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBCF4;&quot;</span>])
+</code></pre>
+<pre><code>import rsp
+
+draw = 0
+win = 0
+lose = 0
+
+for i in range(0,100000000):
+    a = rsp.rsp()
+    b = rsp.rsp()
+
+    if a==b:
+        print(&quot;&#xBE44;&#xAE40;&quot;)
+        draw += 1
+
+    else:
+
+        if a==&quot;&#xBC14;&#xC704;&quot;:
+            if b==&quot;&#xAC00;&#xC704;&quot;:
+                print(&quot;&#xC2B9;&#xB9AC;&quot;)
+                win += 1
+            elif b==&quot;&#xBCF4;&quot;:
+                print(&quot;&#xD328;&#xBC30;&quot;)
+                lose += 1
+        elif a==&quot;&#xAC00;&#xC704;&quot;:
+            if b==&quot;&#xBC14;&#xC704;&quot;:
+                print(&quot;&#xD328;&#xBC30;&quot;)
+                lose += 1
+            elif b==&quot;&#xBCF4;&quot;:
+                print(&quot;&#xC2B9;&#xB9AC;&quot;)
+                win += 1
+
+        elif a==&quot;&#xBCF4;&quot;:
+            if b==&quot;&#xBC14;&#xC704;&quot;:
+                print(&quot;&#xC2B9;&#xB9AC;&quot;)
+                win += 1
+            elif b==&quot;&#xAC00;&#xC704;&quot;:
+                print(&quot;&#xD328;&#xBC30;&quot;)
+                lose += 1
+
+print(&quot;a&#xB294; &#xCD1D; {}&#xBC88; &#xC2B9;&#xB9AC;&#xD558;&#xACE0; {}&#xBC88; &#xBB34;&#xC2B9;&#xBD80;&#xD558;&#xACE0; {}&#xBC88; &#xD328;&#xBC30;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;.format(win,draw,lose))
+</code></pre>
                                 
                                 </section>
                             
@@ -660,7 +715,7 @@ print(string.format(<span class="hljs-string">&quot;SSS&quot;</span>,<span class
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"next":{"title":"C 스터디 2017","level":"1.6.2","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"path":"studies/pybasics1704.md","ref":"studies/pybasics1704.md","articles":[]},{"title":"C 스터디 2017","level":"1.6.2","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"알고리즘 스터디 (2017.03)","level":"1.6.3","depth":2,"path":"studies/algorithm_study.md","ref":"studies/algorithm_study.md","articles":[]},{"title":"파이썬 기초 스터디(2017.01)","level":"1.6.4","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.5","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.5.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.5.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.6","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"http://prose.io/#skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/pybasics1704.md","mtime":"2017-05-02T09:58:42.315Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-02T09:59:47.426Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"next":{"title":"C 스터디 2017","level":"1.6.2","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"path":"studies/pybasics1704.md","ref":"studies/pybasics1704.md","articles":[]},{"title":"C 스터디 2017","level":"1.6.2","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"알고리즘 스터디 (2017.03)","level":"1.6.3","depth":2,"path":"studies/algorithm_study.md","ref":"studies/algorithm_study.md","articles":[]},{"title":"파이썬 기초 스터디(2017.01)","level":"1.6.4","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.5","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.5.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.5.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.6","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"http://prose.io/#skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/pybasics1704.md","mtime":"2017-05-02T11:22:13.257Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-02T11:23:20.118Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
