@@ -4,13 +4,13 @@
 ## Member
 | N | ID | Name |
 | --- | -------- | -------- |
-| 0 | @vaporise93 (Leader) | 김준수 |
-| 1 | @doo9713 | 안두현 |
-| 2 | @chugeonwoo | 추건우 |
-| 3 | @songz1 | 송지은 |
-| 4 | @RyanBlackHead | 공원배 |
-| 5 | @iowa329 | 김희재 |
-| 6 | @Miso-Smile | 김미소 |
+| 0 | [@junshoong](https://github.com/junshoong)(Leader) | 김준수 |
+| 1 | [@doo9713](https://github.com/doo9713) | 안두현 |
+| 2 | [@chugeonwoo](https://github.com/chugeonwoo) | 추건우 |
+| 3 | [@songz1](https://github.com/songz1) | 송지은 |
+| 4 | [@RyanBlackHead](https://github.com/RyanBlackHead) | 공원배 |
+| 5 | [@iowa329](https://github.com/iowa329) | 김희재 |
+| 6 | [@Miso-Smile](https://github.com/Miso-Smile) | 김미소 |
 
 ## 진행방식
 > 1. 매주 목요일에 모여서 스터디를 진행한다.
@@ -164,4 +164,3 @@
 - [1026](https://www.acmicpc.net/problem/1026) &ensp; 보물
 
 ---
-
