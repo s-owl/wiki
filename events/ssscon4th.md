@@ -71,5 +71,5 @@
   - 애자일이 무엇인가 - 애자일이 무엇이고 어떤 것들이 있는지 간략하게 알아봅니다.
   - https://www.slideshare.net/junshoong/4ssscon-agile-upload
  
- ## 행사 사진
+## 행사 사진
  - [구글 포토 공유 앨범](https://goo.gl/photos/g1r8VAMPUWaShQ9s5)
