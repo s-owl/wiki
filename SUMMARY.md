@@ -12,7 +12,7 @@
   * [제1회 SSSCON](events/ssscon1st.md)
 * [스터디 목록](studies/index.md)
   * [파이썬 기초 스터디(2017.04)](studies/pybasics1704.md)
-  * [java스터디(2017.04)](studies/javas-studies.md)
+  * [java스터디(2017.04)](studies/java-studies.md)
   * [C 스터디 2017](studies/c_study.md)
   * [알고리즘 스터디 (2017.03)](studies/algorithm_study.md)
   * [파이썬 기초 스터디(2017.01)](studies/python-basics-study.md)
