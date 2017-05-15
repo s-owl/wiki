@@ -1,4 +1,4 @@
-# Python Basics Study(2017.04)
+# java Study(2017.04)
 
 ## 스터디 개요
  - 기간 : 2017년 03월 29일 ~
