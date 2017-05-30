@@ -143,6 +143,46 @@ print("a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니�
  - 2017.05.16
  - 참석자 : 한영빈, 박찬우, 한나라, 김희수, 김규희, 장은애.
  - 결석 : 김문수(학생회)
- - 진도 : 10장 + 가위바위보 플레이어 코드
+ - 진도 : 가위바위보 플레이어 코드
  - 가위바위보 플레이어 코스 저장소
  	- https://github.com/skhu-sss/pyrsp
+
+## 6회차
+ - 2017.05.30
+ - 참석자 : 한영빈, 한나라, 김희수, 박찬우, 김문수
+ - 결석 : 김규희~~(탈주)~~, 장은애~~(탈주)~~
+ - 진도 : 10강 - 딕셔너리와 튜플
+ - 10강 복습을 위한 간단한 코딩.
+ 
+ ```python
+ 
+#-*-coding:utf-8-*-
+dict = {    201632034 : "한영빈",
+            201633036 : "한나라",
+            201632007 : "김희수",
+            201732004 : "김문수",
+            201732015 : "박찬우"
+            }
+
+def getInfoById(dict, id):
+    return (id, dict[id])
+
+def getInfoByName(dict, name):
+    for key, val in dict.items():
+        if val == name:
+            return (key, name)
+```
+
+```python
+#-*-coding:utf-8-*-v
+import dictex as members
+
+print(members.getInfoById(members.dict, 201632034))
+print(members.getInfoByName(members.dict, "한영빈"))
+
+a, b = members.getInfoById(members.dict, 201632034)
+c, d = members.getInfoByName(members.dict, "한영빈")
+
+print("{}{}".format(a,b))
+print("{}{}".format(c,d))
+```
