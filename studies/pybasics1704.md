@@ -86,7 +86,7 @@ string = """문자열
  - for in list와 for in range를 이해하고 사용하여 반복문을 만들 수 있음.
  - module을 이해하고 사용할 수 있음.
  - 직접 module을 만들고 사용할 수 있음.
- 
+
 - 가위바위보 예제 코드
 
 ```python
@@ -96,7 +96,7 @@ def rsp():
     return random.choice(["바위","가위","보"])
 ```
 
-```
+```python
 import rsp
 
 draw = 0
@@ -153,9 +153,9 @@ print("a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니�
  - 결석 : 김규희~~(탈주)~~, 장은애~~(탈주)~~
  - 진도 : 10강 - 딕셔너리와 튜플
  - 10강 복습을 위한 간단한 코딩.
- 
+
  ```python
- 
+
 #-*-coding:utf-8-*-
 dict = {    201632034 : "한영빈",
             201633036 : "한나라",
@@ -185,4 +185,43 @@ c, d = members.getInfoByName(members.dict, "한영빈")
 
 print("{}{}".format(a,b))
 print("{}{}".format(c,d))
+```
+
+## 7회차
+ - 2017.06.08
+ - 참석자 : 한영빈, 김희수
+ - 결석 : 한나라(병결), 김규희~~(탈주)~~, 장은애~~(탈주)~~
+ - 진도 : 11~12강 - while 반복문과 예외처리(try~except)
+ - 학습한 내용을 이용하여 가위바위보 게임 만들기.
+  - 딕셔너리를 활용하여 승리여부 판단
+  - while 문 활용하여 게임 무한반복.(사용자가 중단 요청 시 까지.)
+  - 범위 밖의 값 입력 시 예외처리 하기
+
+ ```python
+ #-*-coding:utf-8-*-
+
+ import random
+
+ winConditions = {"가위":"보","바위":"가위","보":"바위"}
+ selection = {1:"가위",2:"바위",3:"보"}
+ print("가위,바위,보 게임")
+ while True:
+     player = input("가위(1), 바위(2), 보(3) 중 하나를 숫자로 선택하세요. 종료하려면, 0을 입력하세요.")
+     if(player==0):
+         exit()
+     bot = random.choice(["가위","바위","보"])
+     try:
+         if player not in [1,2,3]:
+             raise ValueError
+     except ValueError as e:
+         print(e)
+         print("올바른 값이 아닙니다.")
+         continue
+     if winConditions[selection[player]] is bot:
+         print("이겼습니다.")
+     elif selection[player] is bot:
+         print("비겼습니다.")
+     else:
+         print("졌습니다.")
+     print("나:{}, 상대방:{}".format(selection[player], bot))
 ```
