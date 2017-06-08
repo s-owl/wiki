@@ -739,40 +739,47 @@ print(&quot;{}{}&quot;.format(c,d))
 <li>&#xCC38;&#xC11D;&#xC790; : &#xD55C;&#xC601;&#xBE48;, &#xAE40;&#xD76C;&#xC218;</li>
 <li>&#xACB0;&#xC11D; : &#xD55C;&#xB098;&#xB77C;(&#xBCD1;&#xACB0;), &#xAE40;&#xADDC;&#xD76C;<del>(&#xD0C8;&#xC8FC;)</del>, &#xC7A5;&#xC740;&#xC560;<del>(&#xD0C8;&#xC8FC;)</del></li>
 <li>&#xC9C4;&#xB3C4; : 11~12&#xAC15; - while &#xBC18;&#xBCF5;&#xBB38;&#xACFC; &#xC608;&#xC678;&#xCC98;&#xB9AC;(try~except)</li>
-<li><p>&#xD559;&#xC2B5;&#xD55C; &#xB0B4;&#xC6A9;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xAC00;&#xC704;&#xBC14;&#xC704;&#xBCF4; &#xAC8C;&#xC784; &#xB9CC;&#xB4E4;&#xAE30;.</p>
-<ul>
+<li>&#xD559;&#xC2B5;&#xD55C; &#xB0B4;&#xC6A9;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xAC00;&#xC704;&#xBC14;&#xC704;&#xBCF4; &#xAC8C;&#xC784; &#xB9CC;&#xB4E4;&#xAE30;.<ul>
 <li>&#xB515;&#xC154;&#xB108;&#xB9AC;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xC5EC; &#xC2B9;&#xB9AC;&#xC5EC;&#xBD80; &#xD310;&#xB2E8;</li>
 <li>while &#xBB38; &#xD65C;&#xC6A9;&#xD558;&#xC5EC; &#xAC8C;&#xC784; &#xBB34;&#xD55C;&#xBC18;&#xBCF5;.(&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC911;&#xB2E8; &#xC694;&#xCCAD; &#xC2DC; &#xAE4C;&#xC9C0;.)</li>
 <li>&#xBC94;&#xC704; &#xBC16;&#xC758; &#xAC12; &#xC785;&#xB825; &#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC; &#xD558;&#xAE30;</li>
 </ul>
-<pre><code class="lang-python"><span class="hljs-comment">#-*-coding:utf-8-*-</span>
-
-<span class="hljs-keyword">import</span> random
-
-winConditions = {<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>:<span class="hljs-string">&quot;&#xBCF4;&quot;</span>,<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>:<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBCF4;&quot;</span>:<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>}
-selection = {<span class="hljs-number">1</span>:<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-number">2</span>:<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>,<span class="hljs-number">3</span>:<span class="hljs-string">&quot;&#xBCF4;&quot;</span>}
-print(<span class="hljs-string">&quot;&#xAC00;&#xC704;,&#xBC14;&#xC704;,&#xBCF4; &#xAC8C;&#xC784;&quot;</span>)
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-  player = input(<span class="hljs-string">&quot;&#xAC00;&#xC704;(1), &#xBC14;&#xC704;(2), &#xBCF4;(3) &#xC911; &#xD558;&#xB098;&#xB97C; &#xC22B;&#xC790;&#xB85C; &#xC120;&#xD0DD;&#xD558;&#xC138;&#xC694;. &#xC885;&#xB8CC;&#xD558;&#xB824;&#xBA74;, 0&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;.&quot;</span>)
-  <span class="hljs-keyword">if</span>(player==<span class="hljs-number">0</span>):
-      exit()
-  bot = random.choice([<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBCF4;&quot;</span>])
-  <span class="hljs-keyword">try</span>:
-      <span class="hljs-keyword">if</span> player <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]:
-          <span class="hljs-keyword">raise</span> ValueError
-  <span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> e:
-      print(e)
-      print(<span class="hljs-string">&quot;&#xC62C;&#xBC14;&#xB978; &#xAC12;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&quot;</span>)
-      <span class="hljs-keyword">continue</span>
-  <span class="hljs-keyword">if</span> winConditions[selection[player]] <span class="hljs-keyword">is</span> bot:
-      print(<span class="hljs-string">&quot;&#xC774;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
-  <span class="hljs-keyword">elif</span> selection[player] <span class="hljs-keyword">is</span> bot:
-      print(<span class="hljs-string">&quot;&#xBE44;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
-  <span class="hljs-keyword">else</span>:
-      print(<span class="hljs-string">&quot;&#xC84C;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
-  print(<span class="hljs-string">&quot;&#xB098;:{}, &#xC0C1;&#xB300;&#xBC29;:{}&quot;</span>.format(selection[player], bot))
-</code></pre>
 </li>
+</ul>
+<pre><code class="lang-python"> <span class="hljs-comment">#-*-coding:utf-8-*-</span>
+
+ <span class="hljs-keyword">import</span> random
+
+ winConditions = {<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>:<span class="hljs-string">&quot;&#xBCF4;&quot;</span>,<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>:<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBCF4;&quot;</span>:<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>}
+ selection = {<span class="hljs-number">1</span>:<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-number">2</span>:<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>,<span class="hljs-number">3</span>:<span class="hljs-string">&quot;&#xBCF4;&quot;</span>}
+ print(<span class="hljs-string">&quot;&#xAC00;&#xC704;,&#xBC14;&#xC704;,&#xBCF4; &#xAC8C;&#xC784;&quot;</span>)
+ <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+     player = input(<span class="hljs-string">&quot;&#xAC00;&#xC704;(1), &#xBC14;&#xC704;(2), &#xBCF4;(3) &#xC911; &#xD558;&#xB098;&#xB97C; &#xC22B;&#xC790;&#xB85C; &#xC120;&#xD0DD;&#xD558;&#xC138;&#xC694;. &#xC885;&#xB8CC;&#xD558;&#xB824;&#xBA74;, 0&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;.&quot;</span>)
+     <span class="hljs-keyword">if</span>(player==<span class="hljs-number">0</span>):
+         exit()
+     bot = random.choice([<span class="hljs-string">&quot;&#xAC00;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBC14;&#xC704;&quot;</span>,<span class="hljs-string">&quot;&#xBCF4;&quot;</span>])
+     <span class="hljs-keyword">try</span>:
+         <span class="hljs-keyword">if</span> player <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]:
+             <span class="hljs-keyword">raise</span> ValueError
+     <span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> e:
+         print(e)
+         print(<span class="hljs-string">&quot;&#xC62C;&#xBC14;&#xB978; &#xAC12;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.&quot;</span>)
+         <span class="hljs-keyword">continue</span>
+     <span class="hljs-keyword">if</span> winConditions[selection[player]] <span class="hljs-keyword">is</span> bot:
+         print(<span class="hljs-string">&quot;&#xC774;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
+     <span class="hljs-keyword">elif</span> selection[player] <span class="hljs-keyword">is</span> bot:
+         print(<span class="hljs-string">&quot;&#xBE44;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
+     <span class="hljs-keyword">else</span>:
+         print(<span class="hljs-string">&quot;&#xC84C;&#xC2B5;&#xB2C8;&#xB2E4;.&quot;</span>)
+     print(<span class="hljs-string">&quot;&#xB098;:{}, &#xC0C1;&#xB300;&#xBC29;:{}&quot;</span>.format(selection[player], bot))
+</code></pre>
+<h2 id="8&#xD68C;&#xCC28;">8&#xD68C;&#xCC28;</h2>
+<ul>
+<li>&#xC9C4;&#xB3C4; : 13~15 &#xAC15;</li>
+</ul>
+<h2 id="9&#xD68C;&#xCC28;">9&#xD68C;&#xCC28;</h2>
+<ul>
+<li>&#xC9C4;&#xB3C4; : 16~18 &#xAC15;</li>
 </ul>
 
                                 
@@ -817,7 +824,7 @@ print(<span class="hljs-string">&quot;&#xAC00;&#xC704;,&#xBC14;&#xC704;,&#xBCF4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"next":{"title":"java스터디(2017.04)","level":"1.6.2","depth":2,"path":"studies/java-studies.md","ref":"studies/java-studies.md","articles":[]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"path":"studies/pybasics1704.md","ref":"studies/pybasics1704.md","articles":[]},{"title":"java스터디(2017.04)","level":"1.6.2","depth":2,"path":"studies/java-studies.md","ref":"studies/java-studies.md","articles":[]},{"title":"C 스터디 2017","level":"1.6.3","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"알고리즘 스터디 (2017.03)","level":"1.6.4","depth":2,"path":"studies/algorithm_study.md","ref":"studies/algorithm_study.md","articles":[]},{"title":"파이썬 기초 스터디(2017.01)","level":"1.6.5","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.6","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.6.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.6.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.7","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"http://prose.io/#skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/pybasics1704.md","mtime":"2017-06-08T10:46:51.181Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T10:47:50.627Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"next":{"title":"java스터디(2017.04)","level":"1.6.2","depth":2,"path":"studies/java-studies.md","ref":"studies/java-studies.md","articles":[]},"previous":{"title":"스터디 목록","level":"1.6","depth":1,"path":"studies/index.md","ref":"studies/index.md","articles":[{"title":"파이썬 기초 스터디(2017.04)","level":"1.6.1","depth":2,"path":"studies/pybasics1704.md","ref":"studies/pybasics1704.md","articles":[]},{"title":"java스터디(2017.04)","level":"1.6.2","depth":2,"path":"studies/java-studies.md","ref":"studies/java-studies.md","articles":[]},{"title":"C 스터디 2017","level":"1.6.3","depth":2,"path":"studies/c_study.md","ref":"studies/c_study.md","articles":[]},{"title":"알고리즘 스터디 (2017.03)","level":"1.6.4","depth":2,"path":"studies/algorithm_study.md","ref":"studies/algorithm_study.md","articles":[]},{"title":"파이썬 기초 스터디(2017.01)","level":"1.6.5","depth":2,"path":"studies/python-basics-study.md","ref":"studies/python-basics-study.md","articles":[]},{"title":"웹해킹 스터디","level":"1.6.6","depth":2,"path":"studies/webhacking/index.md","ref":"studies/webhacking/index.md","articles":[{"title":"1주차 ~ 3주차","level":"1.6.6.1","depth":3,"path":"studies/webhacking/webhacking-week1to3.md","ref":"studies/webhacking/webhacking-week1to3.md","articles":[]},{"title":"4주차 ~ 6주차","level":"1.6.6.2","depth":3,"path":"studies/webhacking/webhacking-week4to6.md","ref":"studies/webhacking/webhacking-week4to6.md","articles":[]}]},{"title":"Docker Study","level":"1.6.7","depth":2,"path":"studies/docker-study.md","ref":"studies/docker-study.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"","base":"http://prose.io/#skhu-sss/wiki/edit/master/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"SSS Wiki","language":"ko","gitbook":"*","description":"깊은 삽질 이나 뻘짓 등으로 얻은 지식이나 그 외 잡다한 것들을 정리해 두는 위키"},"file":{"path":"studies/pybasics1704.md","mtime":"2017-06-08T11:06:21.690Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T11:07:30.711Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
