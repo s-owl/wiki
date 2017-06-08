@@ -197,7 +197,7 @@ print("{}{}".format(c,d))
   - while 문 활용하여 게임 무한반복.(사용자가 중단 요청 시 까지.)
   - 범위 밖의 값 입력 시 예외처리 하기
 
- ```python
+```python
  #-*-coding:utf-8-*-
 
  import random
@@ -225,3 +225,9 @@ print("{}{}".format(c,d))
          print("졌습니다.")
      print("나:{}, 상대방:{}".format(selection[player], bot))
 ```
+
+## 8회차
+ - 진도 : 13~15 강
+ 
+## 9회차
+ - 진도 : 16~18 강
