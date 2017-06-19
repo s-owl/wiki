@@ -154,8 +154,7 @@ print("a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니�
  - 진도 : 10강 - 딕셔너리와 튜플
  - 10강 복습을 위한 간단한 코딩.
 
- ```python
-
+```python
 #-*-coding:utf-8-*-
 dict = {    201632034 : "한영빈",
             201633036 : "한나라",
@@ -174,7 +173,7 @@ def getInfoByName(dict, name):
 ```
 
 ```python
-#-*-coding:utf-8-*-v
+#-*-coding:utf-8-*-
 import dictex as members
 
 print(members.getInfoById(members.dict, 201632034))
