@@ -21,6 +21,7 @@
     * [4주차 ~ 6주차](studies/webhacking/webhacking-week4to6.md)
   * [Docker Study](studies/docker-study.md)
 * [면접정보 및 후기](interview/index.md)
+  * [신촌 세브란스 병원](interview/sinchon-severance.md)
 * 서버
   * [캐노니컬 라이브패치 서비스](server/canonical-livepatch.md)
   * [unattended-upgrades](server/unattended-upgrades.md)
