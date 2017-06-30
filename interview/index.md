@@ -7,3 +7,5 @@
 여기에 면접 정보 자체를 전부 작성해 넣지 마세요.*
 
 - [신촌 세브란스 병원](sinchon-severance.md)
+
+- [SW 마에스트로 8기 과정설명회 후기](8th_SW_Maestro.md)
