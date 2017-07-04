@@ -20,3 +20,13 @@
  ```bash
  pip install django
  ```
+
+## 2회차 모임
+ - 2017.07.04
+ - 참석자 : 한영빈, 김희수, 한나라
+ - 장고 어드민 - 웹 인터페이스로 Django 웹사이트와 연동된 데이터베이스의 데이터를 관리할 수 있음.
+ - 장고 셸 - CLI 에서 파이썬 문법으로 Djano 웹사이트와 연동된 데이터베이스의 데이터를 관리할 수 있음.
+ - 참고자료
+  - 장고걸스 튜토리얼 : https://tutorial.djangogirls.org/ko/
+  - 모델 필드 타입 (장고 모델에서 사용 가능한 필드 타입) : https://tutorial.djangogirls.org/ko/
+  - 장고 템플릿 문법 : https://docs.djangoproject.com/en/1.11/ref/templates/language/
