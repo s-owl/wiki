@@ -30,3 +30,16 @@
   - 장고걸스 튜토리얼 : https://tutorial.djangogirls.org/ko/
   - 모델 필드 타입 (장고 모델에서 사용 가능한 필드 타입) : https://tutorial.djangogirls.org/ko/
   - 장고 템플릿 문법 : https://docs.djangoproject.com/en/1.11/ref/templates/language/
+
+## 3회차 모임
+ - 2017.07.06
+ - 참석자 : 한영빈, 김희수, 한나라
+ - 진도 나간 내용은 주로, Django 에서 제공하는 템플릿 문법과 URL 패턴 등을 좀 더 응용해 보는 내용.
+ - Django url 처리에 사용하는 정규표현식 : https://wayhome25.github.io/django/2017/03/18/django-ep2-regx/
+ - Django request, response 객체 : https://docs.djangoproject.com/en/1.11/ref/request-response/
+ - HttpResponseRedirect 객체 - 사용자를 다른 페이지로 자동 이동 시키고자 할 때 사용 : https://docs.djangoproject.com/en/1.11/ref/request-response/#django.http.HttpResponseRedirect
+ - HttpResponse, `render()`대신 JsonResponse 를 사용하여, JSON 형식으로 요청에 응답할 수도 있음. : https://docs.djangoproject.com/en/1.11/ref/request-response/#jsonresponse-objects
+
+## 4회차 모임
+ - 2017.07.08
+ - 참석자 : 한영빈, 김희수, 한나라
