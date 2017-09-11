@@ -22,7 +22,7 @@
     * [4주차 ~ 6주차](studies/webhacking/webhacking-week4to6.md)
   * [Docker Study](studies/docker-study.md)
 * [프로젝트 목록](projects/index.md)
-  * [SKHUFEEDS](2017-07-skhufeeds.md)
+  * [SKHUFEEDS](projects/2017-07-skhufeeds.md)
 * [면접정보 및 후기](interview/index.md)
   * [신촌 세브란스 병원](interview/sinchon-severance.md)
   * [SW_Maestro 8기 과정설명회 후기](interview/sw-maestro-8th.md)
