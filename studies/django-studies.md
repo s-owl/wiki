@@ -43,3 +43,6 @@
 ## 4회차 모임
  - 2017.07.08
  - 참석자 : 한영빈, 김희수, 한나라
+ - 템플릿 확장(상속) 추가 참고 자료 : https://tutorial.djangogirls.org/ko/template_extending/
+ - 정적 파일 로드 추가 참고 자료 : https://tutorial.djangogirls.org/ko/css/
+ 
