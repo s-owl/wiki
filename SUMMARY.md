@@ -5,6 +5,7 @@
 * [위키 수정 가이드](HowToEdit.md)
 * [개인 운영 블로그 목록](blogs.md)
 * [행사 목록](events/index.md)
+  * [제5회 SSSCON](events/ssscon5th.md)
   * [제4회 SSSCON](events/ssscon4th.md)
   * [제3회 SSSCON](events/ssscon3rd.md)
   * [제2회 SSSCON](events/ssscon2nd.md)
