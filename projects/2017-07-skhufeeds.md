@@ -31,6 +31,14 @@
 - 8.27 : 사용자구독설정모듈개발완료
 - 8.30 : 크롤러 모듈 개발 완료
 - 9.1 : 카카오톡 통신부 모듈 개발 완료
+- 9.8 : 제8회 성공회대학교 IT 경진대회 예선 참가 접수.
 - 9.11 ~ 9.15 : 공개 베타테스트 준비
 - 9.18 ~ 10.13 : 공개 베타테스트 진행 및 개선작업
+- 9.21 : 제8회 성공회대학교 IT 경진대회 본선 진출
+- 10.11 : 제8회 성공회대학교 IT 경진대회 본선 발표
+ - 슬라이드 자료
+  - https://www.slideshare.net/hanyoungbin/skhufeeds
+  - https://www.slideshare.net/hanyoungbin/skhufeeds-80738510
+ - 사용 시연 영상
+  - https://www.youtube.com/watch?v=Be6mCEfPVzM&feature=youtu.be
 - 10.21 : 정식 서비스 시작
