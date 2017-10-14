@@ -22,7 +22,7 @@ rm -rf *
 ls
 cd ..
 ls
-pip install mkdocs mkdocs-material
+pip install mkdocs mkdocs-material pymdown-extensions
 ls
 mkdocs build
 ls
