@@ -11,7 +11,7 @@
  - Prose.io 편집기 화면 우측 하단의 `Authorize on GitHub` 버튼을 눌러 본인의 GitHub 계정으로 로그인 합니다. 그래야 변경 사항을 바로 커밋할 수 있습니다.
  - 마크다운 문법에 따라 문서를 수정합니다.
  - 저장하려면, 우측 상단의 저장 버튼을 누르고 변경사항에 대한 설명을 작성한 후, `Commit`버튼을 눌러 편집을 마칩니다.
- 
+
 ### 컨텐츠 저장소 로컬로 복제하여 수정하기
  - 저장소를 로컬로 복제 하고, `master` 가지로 변경합니다.
   - 위키 컨텐츠 수정은 `master` 가지에서 이뤄집니다.
@@ -28,7 +28,7 @@ git clone https://github.com/skhu-sss/wiki.git
  - 새로운 문서를 추가한 경우에는 사이드바에 보이도록 `SUMMARY.md` 파일을 수정합니다.
 
 
- ```markdown
+```markdown
  # Summary
 
  * [홈 화면](README.md)
@@ -114,10 +114,10 @@ git clone https://github.com/skhu-sss/wiki.git
 아래와 같은 방식으로, `코드 스니펫`을 넣을 수 있습니다.
 ```c
   #include <stdio.h>
-  
+
   int main(void){
    prtinf("Hello World!\n");
-   
+
    return 0;
   }
   ```
@@ -129,7 +129,7 @@ git clone https://github.com/skhu-sss/wiki.git
 
 int main(void){
  prtinf("Hello World!\n");
- 
+
  return 0;
 }
 ```

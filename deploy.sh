@@ -22,12 +22,11 @@ rm -rf *
 ls
 cd ..
 ls
-npm install -g gitbook-cli
+pip install mkdocs mkdocs-material
 ls
-gitbook install
-gitbook build
+mkdocs build
 ls
-cp -a _book/. deploy/
+cp -a site/. deploy/
 cd deploy
 ls
 rm .travis.yml

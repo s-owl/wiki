@@ -1,0 +1,47 @@
+site_name: SSS Wiki
+theme: material
+repo_name: 'skhu-sss/wiki'
+repo_url: 'https://github.com/skhu-sss/wiki'
+edit_uri: edit/master/docs/
+
+pages:
+  - SSS Wiki: index.md
+  - 위키 수정 가이드: HowToEdit.md
+  - 개인 운영 블로그 목록: blogs.md
+  - 행사 목록:
+    - Index: events/index.md
+    - 제5회 SSSCON: events/ssscon5th.md
+    - 제4회 SSSCON: events/ssscon4th.md
+    - 제3회 SSSCON: events/ssscon3rd.md
+    - 제2회 SSSCON: events/ssscon2nd.md
+    - 2016년도 소프트웨어공학과 워크샵 SSS 트랙: events/softworkshop2016ssstrack.md
+    - 제1회 SSSCON: events/ssscon1st.md
+  - 스터디 목록:
+    - Index: studies/index.md
+    - 장고 스터디: studies/django-studies.md
+    - 파이썬 기초 스터디(2017.04): studies/pybasics1704.md
+    - java스터디(2017.04): studies/java-studies.md
+    - C 스터디 2017: studies/c_study.md
+    - 알고리즘 스터디 (2017.03): studies/algorithm_study.md
+    - 파이썬 기초 스터디(2017.01): studies/python-basics-study.md
+    - 웹해킹 스터디:
+      - 개요: studies/webhacking/index.md
+      - 1주차 ~ 3주차: studies/webhacking/webhacking-week1to3.md
+      - 4주차 ~ 6주차: studies/webhacking/webhacking-week4to6.md
+    - Docker Study: studies/docker-study.md
+  - 프로젝트 목록:
+    - Index: projects/index.md
+    - SKHUFEEDS: projects/2017-07-skhufeeds.md
+  - 면접정보 및 후기:
+    - Index: interview/index.md
+    - 신촌 세브란스 병원: interview/sinchon-severance.md
+    - SW_Maestro 8기 과정설명회 후기: interview/sw-maestro-8th.md
+  - 서버:
+    - 캐노니컬 라이브패치 서비스: server/canonical-livepatch.md
+    - unattended-upgrades: server/unattended-upgrades.md
+    - Let's Encrypt: letsencrypt.md
+  - 패키지 관리자:
+      - Chocolatey: package-manager/choco.md
+      - Homebrew: package-manager/homebrew.md
+  - 기타:
+    - (SKHU)불여우와 함께 숲으로 들어가기: skhu-forest-with-firefox.md
