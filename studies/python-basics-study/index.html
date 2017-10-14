@@ -1006,8 +1006,8 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/studies/python-basics-study.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="_1">파이썬 기초 스터디</h1>
-<h2 id="_2">스터디 개요</h2>
+                <h1 id="_1">파이썬 기초 스터디<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">스터디 개요<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>기간 : 2016.12.27일 부터 약 5~6주</li>
 <li>스터디 리더 : 한영빈(소프16)</li>
@@ -1017,7 +1017,7 @@
 <li>스터디 모임 시각 : 매주 화요일 오후 2시~4시 - 3주차 모임은 목요일</li>
 <li>모임 장소 : SSS 랩실</li>
 </ul>
-<h2 id="_3">계획중인 스터디 커리큘럼</h2>
+<h2 id="_3">계획중인 스터디 커리큘럼<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>시작 전 : 스터디 방식 등 수립</li>
 <li>1주차 : 0~3장</li>
@@ -1026,38 +1026,42 @@
 <li>4주차 : 6장</li>
 <li>5주차 : 7장</li>
 </ul>
-<h2 id="1">1주차 모임</h2>
+<h2 id="1">1주차 모임<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.12.27</li>
 <li>참석자 : 한영빈, 김재경, 송지은, 배다슬</li>
 <li>진도 : 0~3장</li>
 </ul>
-<h3 id="python">Python 설치</h3>
+<h3 id="python">Python 설치<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <ul>
 <li>이 스터디에서는 Python 3 를 사용합니다. 장그러므로, Python 3 를 설치합시다. Python 2 는 오래 된 것도 있고, 새로 나오는 라이브러리나 프레임워크, 자료 등이 Python 3 을 기반으로 하기 때문입니다.</li>
 </ul>
-<h4 id="windows">Windows</h4>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
 <p><a href="https://www.python.org">Python 홈페이지</a> 에서 설치 마법사를 내려받아, 설치 마법사의 안내에 따라 설치합니다.
 <a href="https://www.python.org/downloads/windows/">여기</a> 를 눌러 설치 마법사 다운로드 페이지로 이동합니다.</p>
 <p><code>chocolatey</code> 패키지 관리자를 사용하시는 경우, 명령 프롬포트나 Windows PowerShell 를 관리자 권한으로 켜고, 다음을 실행하여 설치할 수도 있습니다.</p>
-<pre><code class="posh">choco install python
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
 
-<h4 id="linux">Linux</h4>
+
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
 <p>보통 리눅스에는 Python 이 설치되어 있습니다. 그러나 설치되지 않는 경우도 있고, Python 2 가 설치된 경우도 있습니다.</p>
 <p>Arch Linux 의 경우, <code>pacman</code>을 사용하여 <code>python</code> 패키지를 설치하면, 최신 버전의 Python 3 가 설치됩니다.</p>
-<pre><code class="bash">sudo pacman -S python
-</code></pre>
+<div class="codehilite"><pre><span></span>sudo pacman -S python
+</pre></div>
+
 
 <p>Ubuntu 의 경우 배포판 버전에 따라 제공되는 패키지 이름에 차이가 있습니다. Ubuntu 16.04 에서는 <code>python3</code> 패키지를 <code>apt</code> 로 설치합니다.</p>
-<pre><code class="bash">sudo apt install python3
-</code></pre>
+<div class="codehilite"><pre><span></span>sudo apt install python3
+</pre></div>
 
-<h4 id="macos">macOS</h4>
+
+<h4 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h4>
 <p>Windows 와 마찬가지로 설치마법사를 이용하여 설치할 수 있습니다. <a href="https://www.python.org/downloads/mac-osx/">여기를 클릭하여 설치마법사 다운로드 페이지로 이동합니다.</a></p>
 <p>또는, <a href="http://brew.sh/">Homebrew</a> 를 사용 하시는 경우, 다음을 실행하여 설치하실 수 있습니다.</p>
-<pre><code class="bash">brew install python3
-</code></pre>
+<div class="codehilite"><pre><span></span>brew install python3
+</pre></div>
+
 
 <hr />
 <ul>
@@ -1078,7 +1082,7 @@
 <li>Python 에는 <code>switch</code> 와 증감 연산자가 없음</li>
 <li>레퍼런스 카운트 - 파이썬의 쓰레기 수집기가 메모리를 해체하는 기준 중 하나로 사용함.</li>
 </ul>
-<h2 id="2">2주차 모임</h2>
+<h2 id="2">2주차 모임<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.01.03</li>
 <li>참석자 : 한영빈, 김재경, 배다슬</li>
@@ -1098,7 +1102,7 @@
 <li>t(또는 생략) : 텍스트</li>
 <li>b : 바이너리</li>
 </ul>
-<h2 id="3">3주차 모임</h2>
+<h2 id="3">3주차 모임<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.01.12</li>
 <li>참석자 : 한영빈, 송지은, 김재경</li>
@@ -1120,23 +1124,24 @@
 <p>스레드 사용 생성하여 실행하기</p>
 </li>
 </ul>
-<pre><code class="python"># 스레딩 모듈 로드
-import threading
-# 스레드 생성
-t = threading.Thread(target=&lt;실행할 함수&gt;, args=(&lt;함수에 넘길 매개변수&gt;))
-# daemon 플래그를 설정하여, 주 프로그램이 종료될 때, 스레드도 같이 종료되도록 설정.
-t.daemon = True
-# 스레드 시작
-t.start()
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1"># 스레딩 모듈 로드</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="c1"># 스레드 생성</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=&lt;</span><span class="err">실행할</span> <span class="err">함수</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="o">&lt;</span><span class="err">함수에</span> <span class="err">넘길</span> <span class="err">매개변수</span><span class="o">&gt;</span><span class="p">))</span>
+<span class="c1"># daemon 플래그를 설정하여, 주 프로그램이 종료될 때, 스레드도 같이 종료되도록 설정.</span>
+<span class="n">t</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="c1"># 스레드 시작</span>
+<span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
 
-<h2 id="4">4주차 모임</h2>
+
+<h2 id="4">4주차 모임<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.01.17</li>
 <li>참석자 : 배다슬, 한영빈</li>
 <li>결석 : 김재경(공결), 송지은(?)</li>
 </ul>
-<h2 id="5">5주차 모임</h2>
+<h2 id="5">5주차 모임<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.01.31</li>
 <li>참석자 : 한영빈, 배다슬</li>

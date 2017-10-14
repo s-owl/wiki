@@ -1262,8 +1262,8 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/studies/webhacking/webhacking-week1to3.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="-1-3">웹해킹 스터디 - 1주차 ~ 3주차 기록</h1>
-<h2 id="1">1주차 모임</h2>
+                <h1 id="-1-3">웹해킹 스터디 - 1주차 ~ 3주차 기록<a class="headerlink" href="#-1-3" title="Permanent link">&para;</a></h1>
+<h2 id="1">1주차 모임<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.10.31</li>
 <li>참석자 : 김지연, 박지선, 한나라, 한영빈, 송지은</li>
@@ -1274,19 +1274,20 @@
 <li>한영빈 : 1, 4, 17</li>
 <li>송지은 : 6, 12</li>
 </ul>
-<h3 id="webhackingkr">webhacking.kr 가입방법</h3>
+<h3 id="webhackingkr">webhacking.kr 가입방법<a class="headerlink" href="#webhackingkr" title="Permanent link">&para;</a></h3>
 <ul>
 <li>먼저 webhacking.kr 에 접속.</li>
 <li>페이지 우클릭 하여 나오는 컨텍스트 메뉴에서 <code>페이지 소스 보기</code> 선택</li>
 <li>페이지 소스에서 아래와 같은 주석을 볼 수 있음. 회원 가입 버튼 코드를 주석으로 달아둔 것임. <code>===========================================</code> 로 감싸진 소스 부분을 복사함.</li>
 </ul>
-<pre><code class="html">&lt;!--
-Register
-===========================================
-&lt;input type=button value='Register' onclick=location.href='join/includ2_join__frm__0001.php?mode=2d8d9c1703e9df8f1e8b7d0ba1578ce0' style=width:50pt;height:20pt;border:0;background:black;color:lightgreen&gt;&lt;/td&gt;&lt;/tr&gt;
-===========================================
---&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!--</span>
+<span class="c">Register</span>
+<span class="c">===========================================</span>
+<span class="c">&lt;input type=button value=&#39;Register&#39; onclick=location.href=&#39;join/includ2_join__frm__0001.php?mode=2d8d9c1703e9df8f1e8b7d0ba1578ce0&#39; style=width:50pt;height:20pt;border:0;background:black;color:lightgreen&gt;&lt;/td&gt;&lt;/tr&gt;</span>
+<span class="c">===========================================</span>
+<span class="c">--&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>로그인 페이지로 돌아가서, 개발자 콘솔을 염(크롬에서는 <code>F12</code>)를 누르면 열림</li>
@@ -1301,7 +1302,7 @@ Register
 <li><code>[Submit]</code> 을 눌러 계속한다.</li>
 <li>가입 완료. 이제 로그인 하여 워게임 문제를 풀어보면 된다.</li>
 </ul>
-<h3 id="1_1">1번 문제</h3>
+<h3 id="1_1">1번 문제<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>쿠키값을 조작하여 문제를 문제를 해결한다.</li>
 <li>문제 1번 페이지에서 <code>index.phps</code> 를 클릭하면, 소스코드가 힌트로 나타난다.</li>
@@ -1309,25 +1310,28 @@ Register
 <li>개발자 콘솔에서 스크립트를 실행하여 쿠키값을 조작할 수 있다.</li>
 <li>다음을 개발자 콘솔의 콘솔 탭에서 입력하여, 쿠키값을 조회한다.</li>
 </ul>
-<pre><code class="javascript">document.cookie
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span>
+</pre></div>
+
 
 <ul>
 <li>아래와 같은 사항이 출력됨을 볼 수 있다.</li>
 </ul>
-<pre><code class="javascript">&quot;user_lv=1; PHPSESSID=&lt;임의의 세션 값&gt;&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;user_lv=1; PHPSESSID=&lt;임의의 세션 값&gt;&quot;</span>
+</pre></div>
+
 
 <ul>
 <li>다음과 같은 방법으로 페이지의 쿠키값을 조작한다. 여기서는 <code>user_lv</code> 값을 5와 6 사이인 5.1 로 조작한다.</li>
 </ul>
-<pre><code class="javascript">document.cookie = &quot;user_lv=5.1&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&quot;user_lv=5.1&quot;</span>
+</pre></div>
+
 
 <ul>
 <li>페이지를 새로고침 하면 문제가 풀리는 것을 볼 수 있다.</li>
 </ul>
-<h3 id="4">4번 문제</h3>
+<h3 id="4">4번 문제<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <ol>
 <li>첫 화면을 보면 YzQwMzNiZmY5NGI1NjdhMTkwZTMzZmFhNTUxZjQxMWNhZWY0NDRmMg== 라는 암호가 적혀있다.
    암호를 풀어서 password에 입력하면 풀리는 문제이다.</li>
@@ -1337,14 +1341,14 @@ Register
 <li>그러면 또 40자리 a94a8fe5ccb19ba61c4c0873d391e987982fbbd3가 나와서 한번 더 돌려보았다.
    그랬더니 아주 깔끔하게 password값이 나온다!</li>
 </ol>
-<h3 id="6">6번 문제</h3>
+<h3 id="6">6번 문제<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <ul>
 <li>http://webhacking.kr/challenge/web/web-06/index.phps 페이지로 들어간다.</li>
 <li>쿠키를 확인해보면 user와 password라는 쿠키가 생성되어있다.</li>
 <li>admin을 base64로 20번 인코딩하여 user, password 쿠키에 값으로 저장해준다.</li>
 <li>새로고침하면 문제가 풀린다.</li>
 </ul>
-<h3 id="12">12번 문제</h3>
+<h3 id="12">12번 문제<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <ul>
 <li>개발자도구로 소스코드를 확인하면 아스키코드 값들이 나온다.</li>
 <li>
@@ -1354,57 +1358,62 @@ Register
 <p>콘솔창 입력 예</p>
 </li>
 </ul>
-<pre><code>WorkTimeFun=String.fromCharCode(118,97,114,32,101,...(생략)...,34,41,41,59,13,10,125,13,10);
+<div class="codehilite"><pre><span></span>WorkTimeFun=String.fromCharCode(118,97,114,32,101,...(생략)...,34,41,41,59,13,10,125,13,10);
 alert(WorkTimeFun);
-</code></pre>
+</pre></div>
+
 
 <ul>
 <li>후에 소스코드를 분석해보면, ck 값이 패스워드라는 것을 알 수 있다.("="은 ""으로 바꿔줬으므로, "=" 제외)</li>
 <li>위와 똑같은 방법으로 콘솔창에 String.from~~~ 부분을 입력하여 alert 해주면 패스워드를 확인할 수 있다.</li>
 <li>Auth에 패스워드를 입력해주면 문제가 해결된다.</li>
 </ul>
-<h3 id="15">15번 문제</h3>
+<h3 id="15">15번 문제<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제에 들어가면 Access_Denied 창이 뜬다.</li>
 <li>확인 버튼을 누른다</li>
 <li>0.5초만에 답이 나왔다가 사라진다.</li>
 <li>Auth에 가서 답을 입력하면 문제 해결이 된다.</li>
 </ul>
-<h3 id="17">17번 문제</h3>
+<h3 id="17">17번 문제<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제에 들어가면 입력칸 하나와 체크 버튼이 나온다.</li>
 <li>개발자 콘솔을 열어서 요소 검사 탭(크롬에서는 Elements 탭)으로 들어간다.</li>
 <li><code>body</code> 태그 끝자락에 <code>script</code> 태그 내부를 본다.</li>
 <li><code>script</code> 태그 내부에 다음과 같은 내용의 자바스크립트 코드가 있다.</li>
 </ul>
-<pre><code class="javascript">unlock=100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10+100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10-100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10/100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10*100*10*10+100/10-10+10+50-9*8+7-6+5-4*3-2*1*10+9999999999;
+<div class="codehilite"><pre><span></span><span class="nx">unlock</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">-</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">100</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="mi">10</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">50</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="mi">8</span><span class="o">+</span><span class="mi">7</span><span class="o">-</span><span class="mi">6</span><span class="o">+</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="mi">9999999999</span><span class="p">;</span>
 
-function sub(){ if(login.pw.value==unlock){ alert(&quot;Password is &quot;+unlock/10); }else { alert(&quot;Wrong&quot;);  }}
-</code></pre>
+<span class="kd">function</span> <span class="nx">sub</span><span class="p">(){</span> <span class="k">if</span><span class="p">(</span><span class="nx">login</span><span class="p">.</span><span class="nx">pw</span><span class="p">.</span><span class="nx">value</span><span class="o">==</span><span class="nx">unlock</span><span class="p">){</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Password is &quot;</span><span class="o">+</span><span class="nx">unlock</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span> <span class="p">}</span><span class="k">else</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>  <span class="p">}}</span>
+</pre></div>
+
 
 <ul>
 <li><code>unlock</code> 변수에 저장된 값에 해당되는 값을 입력칸에 넣고 체크 바튼을 누르면, <code>Password is &lt;비밀번호?&gt;</code> 가 나오는 것을 알 수 있다.</li>
 <li>콘솔 탭에서 바로 위의 코드에서 <code>unlock=...</code>　부분에서 <code>...</code> 에 해당하는 부분(<code>100*10...1*10+9999999999</code>) 콘솔에 붙여넣고 실행하면 아래와 같이 계산된 값이 나온다.</li>
 </ul>
-<pre><code class="javascript">9997809307
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="mi">9997809307</span>
+</pre></div>
+
 
 <ul>
 <li>이를 입력칸에 넣고 체크 버튼을 누르면 다음과 같은 내용의 팝업이 나타난다.</li>
 </ul>
-<pre><code>Password is 999780930.7
-</code></pre>
+<div class="codehilite"><pre><span></span>Password is 999780930.7
+</pre></div>
+
 
 <ul>
 <li><code>webhacking.kr</code> 의 Auth 메뉴로 들어가서, <code>Flag</code> 칸에 <code>999780930.7</code> 를 넣고 제출한다.</li>
 <li>문제가 풀리는 것을 확인할 수 있다.</li>
 </ul>
-<h3 id="26">26번 문제</h3>
+<h3 id="26">26번 문제<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
 <ul>
 <li>'index.phps' 클릭하면 소스가 나타난다.       </li>
 </ul>
-<pre><code>&lt;?if(eregi(&quot;admin&quot;,$_GET[id])) { echo(&quot;&lt;p&gt;no!&quot;); exit();}$_GET[id]=urldecode($_GET[id]);if($_GET[id]==&quot;admin&quot;){@solve(26,100);}?&gt;       
-</code></pre>
+<div class="codehilite"><pre><span></span>&lt;?if(eregi(&quot;admin&quot;,$_GET[id])) { echo(&quot;&lt;p&gt;no!&quot;); exit();}$_GET[id]=urldecode($_GET[id]);if($_GET[id]==&quot;admin&quot;){@solve(26,100);}?&gt;       
+</pre></div>
+
 
 <ul>
 <li><code>id</code>의 값이 <code>admin</code>이면 문제 해결된다.       </li>
@@ -1415,7 +1424,7 @@ function sub(){ if(login.pw.value==unlock){ alert(&quot;Password is &quot;+unloc
 <li>그러나 <code>%61%64%6D%69%6E</code>를 입력하면 <code>eregi</code>에 의해 막힌다.(<code>%61%64%6D%69%6E</code>가 자동으로 디코딩되버렸기 때문에)     </li>
 <li><code>%61%64%6D%69%6E</code>을 인코딩해서 입력하면 문제 해결</li>
 </ul>
-<h2 id="2">2주차 모임</h2>
+<h2 id="2">2주차 모임<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.07</li>
 <li>참석자 : 김지연, 박지선, 한나라, 한영빈, 송지은</li>
@@ -1426,49 +1435,53 @@ function sub(){ if(login.pw.value==unlock){ alert(&quot;Password is &quot;+unloc
 <li>한영빈 : 16, 14</li>
 <li>송지은 : 24, 27</li>
 </ul>
-<h3 id="14">14번 문제</h3>
+<h3 id="14">14번 문제<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.</li>
 <li><code>script</code> 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.</li>
 </ul>
-<pre><code class="javascript">
-function ck()
-{
-var ul=document.URL;
-ul=ul.indexOf(&quot;.kr&quot;);
-ul=ul*30;
-if(ul==pw.input_pwd.value) { alert(&quot;Password is &quot;+ul*pw.input_pwd.value); }
-else { alert(&quot;Wrong&quot;); }
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">ck</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kd">var</span> <span class="nx">ul</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">;</span>
+<span class="nx">ul</span><span class="o">=</span><span class="nx">ul</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;.kr&quot;</span><span class="p">);</span>
+<span class="nx">ul</span><span class="o">=</span><span class="nx">ul</span><span class="o">*</span><span class="mi">30</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">ul</span><span class="o">==</span><span class="nx">pw</span><span class="p">.</span><span class="nx">input_pwd</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Password is &quot;</span><span class="o">+</span><span class="nx">ul</span><span class="o">*</span><span class="nx">pw</span><span class="p">.</span><span class="nx">input_pwd</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span> <span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <ul>
 <li><code>ck()</code> 함수에서, 화면상의 입력칸에 입력한 값과. 현재 페이지 url 문자열에서 <code>.kr</code> 의 인덱스 값에 30 을 곱한 것이 동일한 경우, 비밀번호를 팝업으로 보여주는 것을 알 수 있다.</li>
 <li>콘솔 메뉴에 들어간다. 콘솔에서 <code>document.URL</code> 을 입력하면, 현제 페이지에 입력된 <code>URL</code> 을 알 수 있다.</li>
 </ul>
-<pre><code>&lt;- document.URL
+<div class="codehilite"><pre><span></span>&lt;- document.URL
 -&gt; &quot;http://webhacking.kr/challenge/javascript/js1.html&quot;
-</code></pre>
+</pre></div>
+
 
 <ul>
 <li>그렇다면, 다음을 콘솔에서 실행하여, 현재 페이지 <code>URL</code> 에서 <code>.kr</code> 의 인덱스를 알 수 있다.</li>
 </ul>
-<pre><code>&lt;- document.URL.indexOf('.kr')
+<div class="codehilite"><pre><span></span>&lt;- document.URL.indexOf(&#39;.kr&#39;)
 -&gt; 17
-</code></pre>
+</pre></div>
+
 
 <ul>
 <li>여기에 인덱스 값은 <code>17</code> 이다. 여기에 <code>30</code> 을 곱하면, <code>ck()</code> 함수 내 조건문의 조건을 만족하는 값이 나온다.</li>
 </ul>
-<pre><code>&lt;- 17*30
+<div class="codehilite"><pre><span></span>&lt;- 17*30
 -&gt; 510
-</code></pre>
+</pre></div>
+
 
 <ul>
 <li><code>510</code> 을 입력칸에 넣고 <code>check</code> 를 넣으면, 다음과 같은 내용으로 플래그가 팝업에 나타나는 것을 볼 수 있다.</li>
 </ul>
-<pre><code>Password is 260100
-</code></pre>
+<div class="codehilite"><pre><span></span>Password is 260100
+</pre></div>
+
 
 <blockquote>
 <p>굳이 입력칸에 넣고 버튼을 누르지 않고도 플래그를 구할 수 있다. <code>ck()</code> 의 코드를 보면, 입력받은 값과, 임의로 만든 값을 곱해 팝업으로 보여주고 있는데, 입력받은 값과 임의로 만든 값이 같을 때 서로 곱하므로, 함수가 임의로 만드는 값인 <code>510</code> 을 제곱하면 플래그인 <code>260100</code> 이 된다.</p>
@@ -1476,43 +1489,44 @@ else { alert(&quot;Wrong&quot;); }
 <ul>
 <li>이제 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.</li>
 </ul>
-<h3 id="16">16번 문제</h3>
+<h3 id="16">16번 문제<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제 화면에서, 개발자 콘솔을 열고 요소 검사 메뉴로 들어간다.</li>
 <li><code>script</code> 태그에 다음과 같은 Javascript 소스가 있는 것을 볼 수 있다.</li>
 </ul>
-<pre><code class="javascript">
-document.body.innerHTML+=&quot;&lt;font color=yellow id=aa style=position:relative;left:0;top:0&gt;*&lt;/font&gt;&quot;;
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">+=</span><span class="s2">&quot;&lt;font color=yellow id=aa style=position:relative;left:0;top:0&gt;*&lt;/font&gt;&quot;</span><span class="p">;</span>
 
-function mv(cd)
-{
-kk(star.style.posLeft-50,star.style.posTop-50);
-if(cd==100) star.style.posLeft=star.style.posLeft+50;
-if(cd==97) star.style.posLeft=star.style.posLeft-50;
-if(cd==119) star.style.posTop=star.style.posTop-50;
-if(cd==115) star.style.posTop=star.style.posTop+50;
-if(cd==124) location.href=String.fromCharCode(cd);
-}
+<span class="kd">function</span> <span class="nx">mv</span><span class="p">(</span><span class="nx">cd</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nx">kk</span><span class="p">(</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posTop</span><span class="o">-</span><span class="mi">50</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">cd</span><span class="o">==</span><span class="mi">100</span><span class="p">)</span> <span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">=</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">+</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">cd</span><span class="o">==</span><span class="mi">97</span><span class="p">)</span> <span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">=</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">-</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">cd</span><span class="o">==</span><span class="mi">119</span><span class="p">)</span> <span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posTop</span><span class="o">=</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posTop</span><span class="o">-</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">cd</span><span class="o">==</span><span class="mi">115</span><span class="p">)</span> <span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posTop</span><span class="o">=</span><span class="nx">star</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">posTop</span><span class="o">+</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">cd</span><span class="o">==</span><span class="mi">124</span><span class="p">)</span> <span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">cd</span><span class="p">);</span>
+<span class="p">}</span>
 
 
-function kk(x,y)
-{
-rndc=Math.floor(Math.random()*9000000);
-document.body.innerHTML+=&quot;&lt;font color=#&quot;+rndc+&quot; id=aa style=position:relative;left:&quot;+x+&quot;;top:&quot;+y+&quot; onmouseover=this.innerHTML=''&gt;*&lt;/font&gt;&quot;;
-}
-</code></pre>
+<span class="kd">function</span> <span class="nx">kk</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nx">rndc</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">9000000</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">+=</span><span class="s2">&quot;&lt;font color=#&quot;</span><span class="o">+</span><span class="nx">rndc</span><span class="o">+</span><span class="s2">&quot; id=aa style=position:relative;left:&quot;</span><span class="o">+</span><span class="nx">x</span><span class="o">+</span><span class="s2">&quot;;top:&quot;</span><span class="o">+</span><span class="nx">y</span><span class="o">+</span><span class="s2">&quot; onmouseover=this.innerHTML=&#39;&#39;&gt;*&lt;/font&gt;&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <ul>
 <li><code>mv()</code> 함수 내부를 보면, 함수 인자인 <code>cd</code> 가 <code>124</code> 일때, <code>124</code> 로 이동하는 것을 볼 수 있다.</li>
 <li>개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.</li>
 </ul>
-<pre><code class="javascript">mv(124);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nx">mv</span><span class="p">(</span><span class="mi">124</span><span class="p">);</span>
+</pre></div>
+
 
 <ul>
 <li>화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.</li>
 </ul>
-<h3 id="18">18번 문제</h3>
+<h3 id="18">18번 문제<a class="headerlink" href="#18" title="Permanent link">&para;</a></h3>
 <ol>
 <li>index.phps를 들어가서 읽어보니 id가 guest라고 되어있는 것을 admin으로 바꾸면 solve될 것 같이 보였다.</li>
 <li>일단 id를 아무거나 때려 넣어 보다가 no=1이라고 되어있길래 1을 넣었더니 hi guest가 떴다.</li>
@@ -1520,25 +1534,26 @@ document.body.innerHTML+=&quot;&lt;font color=#&quot;+rndc+&quot; id=aa style=po
 <li>그리고 저 no=1 부분을 수정했다. (0 or 1 limit1, 1이렇게)</li>
 <li>no=0%Aor%0A1%0Alimit%0A1,1 이런식으로 바꾸고 페이지에 반영시키면 clear!</li>
 </ol>
-<h3 id="24">24번 문제</h3>
+<h3 id="24">24번 문제<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
 <ul>
 <li>http://webhacking.kr/challenge/bonus/bonus-4/index.phps 페이지로 들어간다.</li>
 <li>소스코드를 분석해보면 REMOTE_ADDR이란 쿠키값에 저장된 값을 ip 변수에 저장한다. ip 값을 127.0.0.1로 만들어줘서 문제를 풀면 된다.</li>
 <li>우선 REMOTE_ADDR 쿠키를 생성해주고,</li>
 </ul>
-<pre><code class="php">if($_COOKIE[REMOTE_ADDR])
-{
-$ip=str_replace(&quot;12&quot;,&quot;&quot;,$ip);
-$ip=str_replace(&quot;7.&quot;,&quot;&quot;,$ip);
-$ip=str_replace(&quot;0.&quot;,&quot;&quot;,$ip);
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="x">if($_COOKIE[REMOTE_ADDR])</span>
+<span class="x">{</span>
+<span class="x">$ip=str_replace(&quot;12&quot;,&quot;&quot;,$ip);</span>
+<span class="x">$ip=str_replace(&quot;7.&quot;,&quot;&quot;,$ip);</span>
+<span class="x">$ip=str_replace(&quot;0.&quot;,&quot;&quot;,$ip);</span>
+<span class="x">}</span>
+</pre></div>
+
 
 <ul>
 <li>이 부분에 걸리지 않도록 값을 조정하여 112277..00..00..1 을 쿠키값으로 저장해준다.</li>
 <li>후에 새로고침 해주면 문제가 풀린다.</li>
 </ul>
-<h3 id="27">27번 문제</h3>
+<h3 id="27">27번 문제<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
 <ul>
 <li>http://webhacking.kr/challenge/web/web-12/index.phps 페이지로 들어간다.</li>
 <li>필터링 된 문자들을 우회해서 sql 인젝션 해주면 된다.</li>
@@ -1546,14 +1561,14 @@ $ip=str_replace(&quot;0.&quot;,&quot;&quot;,$ip);
 <li>입력창에 0) or no=2 을 넣어주면 필터링이 걸리므로 우회하여 0) or no like 2 -- 로 입력해준다.</li>
 <li>문제가 해결된다.</li>
 </ul>
-<h3 id="38">38번 문제</h3>
+<h3 id="38">38번 문제<a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
 <ul>
 <li>웹 해킹 페이지 38번에 들어가면 login과 admin의 버튼이 등장한다</li>
 <li>우선 소스를 확인해보자</li>
 </ul>
-<pre><code class="html">&lt;!--admin.php--&gt;
+<div class="codehilite"><pre><span></span><span class="c">&lt;!--admin.php--&gt;</span>
+</pre></div>
 
-</code></pre>
 
 <p>이렇게 주석처리로 적혀있다. 그러므로 admin.php로 들어가보자.
 - 바로 admin으로 들어가면 login plz라는 문구가 뜬다      <br />
@@ -1561,11 +1576,11 @@ $ip=str_replace(&quot;0.&quot;,&quot;&quot;,$ip);
 - 값을 넣고 로그인 버튼을 넣어도 아무변화가 없다.     <br />
 - 다시 admin으로 들어가면 내가 쓴 값앞에 무언가가 붙는다.      <br />
 - 다시 한번 소스를 확인한다.</p>
-<pre><code class="html">&lt;!--
+<div class="codehilite"><pre><span></span><span class="c">&lt;!--</span>
 
- hint : admin
+<span class="c"> hint : admin</span>
 
- --&gt;
+<span class="c"> --&gt;</span>
  ```
  이라고 적혀있다.
  - admin만 값을 넣으면 풀이가 되지 않는다
@@ -1578,55 +1593,56 @@ $ip=str_replace(&quot;0.&quot;,&quot;&quot;,$ip);
 1. burp suite로 페이지를 잡아서 소스코드를 살펴보았다.
 
 ```html
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Challenge 54&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;&lt;b&gt;Password is &lt;font id=aview&gt;&lt;/font&gt;&lt;/b&gt;&lt;/h1&gt;
-&lt;script&gt;
-function run(){
-  if(window.ActiveXObject){
-   try {
-    return new ActiveXObject('Msxml2.XMLHTTP');
-   } catch (e) {
-    try {
-     return new ActiveXObject('Microsoft.XMLHTTP');
-    } catch (e) {
-     return null;
-    }
-   }
-  }else if(window.XMLHttpRequest){
-   return new XMLHttpRequest();
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Challenge 54<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Password is <span class="p">&lt;</span><span class="nt">font</span> <span class="na">id</span><span class="o">=</span><span class="s">aview</span><span class="p">&gt;&lt;/</span><span class="nt">font</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kd">function</span> <span class="nx">run</span><span class="p">(){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">ActiveXObject</span><span class="p">){</span>
+   <span class="k">try</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">ActiveXObject</span><span class="p">(</span><span class="s1">&#39;Msxml2.XMLHTTP&#39;</span><span class="p">);</span>
+   <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+     <span class="k">return</span> <span class="k">new</span> <span class="nx">ActiveXObject</span><span class="p">(</span><span class="s1">&#39;Microsoft.XMLHTTP&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+   <span class="p">}</span>
+  <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">XMLHttpRequest</span><span class="p">){</span>
+   <span class="k">return</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
 
-  }else{
-   return null;
-  }
- }
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+   <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="p">}</span>
+ <span class="p">}</span>
 
-x=run();
+<span class="nx">x</span><span class="o">=</span><span class="nx">run</span><span class="p">();</span>
 
-function answer(i)
-{
-x.open('GET','?m='+i,false);
-x.send(null);
-aview.innerHTML=x.responseText;
-i++;
-if(x.responseText) setTimeout(&quot;answer(&quot;+i+&quot;)&quot;,100);
-if(x.responseText==&quot;&quot;) aview.innerHTML=&quot;?&quot;;
-}
+<span class="kd">function</span> <span class="nx">answer</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nx">x</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;?m=&#39;</span><span class="o">+</span><span class="nx">i</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>
+<span class="nx">x</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="nx">aview</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">x</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;answer(&quot;</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">responseText</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="nx">aview</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">;</span>
+<span class="p">}</span>
 
-setTimeout(&quot;answer(0)&quot;,10000);
+<span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&quot;answer(0)&quot;</span><span class="p">,</span><span class="mi">10000</span><span class="p">);</span>
 
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p>이라고 뜨는데 <code>function answer(i)</code>부분을 조금만 수정하면 될 것처럼 보였다.
 2. <code>aview.innerHTML=x.responseText;</code>여기를 <code>aview.innerHTML+=x.responseText;</code>이렇게 부호만 바꾸고,
 3. <code>if(x.responseText=="") aview.innerHTML="?";</code> 여기를 <code>if(x.responseText=="") alert(aview.innerHTML);</code>이렇게 바꾸어서 반영시켜보면 간단하게 해결된다!</p>
-<h3 id="56">56번 문제</h3>
+<h3 id="56">56번 문제<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>readme</code> 눌렀을때 <code>access denied</code> 등장 (접근 거부)</li>
 <li><code>hi~</code> 눌렀을때 <code>hi~</code> 등장</li>
@@ -1648,7 +1664,7 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <li>주소창 뒤에 적고 <code>Enter</code> 치면</li>
 <li>성공 <code>&gt;_&lt;</code></li>
 </ul>
-<h2 id="3">3주차 모임</h2>
+<h2 id="3">3주차 모임<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.14</li>
 <li>참석자 : 김지연, 박지선, 한나라, 한영빈, 송지은</li>
@@ -1659,7 +1675,7 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <li>한영빈 : 3, 10</li>
 <li>송지은 : 32, 49</li>
 </ul>
-<h3 id="3_1">3번 문제</h3>
+<h3 id="3_1">3번 문제<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제 페이지로 들어가면, 퍼즐이 하나 나오는데, <code>노노그램</code> 혹은 <code>네모네모로직</code> 이라는 퍼즐 게임이다.</li>
 <li>5 * 5 칸이 준비되어 있고, 각 가로줄이나 세로줄 위쪽이나 왼쪽에 숫자가 배열되어 있다.</li>
@@ -1734,46 +1750,46 @@ setTimeout(&quot;answer(0)&quot;,10000);
  ip : localhost</code></p>
 </li>
 </ul>
-<h3 id="10">10번 문제</h3>
+<h3 id="10">10번 문제<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제 화면에 들어가면, 빨간 사각형 하나, 회색 사각형 하나, 빨간 사각형 하나가 아래 방향으로 나열되어 있다.</li>
 <li>페이지 화면은 볼거 없고... 소스를 보자!</li>
 <li>개발자 콘솔이나, 페이지 우클릭시 나오는 컨텍스트 메뉴에서 <code>소스 보기</code> 누르면 나오는 소스는 아래와 같다.</li>
 </ul>
-<pre><code class="html">
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Challenge 10&lt;/title&gt;
-&lt;/head&gt;
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Challenge 10<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;body&gt;
-&lt;hr style=height:100;background:brown;&gt;
-&lt;table border=0 width=900 style=background:gray&gt;
-&lt;tr&gt;&lt;td&gt;
-&lt;a id=hackme style=&quot;position:relative;left:0;top:0&quot; onclick=&quot;this.style.posLeft+=1;if(this.style.posLeft==800)this.href='?go='+this.style.posLeft&quot; onmouseover=this.innerHTML='yOu' onmouseout=this.innerHTML='O'&gt;O&lt;/a&gt;&lt;br&gt;
-&lt;font style=&quot;position:relative;left:800;top:0&quot; color=gold&gt;|&lt;br&gt;|&lt;br&gt;|&lt;br&gt;|&lt;br&gt;buy lotto&lt;/font&gt;
-&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;hr style=height:100;background:brown;&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">hr</span> <span class="na">style</span><span class="o">=</span><span class="s">height:100;background:brown;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">0</span> <span class="na">width</span><span class="o">=</span><span class="s">900</span> <span class="na">style</span><span class="o">=</span><span class="s">background:gray</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">hackme</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;position:relative;left:0;top:0&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;this.style.posLeft+=1;if(this.style.posLeft==800)this.href=&#39;?go=&#39;+this.style.posLeft&quot;</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">this.innerHTML=&#39;yOu&#39;</span> <span class="na">onmouseout</span><span class="o">=</span><span class="s">this.innerHTML=&#39;O&#39;</span><span class="p">&gt;</span>O<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">font</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;position:relative;left:800;top:0&quot;</span> <span class="na">color</span><span class="o">=</span><span class="s">gold</span><span class="p">&gt;</span>|<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>|<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>|<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>|<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>buy lotto<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">hr</span> <span class="na">style</span><span class="o">=</span><span class="s">height:100;background:brown;</span><span class="p">&gt;</span>
 
-&lt;/body&gt;
-&lt;/html&gt;
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
 
-</code></pre>
 
 <ul>
 <li><code>id</code>가 <code>hackme</code>인 <code>a</code> 태그를 보면, <code>a</code> 태그 클릭시, 해당 태그의 <code>style</code> 속성에서, <code>posLeft</code> 가 <code>1</code>씩 늘어나고, 값이 <code>800</code> 이면, 정해진 작업이 실행되는 것을 볼 수 있다.</li>
 <li><code>posLeft</code> 값을 <code>799</code> 로 바꾸고 클릭 해보자. 개발자 콘솔을 열고, 콘솔 탭에서 다음을 실행한다.</li>
 <li><code>id</code> 가 <code>hackme</code> 인 요소에 접근하여, 해당 요소의 <code>style</code> 속성의 <code>posLeft</code> 값을 <code>799</code> 로 변경하는 코드이다.</li>
 </ul>
-<pre><code class="javascript">document.getElementById('hackme').style.posLeft=799
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;hackme&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">=</span><span class="mi">799</span>
+</pre></div>
+
 
 <ul>
 <li>그리고, 회색 사각형 위의 <code>O</code> 글자를 누른다.(참고로 마우스를 올리면 <code>yOu</code> 라고 바뀌었다가, 때면 다시 <code>O</code> 로 바뀐다.)</li>
 <li>끝. 문제가 풀렸다.</li>
 </ul>
-<h3 id="11">11번 문제</h3>
+<h3 id="11">11번 문제<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>preg_match : PHP에서 패턴이 일치하는 문자 혹은 숫자를 판단하기 위해서 사용되는 함수</li>
 <li>preg_match(패턴, 비교할 변수) 형태로 사용.</li>
@@ -1791,7 +1807,7 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <li>1aaaaa_.IP주소.%09p%09a%09s%09s 가 나옴.</li>
 <li>이것을 주소창에 입력.(val = 1aaaaa_.IP주소.%09p%09a%09s%09s)</li>
 </ul>
-<h3 id="21">21번 문제</h3>
+<h3 id="21">21번 문제<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <ul>
 <li>소스를 보면 히든값으로 id와 pw을 받는다.</li>
 <li><code>0</code>을 입력했을 때, 반응 없다.</li>
@@ -1806,7 +1822,7 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <li><code>blindsqlinjectionkk</code>이 답인 것을 알 수 있다.</li>
 <li><code>Flag</code>에 입력하면 문제해결.</li>
 </ul>
-<h3 id="25">25번 문제</h3>
+<h3 id="25">25번 문제<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>url을 먼저 살펴보면, ?file=hello 라고 되어있다.</p>
@@ -1829,7 +1845,7 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <p>그렇다면 ?file=뒤에 무엇을 입력해야 할 지 쉽게 알 수 있을 것이다!</p>
 </li>
 </ul>
-<h3 id="32">32번 문제</h3>
+<h3 id="32">32번 문제<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
 <ul>
 <li>join 버튼을 누르면 랭킹에 내 아이디가 추가된다.</li>
 <li>아이디를 클릭하면 vote_check:ok 쿠키가 생성되며 HIT 부분의 수가 증가한다.</li>
@@ -1837,26 +1853,27 @@ setTimeout(&quot;answer(0)&quot;,10000);
 <li>투표의 여부를 쿠키값으로 확인하는 구조인 듯 하므로, 쿠키가 생성되기 전에 페이지를 가로채서 100번이 넘어가도록 투표를 반복한다. (<code>burpsuite</code>의 <code>repeater</code> 기능을 사용함)</li>
 <li>본인 아이디의 투표 횟수가 100이 넘어가면 문제가 풀린다.</li>
 </ul>
-<h3 id="39">39번 문제</h3>
+<h3 id="39">39번 문제<a class="headerlink" href="#39" title="Permanent link">&para;</a></h3>
 <ul>
 <li>우선 소스를 확인하자  <code>$_POST[id]</code></li>
 </ul>
-<pre><code class="html">&lt;!-- index.phps--&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!-- index.phps--&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>주석에 index.phps가 있으므로 현주소 뒤에 붙여준다  </li>
 <li>index 페이지를 보면 새로운 코드들이 있다  </li>
 </ul>
-<pre><code class="php">$pw=&quot;????&quot;;
+<div class="codehilite"><pre><span></span><span class="x">$pw=&quot;????&quot;;</span>
 
-if($_POST[id])
-{
-$_POST[id]=str_replace(&quot;\\&quot;,&quot;&quot;,$_POST[id]);
-$_POST[id]=str_replace(&quot;'&quot;,&quot;''&quot;,$_POST[id]);
-$_POST[id]=substr($_POST[id],0,15);
+<span class="x">if($_POST[id])</span>
+<span class="x">{</span>
+<span class="x">$_POST[id]=str_replace(&quot;\\&quot;,&quot;&quot;,$_POST[id]);</span>
+<span class="x">$_POST[id]=str_replace(&quot;&#39;&quot;,&quot;&#39;&#39;&quot;,$_POST[id]);</span>
+<span class="x">$_POST[id]=substr($_POST[id],0,15);</span>
+</pre></div>
 
-</code></pre>
 
 <ul>
 <li>여기서 입력값에 대해 replace와 substr이 된다고 한다  </li>
@@ -1868,15 +1885,16 @@ $_POST[id]=substr($_POST[id],0,15);
 <li>replace에서 싱글 쿼터는 필터링이 된다. (자만하고 소스를 제대로 확인을 안한 벌을 받았다)</li>
 <li>보면 (' )를 (" )로 replace 하고 있었다.</li>
 </ul>
-<pre><code class="php">$_POST[id]=substr($_POST[id],0,15);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="x">$_POST[id]=substr($_POST[id],0,15);</span>
+</pre></div>
+
 
 <ul>
 <li>replace랑 substr이 15자리까지만 id를 받는다고 적혀있으니까 우선 15번째는 (' )를 적어주면 된다는 사실을 발견했다.</li>
 <li>빈칸~~~~~하고나서 <code>'</code>만 하면 솔브가 되지 않는다.</li>
 <li>웹해킹 문제를 풀어보면 <code>admin</code>을 너무 좋아하길래 혹시나하고 <code>admin         '</code>를 적었더니 솔브가 된다(운이 좋았ㄷ...)</li>
 </ul>
-<h3 id="46">46번 문제</h3>
+<h3 id="46">46번 문제<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
 <ul>
 <li>46번에 들어가면 level값에 1이 적혀있고 제출버튼이 보인다.</li>
 <li>먼저 그냥 제출을 클릭하면 아래와 같이 출력된다.<ul>
@@ -1890,7 +1908,7 @@ $_POST[id]=substr($_POST[id],0,15);
 <li>그리고 admin을 직접 입력하면 안된다는 것을 깨닫는다.</li>
 <li>ascii코드로 admin 값을 구해서 char(--이곳에 그 값을 입력--) 하면 된다.</li>
 </ul>
-<h3 id="49">49번 문제</h3>
+<h3 id="49">49번 문제<a class="headerlink" href="#49" title="Permanent link">&para;</a></h3>
 <ul>
 <li>level에 1을 입력하면 <code>zzibong</code>이 뜬다.</li>
 <li>http://webhacking.kr/challenge/web/web-24/index.phps 에서 소스코드를 확인한다.</li>
@@ -1899,16 +1917,17 @@ $_POST[id]=substr($_POST[id],0,15);
 <li><code>0 or id=admin</code> 을 필터링을 우회하여 입력</li>
 <li><code>0%0A||%0Aid=0x61646d696e</code> 이런식으로 입력해주면 문제가 풀린다.</li>
 </ul>
-<h3 id="58">58번 문제</h3>
+<h3 id="58">58번 문제<a class="headerlink" href="#58" title="Permanent link">&para;</a></h3>
 <ul>
 <li>pw: 와 login이 있다. 소스부터 확인하자</li>
 </ul>
-<pre><code class="html">&lt;center&gt;
-&lt;script src=&quot;kk.js&quot;&gt;&lt;script&gt;
-&lt;script src=&quot;kk2.js&quot;&gt;&lt;script&gt;
-&lt;embed src=&quot;hackme.swf&quot; width=&quot;500&quot; height=&quot;400&quot;&gt;
-&lt;/center&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;kk.js&quot;</span><span class="p">&gt;</span><span class="err">&lt;script&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;kk2.js&quot;</span><span class="p">&gt;</span><span class="err">&lt;script&gt;</span>
+<span class="p">&lt;</span><span class="nt">embed</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;hackme.swf&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;500&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>여기서 js는 Java Script 코드를 가지고 있는 text 파일이라는 것을 구글링을 통해 알 수 있었다.</li>
@@ -1916,17 +1935,19 @@ $_POST[id]=substr($_POST[id],0,15);
 <li>주소창 뒤에 파일 이름을 적는다.</li>
 <li>그러면kk.js는 아래와 같이 나온다</li>
 </ul>
-<pre><code class="javascript">kk=document.URL;
-kk=kk.substr(10,4);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nx">kk</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">;</span>
+<span class="nx">kk</span><span class="o">=</span><span class="nx">kk</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</pre></div>
+
 
 <ul>
 <li>이것은 <code>kk</code>에 <code>document.URL</code>을 저장시키고 저장된 값에서 10번쨰 다음 숫자부터 4개의 값을 뽑고 다시 kk에 저장한다는 소리이다.</li>
 <li><code>kk2.js</code>를 넣으면 아래와 같이 나온다</li>
 </ul>
-<pre><code class="javascript">kk=kk+&quot;me.swf&quot;;
-document.write(&quot;&lt;embed src=&quot;+kk+&quot; width=500 height=400&gt;&lt;/embed&gt;&quot;);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nx">kk</span><span class="o">=</span><span class="nx">kk</span><span class="o">+</span><span class="s2">&quot;me.swf&quot;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;embed src=&quot;</span><span class="o">+</span><span class="nx">kk</span><span class="o">+</span><span class="s2">&quot; width=500 height=400&gt;&lt;/embed&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+
 
 <ul>
 <li><code>kk</code>에 <code>me.swf</code>를 더한 값을 <code>kk</code>에 저장시키고 그다음 <code>embed</code>태그(플래시를 재생하게 해주는 태그라고 합니다)와 <code>kk</code>를 적어 출력시킨다</li>
@@ -1934,12 +1955,13 @@ document.write(&quot;&lt;embed src=&quot;+kk+&quot; width=500 height=400&gt;&lt;
 <li>동영상을 어떻게 추가해야할지 막막했다.</li>
 <li>구글링을 하다보니 메모장에서 하이퍼링크를 통해서 추가한다는 것을 응용함</li>
 </ul>
-<pre><code class="html">&lt;html&gt;
-&lt;body&gt;
-&lt;a href=&quot;http://webhacking.kr/challenge/web/web-35/hackme.swf&quot;&gt;동영상&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://webhacking.kr/challenge/web/web-35/hackme.swf&quot;</span><span class="p">&gt;</span>동영상<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>이렇게 적고 동영상.html 저장을 해주었다.</li>

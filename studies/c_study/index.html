@@ -884,8 +884,8 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/studies/c_study.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="c-study">C STUDY</h1>
-<h2 id="_1">스터디 개요</h2>
+                <h1 id="c-study">C STUDY<a class="headerlink" href="#c-study" title="Permanent link">&para;</a></h1>
+<h2 id="_1">스터디 개요<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>기간: 2017년 3월27일 ~ 2017년 4월 13일</li>
 <li>스터디 멘토: 박지선, 김희수</li>
@@ -896,7 +896,7 @@
 <li>모임 장소: 상시 변동</li>
 </ul>
 <hr />
-<h2 id="1">1주차</h2>
+<h2 id="1">1주차<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.03.27</li>
 <li>출석: 김규희, 김문수, 박찬우, 장은애, 허수진</li>
@@ -904,28 +904,29 @@
 <li>과제: 삼각형의 밑변과 높이를 double형 정수로 입력받아 삼각형의 넓이를 소수점 셋째자리까지 출력</li>
 </ul>
 <p>과제 코드</p>
-<pre><code class="c">#include &lt;stdio.h&gt;
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main(void)
-{
-    double x,y;
-    double area;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">area</span><span class="p">;</span>
 
-    printf(&quot;밑변을 입력하세요: &quot;);
-    scanf(&quot;%lf&quot;, &amp;x);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;밑변을 입력하세요: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
 
-    printf(&quot;높이를 입력하세요: &quot;);
-    scanf(&quot;%lf&quot;, &amp;y);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;높이를 입력하세요: &quot;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%lf&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
 
-    area = (x*y)/2;
+    <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
 
-    printf(&quot;넓이는 %.3f입니다.\n&quot;, area);
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;넓이는 %.3f입니다.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">area</span><span class="p">);</span>
 
-    return 0;
-}
-</code></pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 
-<h2 id="2">2주차</h2>
+
+<h2 id="2">2주차<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.04.06</li>
 <li>출석: 김규희, 김문수, 박소정, 박찬우, 장은빈, 장은애, 허수진</li>
@@ -933,41 +934,43 @@ int main(void)
 <li>내용: 반복문을 이해하고 반복문을 사용하여 간단한 코드를 작성할 수 있다.</li>
 </ul>
 <p>예제1</p>
-<pre><code class="c">#include &lt;stdio.h&gt;
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main(void)
-{
-    int sum = 0;
-    int i = 0;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    for(i=0; i&lt;100; i++)
-    {
-        sum += 1;
-    }
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</code></pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>예제2</p>
-<pre><code class="c">#include &lt;stdio.h&gt;
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-int main(void)
-{
-    int sum = 0;
-    int i=0;
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 
-    while(i&lt;100)
-    {
-        sum += i;
-        i++;
-    }
+    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    return 0;
-}
-</code></pre>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 
-<h2 id="3">3주차</h2>
+
+<h2 id="3">3주차<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.04.14</li>
 <li>출석: 김규희, 김문수, 박소정, 박찬우, 장은빈, 장은애, 허수진</li>

@@ -1216,8 +1216,8 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/studies/webhacking/webhacking-week4to6.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="-4-6">웹해킹 스터디 - 4주차 ~ 6주차 기록</h1>
-<h2 id="4">4주차 모임</h2>
+                <h1 id="-4-6">웹해킹 스터디 - 4주차 ~ 6주차 기록<a class="headerlink" href="#-4-6" title="Permanent link">&para;</a></h1>
+<h2 id="4">4주차 모임<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.21</li>
 <li>참석자 : 김지연, 박지선, 한나라, 한영빈</li>
@@ -1229,7 +1229,7 @@
 <li>한영빈 :</li>
 <li>송지은 : 41</li>
 </ul>
-<h3 id="23">23번 문제</h3>
+<h3 id="23">23번 문제<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>&lt;script&gt;alert(1);&lt;/script&gt;</code>을 인젝션 하는 문제.</li>
 <li>특수문자를 입력했을 때 필터링되지 않는다.</li>
@@ -1242,7 +1242,7 @@
 <li><code>%3cs%00c%00r%00i%00p%00t%3ea%00l%00e%00r%00t(1)%3b%3c%2fs%00c%00r%00i%00p%00t%3e</code></li>
 <li>이것을 주소창 <code>code=</code> 뒤에 입력해주면 문제해결.</li>
 </ul>
-<h3 id="41">41번 문제</h3>
+<h3 id="41">41번 문제<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
 <ul>
 <li>"~/index.phps" 에서 소스코드를 확인한다.</li>
 <li><code>copy()</code> 함수는 <code>빈칸</code>이 값으로 들어왔을 때 취약점이 발생한다.</li>
@@ -1251,7 +1251,7 @@
 <li>파일명이 <code>&lt;</code> 또는 <code>&gt;</code>인 파일을 업로드하면 에러 메세지가 출력되면서 <code>$hidden_dir</code> 값이 노출된다.</li>
 <li>제대로 된 파일을 업로드 한 후 "~/$hidden_dir/업로드한_파일명" 으로 접속하면 문제가 풀린다.</li>
 </ul>
-<h2 id="5">5주차 모임</h2>
+<h2 id="5">5주차 모임<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.28</li>
 <li>참석자 : 김지연, 박지선, 한영빈, 송지은</li>
@@ -1263,17 +1263,18 @@
 <li>한영빈 : 33</li>
 <li>송지은 : 47</li>
 </ul>
-<h3 id="7">7번 문제</h3>
+<h3 id="7">7번 문제<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
 <ul>
 <li>URL을 보면 <code>val=1</code> 확인할 수 있다.</li>
 <li><code>auth</code>을 클릭하면 <code>Acess_Denied</code>라는 안내창이 나온다.</li>
 <li>소스를 보면 주석이 있다.</li>
 </ul>
-<pre><code class="html">&lt;!-- admin mode : val=2 --&gt;
-&lt;!--
-index.phps
---&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!-- admin mode : val=2 --&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">index.phps</span>
+<span class="c">--&gt;</span>
+</pre></div>
+
 
 <ul>
 <li><code>admin mod</code>는 <code>val = 2</code>라는 것을 알수 있다.</li>
@@ -1282,12 +1283,13 @@ index.phps
 <li><code>index.phps</code> 이동해본다.</li>
 <li>여기에도 주석이 있다. 주석을 통해 정보를 얻을 수 있다.</li>
 </ul>
-<pre><code class="html">&lt;!--
-db에는 val=2가 존재하지 않습니다.
+<div class="codehilite"><pre><span></span><span class="c">&lt;!--</span>
+<span class="c">db에는 val=2가 존재하지 않습니다.</span>
 
-union을 이용하세요
---&gt;
-</code></pre>
+<span class="c">union을 이용하세요</span>
+<span class="c">--&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>주석 아래에 있는 소스를 해석해보면</li>
@@ -1300,56 +1302,57 @@ union을 이용하세요
 <li><code>rand</code>는 난수를 만드는 함수. (난수는 랜덤으로 이해하면 된다.)</li>
 <li><code>rand</code>값에는 1~5 사이의 값을 랜덤하게 저장.</li>
 </ul>
-<pre><code class="php">$rand=rand(1,5);
+<div class="codehilite"><pre><span></span><span class="x">$rand=rand(1,5);</span>
 
-if($rand==1)
-{
-$result=@mysql_query(&quot;select lv from lv1 where lv=($go)&quot;) or die(&quot;nice try!&quot;);
-}
+<span class="x">if($rand==1)</span>
+<span class="x">{</span>
+<span class="x">$result=@mysql_query(&quot;select lv from lv1 where lv=($go)&quot;) or die(&quot;nice try!&quot;);</span>
+<span class="x">}</span>
 
-if($rand==2)
-{
-$result=@mysql_query(&quot;select lv from lv1 where lv=(($go))&quot;) or die(&quot;nice try!&quot;);
-}
+<span class="x">if($rand==2)</span>
+<span class="x">{</span>
+<span class="x">$result=@mysql_query(&quot;select lv from lv1 where lv=(($go))&quot;) or die(&quot;nice try!&quot;);</span>
+<span class="x">}</span>
 
-if($rand==3)
-{
-$result=@mysql_query(&quot;select lv from lv1 where lv=((($go)))&quot;) or die(&quot;nice try!&quot;);
-}
+<span class="x">if($rand==3)</span>
+<span class="x">{</span>
+<span class="x">$result=@mysql_query(&quot;select lv from lv1 where lv=((($go)))&quot;) or die(&quot;nice try!&quot;);</span>
+<span class="x">}</span>
 
-if($rand==4)
-{
-$result=@mysql_query(&quot;select lv from lv1 where lv=(((($go))))&quot;) or die(&quot;nice try!&quot;);
-}
+<span class="x">if($rand==4)</span>
+<span class="x">{</span>
+<span class="x">$result=@mysql_query(&quot;select lv from lv1 where lv=(((($go))))&quot;) or die(&quot;nice try!&quot;);</span>
+<span class="x">}</span>
 
-if($rand==5)
-{
-$result=@mysql_query(&quot;select lv from lv1 where lv=((((($go)))))&quot;) or die(&quot;nice try!&quot;);
-}
+<span class="x">if($rand==5)</span>
+<span class="x">{</span>
+<span class="x">$result=@mysql_query(&quot;select lv from lv1 where lv=((((($go)))))&quot;) or die(&quot;nice try!&quot;);</span>
+<span class="x">}</span>
 
-$data=mysql_fetch_array($result);
-if(!$data[0]) { echo(&quot;query error&quot;); exit(); }
-if($data[0]!=1 &amp;&amp; $data[0]!=2) { exit(); }
+<span class="x">$data=mysql_fetch_array($result);</span>
+<span class="x">if(!$data[0]) { echo(&quot;query error&quot;); exit(); }</span>
+<span class="x">if($data[0]!=1 &amp;&amp; $data[0]!=2) { exit(); }</span>
+</pre></div>
 
-</code></pre>
 
 <ul>
 <li><code>date[0]</code>가 2가 나오면 문제 해결.</li>
 </ul>
-<pre><code class="php">if($data[0]==1)
-{
-echo(&quot;&lt;input type=button style=border:0;bgcolor='gray' value='auth' onclick=
-alert('Access_Denied!')&gt;&lt;p&gt;&quot;);
-echo(&quot;&lt;!-- admin mode : val=2 --&gt;&quot;);
-}
+<div class="codehilite"><pre><span></span><span class="x">if($data[0]==1)</span>
+<span class="x">{</span>
+<span class="x">echo(&quot;&lt;input type=button style=border:0;bgcolor=&#39;gray&#39; value=&#39;auth&#39; onclick=</span>
+<span class="x">alert(&#39;Access_Denied!&#39;)&gt;&lt;p&gt;&quot;);</span>
+<span class="x">echo(&quot;&lt;!-- admin mode : val=2 --&gt;&quot;);</span>
+<span class="x">}</span>
 
-if($data[0]==2)
-{
-echo(&quot;&lt;input type=button style=border:0;bgcolor='gray' value='auth' onclick=
-alert('Congratulation')&gt;&lt;p&gt;&quot;);
-@solve();
-}
-</code></pre>
+<span class="x">if($data[0]==2)</span>
+<span class="x">{</span>
+<span class="x">echo(&quot;&lt;input type=button style=border:0;bgcolor=&#39;gray&#39; value=&#39;auth&#39; onclick=</span>
+<span class="x">alert(&#39;Congratulation&#39;)&gt;&lt;p&gt;&quot;);</span>
+<span class="x">@solve();</span>
+<span class="x">}</span>
+</pre></div>
+
 
 <ul>
 <li>주석대로 val에 union을 사용한다.</li>
@@ -1369,13 +1372,13 @@ alert('Congratulation')&gt;&lt;p&gt;&quot;);
 <li><code>var=0)%0Aunion%0Aselect%0A(3-1</code> 입력</li>
 <li>문제 해결</li>
 </ul>
-<h3 id="33">33번 문제</h3>
+<h3 id="33">33번 문제<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>필자 생각에, 이 문제는 끈기와 인내심을 요하는 문제인 것 같다.</p>
 </blockquote>
 <p>이 문제는 여러게의 작은 문제를 연속으로 풀어야 하는 문제다.
 100~150 점 짜리 문제 10개 연속으로 푼다고 생각하면 된다.</p>
-<h4 id="33-1">33-1</h4>
+<h4 id="33-1">33-1<a class="headerlink" href="#33-1" title="Permanent link">&para;</a></h4>
 <p>먼저 아래와 같은 내용의 페이지가 나온다.
 <code>/challenge/bonus/bonus-6/index.phps</code> 를 클릭해보자.</p>
 <blockquote>
@@ -1384,85 +1387,92 @@ alert('Congratulation')&gt;&lt;p&gt;&quot;);
 Wrong</p>
 </blockquote>
 <p>그러면 이 문제의 서버측 코드가 나온다.</p>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-1&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-1&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-&lt;?
+<span class="cp">&lt;?</span>
 
-if($_GET[get]==&quot;hehe&quot;)
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">get</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;hehe&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>서버에 <code>GET</code> 메소드를 통해 <code>get</code> 이라는 키로 날라온 값이 <code>hehe</code> 이면 통과하는 것을 알 수 있다. <code>GET</code> 으로 값을 전달하려는 경우 보통 주소 뒤에 쿼리스트링을 붙여서 전달한다. 예제는 아래와 같다.</p>
-<pre><code> http:/exmaple.com?키1=값1&amp;키2=값2
-</code></pre>
+<div class="codehilite"><pre><span></span> http:/exmaple.com?키1=값1&amp;키2=값2
+</pre></div>
+
 
 <p>따라서 주소 뒤에 <code>?get=hehe</code>를 붙여서 이동하면 문제가 풀린다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/?get=hehe
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/?get=hehe
+</pre></div>
 
-<h4 id="33-2">33-2</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-2&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
 
-&lt;?
+<h4 id="33-2">33-2<a class="headerlink" href="#33-2" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-2&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-if($_POST[post]==&quot;hehe&quot; &amp;&amp; $_POST[post2]==&quot;hehe2&quot;)
-{
-echo(&quot;&lt;a href=##&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="cp">&lt;?</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">post</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;hehe&quot;</span> <span class="o">&amp;&amp;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">post2</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;hehe2&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=##&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>소스를 보면, POST 메소드로 키가 <code>post</code> 이고 값은 <code>hehe</code> 인 것과, 키가 <code>post2</code> 이고 값은 <code>hehe2</code> 인것이 오면 문제가 풀리는 것을 볼 수 있다. <code>POST</code> 메소드로 값을 전달하는 방법 중 하나는 HTML <code>form</code> 태그를 이용하는 것 이다. 다음과 같은 코드를 개발자 도구를 이용하여 페이지에 삽입하자. 문제가 요구하는 값을 가졌고, 버튼을 누르면 POST 메소드로 값을 보내는 폼이다. 삽입 후, 제출 버튼을 누르면 문제가 풀린다.</p>
-<pre><code class="html">&lt;form method=&quot;post&quot;&gt;
-  &lt;input name=&quot;post&quot; value=&quot;hehe&quot;&gt;
-  &lt;input name=&quot;post2&quot; value=&quot;hehe2&quot;&gt;
-  &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;hehe&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;post2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;hehe2&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
 
-<h4 id="33-3">33-3</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-3&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
 
-&lt;?
+<h4 id="33-3">33-3<a class="headerlink" href="#33-3" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-3&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-if($_GET[myip]==$_SERVER[REMOTE_ADDR])
-{
-echo(&quot;&lt;a href=##.php&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="cp">&lt;?</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">myip</span><span class="p">]</span><span class="o">==</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">])</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=##.php&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>GET 요청을 통해 온 <code>myip</code> 가 해당 요청을 클라이언트의 IP 주소와 같으면 풀리는 문제이다.
 아래와 같이 주소 뒤에 <code>?myip=본인의_공인IP주소</code> 를 넣고 이동하면 풀린다.
 본인의 공인 IP는 <a href="https://whatismyipaddress.com/">WhatIsMyIPAddress</a>등을 이용하면 알 수 있다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/33.phps?myip=본인의_공인IP주소
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/33.phps?myip=본인의_공인IP주소
+</pre></div>
 
-<h4 id="33-4">33-4</h4>
+
+<h4 id="33-4">33-4<a class="headerlink" href="#33-4" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>~~여러분의 순발력을 시험하는 조금 거지같은 문제 되시겠다.~~</p>
 </blockquote>
@@ -1473,272 +1483,292 @@ echo(&quot;Wrong&quot;);
 hint : 1480253474</p>
 </blockquote>
 <p>일단 소스를 한번 보자.</p>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-4&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-4&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-&lt;?
+<span class="cp">&lt;?</span>
 
-if($_GET[password]==md5(time()))
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;hint : &quot;.time());
-}
-?&gt;
-</code></pre>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">password</span><span class="p">]</span><span class="o">==</span><span class="nb">md5</span><span class="p">(</span><span class="nb">time</span><span class="p">()))</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;hint : &quot;</span><span class="o">.</span><span class="nb">time</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p><code>time()</code> 함수를 호출하여 얻은 현재 시각을 <code>md5</code> Hash 로 바꾼 값과, GET 요청으로 온 <code>password</code> 값이 일치하면 풀리는 문제이다. 풀리지 않는 경우, 그냥 현재 시각을 힌트로 페이지에 출력해준다. 페이지에 찍힌 <code>hint</code> 값에 20~30 정도 더해서 <code>md5</code> Hash 로 바꿔서 넣어보자. 순발력과 인내심으로 빠르게 변환하여 주소창에 넣고 이동을 몇번 반복하면 풀린다. 예제는 아래와 같다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/l4.php?password=4f607be26614b5695bdfa8623c5c8e85
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/l4.php?password=4f607be26614b5695bdfa8623c5c8e85
+</pre></div>
 
-<h4 id="33-5">33-5</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-5&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
 
-&lt;?
+<h4 id="33-5">33-5<a class="headerlink" href="#33-5" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-5&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-if($_GET[imget] &amp;&amp; $_POST[impost] &amp;&amp; $_COOKIE[imcookie])
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="cp">&lt;?</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">imget</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">impost</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nv">$_COOKIE</span><span class="p">[</span><span class="nx">imcookie</span><span class="p">])</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>소스를 보면, GET 요청으로 온 <code>imget</code>, POST 요청으로 온 <code>impost</code>, 쿠키값인 <code>imcookie</code> 가 모두 참이면 문제가 풀리는 것을 볼 수 있다. 어떻게 하면 GET, POST, Cookie 로 동시에 보낼 수 있을까? 생각보다 간단하다. ~~그러나 긔찮다.~~
 <code>imget</code> 값은 쿼리스트링, <code>impost</code> 값은 폼 태그 하나 삽입하고, 쿠키값은 개발자 콘솔의 콘솔 탭에서 수정하면 된다.
 하나씩 해 보자.</p>
 <p>먼저 주소창 뒤에 아래와 같이 쿼리스트링을 붙여 이동한다.<code>imget</code> 값을 <code>1</code> 로 하여 쿼리스트링으로 붙이는 것이다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/md555.php?imget=1
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/md555.php?imget=1
+</pre></div>
+
 
 <p>그리고 다음과 같은 코드를 개발자 콘솔의 콘솔 탭에서 실행하여, 값이 <code>1</code> 인 쿠키, <code>imcookie</code> 를 만든다.</p>
-<pre><code class="js">document.cookie = &quot;imcookie=1&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&quot;imcookie=1&quot;</span>
+</pre></div>
+
 
 <p>마지막으로 아래와 같은 코드를 페이지에 삽입하고, 제출 버튼을 누르면 풀린다.</p>
-<pre><code class="html">&lt;form method=&quot;post&quot;&gt;
-  &lt;input name=&quot;impost&quot; value=&quot;1&quot;&gt;
-  &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;impost&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
 
-<h4 id="33-6">33-6</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-6&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
 
-&lt;?
+<h4 id="33-6">33-6<a class="headerlink" href="#33-6" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-6&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-if($_COOKIE[test]==md5(&quot;$_SERVER[REMOTE_ADDR]&quot;) &amp;&amp; $_POST[kk]==md5(&quot;$_SERVER[HTTP_USER_AGENT]&quot;))
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;hint : $_SERVER[HTTP_USER_AGENT]&quot;);
-}
-?&gt;
-</code></pre>
+<span class="cp">&lt;?</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="nx">test</span><span class="p">]</span><span class="o">==</span><span class="nb">md5</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">$_SERVER[REMOTE_ADDR]</span><span class="s2">&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">kk</span><span class="p">]</span><span class="o">==</span><span class="nb">md5</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">$_SERVER[HTTP_USER_AGENT]</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;hint : </span><span class="si">$_SERVER[HTTP_USER_AGENT]</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>소스코드를 보면, 클라이언트 주소를 <code>md5</code> 로 바꾼 값과 쿠키 중 <code>test</code> 의 값과 일치하고, POST 로 보낸 <code>kk</code> 가 클라이언트의 User Agent 를 <code>md5</code> 로 변환한 것과 일치하면 풀리는 것을 볼 수 있다. 풀리지 않는 경우, User Agent 값이 페이지에 찍히는 것을 알 수 있다.</p>
 <p>먼저 쿠키값을 고쳐보자. 일단 본인의 공인 IP 를 <code>md5</code> 로 변환한 뒤, 다음과 같은 코드를 개발자 콘솔의 콘솔 탭에서 실행하면 된다.</p>
-<pre><code class="javascript">document.cookie = &quot;test=59a74d2df97a0bc5fe49bf94f16cdf1c&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&quot;test=59a74d2df97a0bc5fe49bf94f16cdf1c&quot;</span>
+</pre></div>
+
 
 <p>그리고 본인의 User Agent 값을 <code>md5</code> 로 변환한다. 놀랍게도 본인의 User Agent 값을 문제 페이지에서 친절하게 보여주고 있다. 필자의 경우, User Agent 는 <code>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36</code> 이다. 이를 <code>md5</code> 로 변환하고, 아래와 같은 폼 코드를 짜서 페이지에 삽입한다.</p>
-<pre><code class="html">&lt;form method=&quot;post&quot;&gt;
-  &lt;input name=&quot;kk&quot; value=&quot;adc50ddc21cf547721bc636b82e6dc05&quot;&gt;
-  &lt;input type=&quot;submit&quot;&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;kk&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;adc50ddc21cf547721bc636b82e6dc05&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <p>그리고 제출 버튼을 누르면 문제가 풀린다.</p>
-<h4 id="33-7">33-7</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-7&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
+<h4 id="33-7">33-7<a class="headerlink" href="#33-7" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-7&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-&lt;?
-$_SERVER[REMOTE_ADDR]=str_replace(&quot;.&quot;,&quot;&quot;,$_SERVER[REMOTE_ADDR]);
+<span class="cp">&lt;?</span>
+<span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">]</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">]);</span>
 
-if($_GET[$_SERVER[REMOTE_ADDR]]==$_SERVER[REMOTE_ADDR])
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&lt;br&gt;&quot;.$_GET[$_SERVER[REMOTE_ADDR]]);
-}
-?&gt;
-</code></pre>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">]]</span><span class="o">==</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">])</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&lt;br&gt;&quot;</span><span class="o">.</span><span class="nv">$_GET</span><span class="p">[</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">]]);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>GET을 통해 받은 것의 키가 본인의 공인 IP, 값도 본인의 IP 이면 문제가 풀림을 알 수 있다, 다만 점을 공백으로 대체하는 코드가 있는것을 보아, 점을 빼고 넣어주면 될 것 같다. 본인의 IP 가 <code>123.123.123.123</code> 이라면 <code>123123123123</code> 을 넣어주면 될 것 같다. 결론적으로 아래와 같이 주소 뒤에 붙여주면 된다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/wtff.php?123123123123=123123123123
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/wtff.php?123123123123=123123123123
+</pre></div>
 
-<h4 id="33-8">33-8</h4>
+
+<h4 id="33-8">33-8<a class="headerlink" href="#33-8" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p>~~문제가 끝도 없다. 뷁.~~</p>
 </blockquote>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-8&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-8&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-&lt;?
+<span class="cp">&lt;?</span>
 
-extract($_GET);
+<span class="nb">extract</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">);</span>
 
-if(!$_GET[addr]) $addr=$_SERVER[REMOTE_ADDR];
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">addr</span><span class="p">])</span> <span class="nv">$addr</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">];</span>
 
-if($addr==&quot;127.0.0.1&quot;)
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="k">if</span><span class="p">(</span><span class="nv">$addr</span><span class="o">==</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>GET 요청으로 온 <code>addr</code> 값이 <code>127.0.0.1</code> 이면 문제가 풀린다. 만약에 <code>addr</code> 값이 비어 있으면 클라이언트의 IP 가 <code>addr</code> 에 저장되어 <code>127.0.0.1</code> 과 같은지 비교하는 것을 볼 수 있다. 다음과 같이 주소 뒤에 값을 붙여주면 문제가 풀린다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/ipt.php?addr=127.0.0.1
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/ipt.php?addr=127.0.0.1
+</pre></div>
 
-<h4 id="33-9">33-9</h4>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-9&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
 
-&lt;?
+<h4 id="33-9">33-9<a class="headerlink" href="#33-9" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-9&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-for($i=97;$i&lt;=122;$i=$i+2)
-{
-$ch=chr($i);
+<span class="cp">&lt;?</span>
 
-$answer.=$ch;
+<span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">97</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;=</span><span class="mi">122</span><span class="p">;</span><span class="nv">$i</span><span class="o">=</span><span class="nv">$i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nv">$ch</span><span class="o">=</span><span class="nb">chr</span><span class="p">(</span><span class="nv">$i</span><span class="p">);</span>
 
-}
+<span class="nv">$answer</span><span class="o">.=</span><span class="nv">$ch</span><span class="p">;</span>
 
-if($_GET[ans]==$answer)
-{
-echo(&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;);
-}
-else
-{
-echo(&quot;Wrong&quot;);
-}
-?&gt;
-</code></pre>
+<span class="p">}</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">ans</span><span class="p">]</span><span class="o">==</span><span class="nv">$answer</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;&lt;a href=###&gt;Next&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>소스코드를 보면, 반복문에서는 97 부터 시작하여 122 까지 홀수 인 숫자들을 아스키코드 표 상에서 대응하는 문자로 바꿔서(<a href="http://php.net/manual/kr/function.chr.php"><code>chr</code> 함수</a>), <code>answer</code> 변수의 저장된 문자열에 덧붙이는 것(<a href="http://php.net/manual/kr/language.operators.assignment.php"><code>.=</code> (할당연산자)</a>)을 볼 수 있다. 그리고 GET 요청을 통해 온 <code>ans</code> 가 반복문을 통해 만들어진 값과 같으면, 문제가 풀리는 것을 볼 수 있다.</p>
 <p>일일이 아스키코드 표 보면서 값 알아내기 귀찮으므로, 다음과 같은 자바스크립트 코드를 콘솔에서 돌려보자.
 그냥 아래 코드를 콘솔에 복붙하고 엔터키를 눌러보자.</p>
-<pre><code class="javascript">var answer = &quot;&quot;;
-for(var i=97; i&lt;=122; i+=2){
-  answer += String.fromCharCode(i);
-}
-console.log(&quot;ANSWER : &quot;+answer);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">97</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;=</span><span class="mi">122</span><span class="p">;</span> <span class="nx">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">){</span>
+  <span class="nx">answer</span> <span class="o">+=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;ANSWER : &quot;</span><span class="o">+</span><span class="nx">answer</span><span class="p">);</span>
+</pre></div>
+
 
 <p>그럼 아래와 같은 결과가 나온다.</p>
-<pre><code>ANSWER : acegikmoqsuwy
-</code></pre>
+<div class="codehilite"><pre><span></span>ANSWER : acegikmoqsuwy
+</pre></div>
+
 
 <p><code>ans</code> 의 값을 <code>acegikmoqsuwy</code> 로 보내주면 됨을 알 수 있다.</p>
 <p>아래와 같이 주소 뒤에 붙여서 이동하자. 그러면 문제가 풀린다.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/nextt.php?ans=acegikmoqsuwy
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/nextt.php?ans=acegikmoqsuwy
+</pre></div>
 
-<h4 id="33-10">33-10</h4>
+
+<h4 id="33-10">33-10<a class="headerlink" href="#33-10" title="Permanent link">&para;</a></h4>
 <p>일단은... Wrong! 이 없는 걸 보니 이게 마지막 인 것 같다.</p>
-<pre><code class="php">&lt;hr&gt;
-Challenge 33-10&lt;br&gt;
-&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr&lt;?=$_SERVER[PHP_SELF]?&gt;s&gt;&lt;?=$_SERVER[PHP_SELF]?&gt;s&lt;/a&gt;&quot;);&lt;/script&gt;
-&lt;hr&gt;
+<div class="codehilite"><pre><span></span><span class="x">&lt;hr&gt;</span>
+<span class="x">Challenge 33-10&lt;br&gt;</span>
+<span class="x">&lt;script&gt;document.write(&quot;&lt;a href=http://webhacking.kr</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">PHP_SELF</span><span class="p">]</span><span class="cp">?&gt;</span><span class="x">s&lt;/a&gt;&quot;);&lt;/script&gt;</span>
+<span class="x">&lt;hr&gt;</span>
 
-&lt;?
+<span class="cp">&lt;?</span>
 
-$ip=$_SERVER[REMOTE_ADDR];
+<span class="nv">$ip</span><span class="o">=</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="nx">REMOTE_ADDR</span><span class="p">];</span>
 
-for($i=0;$i&lt;=strlen($ip);$i++)
-{
-$ip=str_replace($i,ord($i),$ip);
-}
+<span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;=</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$ip</span><span class="p">);</span><span class="nv">$i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="nv">$i</span><span class="p">,</span><span class="nb">ord</span><span class="p">(</span><span class="nv">$i</span><span class="p">),</span><span class="nv">$ip</span><span class="p">);</span>
+<span class="p">}</span>
 
-$ip=str_replace(&quot;.&quot;,&quot;&quot;,$ip);
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nv">$ip</span><span class="p">);</span>
 
-$ip=substr($ip,0,10);
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$ip</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
 
-@mkdir(&quot;answerip/$ip&quot;);
+<span class="o">@</span><span class="nb">mkdir</span><span class="p">(</span><span class="s2">&quot;answerip/</span><span class="si">$ip</span><span class="s2">&quot;</span><span class="p">);</span>
 
-$answer=$ip*2;
-$answer=$ip/2;
-$answer=str_replace(&quot;.&quot;,&quot;&quot;,$answer);
+<span class="nv">$answer</span><span class="o">=</span><span class="nv">$ip</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="nv">$answer</span><span class="o">=</span><span class="nv">$ip</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="nv">$answer</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nv">$answer</span><span class="p">);</span>
 
-$pw=&quot;###&quot;;
+<span class="nv">$pw</span><span class="o">=</span><span class="s2">&quot;###&quot;</span><span class="p">;</span>
 
-$f=fopen(&quot;answerip/$ip/$answer.$ip&quot;,&quot;w&quot;);
-fwrite($f,&quot;Password is $pw\n\nclear ip : $_SERVER[REMOTE_ADDR]&quot;);
-fclose($f);
-
-
+<span class="nv">$f</span><span class="o">=</span><span class="nb">fopen</span><span class="p">(</span><span class="s2">&quot;answerip/</span><span class="si">$ip</span><span class="s2">/</span><span class="si">$answer</span><span class="s2">.</span><span class="si">$ip</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">);</span>
+<span class="nb">fwrite</span><span class="p">(</span><span class="nv">$f</span><span class="p">,</span><span class="s2">&quot;Password is </span><span class="si">$pw\n\nclear</span><span class="s2"> ip : </span><span class="si">$_SERVER[REMOTE_ADDR]</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="nb">fclose</span><span class="p">(</span><span class="nv">$f</span><span class="p">);</span>
 
 
-?&gt;
 
-</code></pre>
+
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>공인 IP 주소 받아다가 지지고 볶아서 나온 값을 기반으로, 파일을 하나 만들고(<code>/answerip/$ip값/$answer값.$ip값</code>), 그곳에 최종 플래그 값을 찍는 것 같다.
 일일이 해석하기는 귀찮고... 조금 수정해다가 실행해서 <code>answer</code> 와 <code>ip</code> 값을 알아내 보자. <a href="http://webhacking.kr/pds/phppad/index.php">webhacking.kr PHP PAD</a> 나 <a href="http://codepad.org/">Codepad</a> 등을 이용해서 코드를 실행 할 수 있다. 다음과 같이 수정하여 실행해서 값을 알아내 보자.</p>
-<pre><code class="php">&lt;?
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?</span>
 
-$ip=&quot;본인의 공인IP&quot;;
+<span class="nv">$ip</span><span class="o">=</span><span class="s2">&quot;본인의 공인IP&quot;</span><span class="p">;</span>
 
-for($i=0;$i&lt;=strlen($ip);$i++)
-{
-$ip=str_replace($i,ord($i),$ip);
-}
+<span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;=</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$ip</span><span class="p">);</span><span class="nv">$i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="nv">$i</span><span class="p">,</span><span class="nb">ord</span><span class="p">(</span><span class="nv">$i</span><span class="p">),</span><span class="nv">$ip</span><span class="p">);</span>
+<span class="p">}</span>
 
-$ip=str_replace(&quot;.&quot;,&quot;&quot;,$ip);
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nv">$ip</span><span class="p">);</span>
 
-$ip=substr($ip,0,10);
+<span class="nv">$ip</span><span class="o">=</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$ip</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
 
-echo &quot;IP : $ip &quot;;
+<span class="k">echo</span> <span class="s2">&quot;IP : </span><span class="si">$ip</span><span class="s2"> &quot;</span><span class="p">;</span>
 
-$answer=$ip*2;
-$answer=$ip/2;
-$answer=str_replace(&quot;.&quot;,&quot;&quot;,$answer);
+<span class="nv">$answer</span><span class="o">=</span><span class="nv">$ip</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<span class="nv">$answer</span><span class="o">=</span><span class="nv">$ip</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="nv">$answer</span><span class="o">=</span><span class="nb">str_replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="nv">$answer</span><span class="p">);</span>
 
-echo &quot;ANSWER : $answer &quot;;
+<span class="k">echo</span> <span class="s2">&quot;ANSWER : </span><span class="si">$answer</span><span class="s2"> &quot;</span><span class="p">;</span>
 
-?&gt;
-</code></pre>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
 
 <p>코드를 실행하면 아래와 같이 값이 찍힌다.</p>
-<pre><code>IP : ???????? ANSWER : ????????
-</code></pre>
+<div class="codehilite"><pre><span></span>IP : ???????? ANSWER : ????????
+</pre></div>
+
 
 <p>이제 이 값을 <code>/answerip/$ip값/$answer값.$ip값</code> 에 그대로 대입하여 주소창에 넣어보자.</p>
-<pre><code>http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/bonus/bonus-6/answerip/$ip값/$answer값.$ip값
+</pre></div>
+
 
 <p>화면에 나타나는 플래그를 <code>Auth</code> 에 제출하면 문제가 풀린다.</p>
-<h3 id="47">47번 문제</h3>
+<h3 id="47">47번 문제<a class="headerlink" href="#47" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>burpsuite</code> 툴의 <code>proxy</code> 기능을 사용해서 이메일 입력 후 제출을 눌렀을 때 넘어가는 패킷을 잡는다.</li>
 <li><code>email= ...</code> 형태로 입력한 메일이 전송됨을 알 수 있다.</li>
@@ -1747,7 +1777,7 @@ echo &quot;ANSWER : $answer &quot;;
 <li>따라서 <code>email= bb@slfjl (줄바꿈) cc: hacker@webhacking.kr</code> 과 같은 형식으로 코드를 수정해서 넘겨주면 패스워드 값이 나온다.</li>
 <li><code>auth</code> 에 입력해주면 문제가 풀린다.</li>
 </ul>
-<h2 id="6">6주차 모임</h2>
+<h2 id="6">6주차 모임<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.12.05</li>
 <li>참석자 : 한나라, 김지연, 박지선, 한영빈, 송지은</li>
@@ -1759,7 +1789,7 @@ echo &quot;ANSWER : $answer &quot;;
 <li>한영빈 : 5</li>
 <li>송지은 : 34</li>
 </ul>
-<h3 id="5_1">5번 문제</h3>
+<h3 id="5_1">5번 문제<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제를 들어가면 두 가지 버튼이 보인다. <code>Login</code> 과 <code>Join</code></li>
 <li><code>Login</code> 을 누르면, 로그인 화면이 나오고, <code>Join</code> 버튼은 그냥 작동하지 않고 <em>Access_Denied</em> 만 나온다.</li>
@@ -1779,44 +1809,49 @@ id is not admin</p>
 <li>Join 버튼을 누르면 나와야 할 회원가입 페이지로 가 보자. 버튼도 안 먹고 주소도 모르는 데 어떻게 가냐고? 일단 추측을 해 보자.</li>
 <li>로그인 페이지는 뒤에 붙는 경로가 <code>/mem/login.php</code> 이므로, 회원가입 페이지는 경로가 <code>/mem/join.php</code> 임을 추측해서 들어가 보자.</li>
 </ul>
-<pre><code>http://webhacking.kr/challenge/web/web-05/mem/login.php
-</code></pre>
+<div class="codehilite"><pre><span></span>http://webhacking.kr/challenge/web/web-05/mem/login.php
+</pre></div>
+
 
 <ul>
 <li>주소가 올바른 것 같다. 일단 빈 페이지가 나오는데, 페이지 소스를 보면 아래와 같다.</li>
 </ul>
-<pre><code class="html">&lt;html&gt;
-&lt;title&gt;Challenge 5&lt;/title&gt;&lt;/head&gt;&lt;body bgcolor=black&gt;&lt;center&gt;
-&lt;script&gt;
-l='a';ll='b';lll='c';llll='d';lllll='e';llllll='f';lllllll='g';llllllll='h';lllllllll='i';llllllllll='j';lllllllllll='k';llllllllllll='l';lllllllllllll='m';llllllllllllll='n';lllllllllllllll='o';llllllllllllllll='p';lllllllllllllllll='q';llllllllllllllllll='r';lllllllllllllllllll='s';llllllllllllllllllll='t';lllllllllllllllllllll='u';llllllllllllllllllllll='v';lllllllllllllllllllllll='w';llllllllllllllllllllllll='x';lllllllllllllllllllllllll='y';llllllllllllllllllllllllll='z';I='1';II='2';III='3';IIII='4';IIIII='5';IIIIII='6';IIIIIII='7';IIIIIIII='8';IIIIIIIII='9';IIIIIIIIII='0';li='.';ii='&lt;';iii='&gt;';lIllIllIllIllIllIllIllIllIllIl=lllllllllllllll+llllllllllll+llll+llllllllllllllllllllllllll+lllllllllllllll+lllllllllllll+ll+lllllllll+lllll;
-lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+lll+lllllllllllllll+lllllllllllllll+lllllllllll+lllllllll+lllll;if(eval(lIIIIIIIIIIIIIIIIIIl).indexOf(lIllIllIllIllIllIllIllIllIllIl)==-1) { bye; }if(eval(llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+'U'+'R'+'L').indexOf(lllllllllllll+lllllllllllllll+llll+lllll+'='+I)==-1){alert('access_denied');history.go(-1);}else{document.write('&lt;font size=2 color=white&gt;Join&lt;/font&gt;&lt;p&gt;');document.write('.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;');document.write('&lt;form method=post action='+llllllllll+lllllllllllllll+lllllllll+llllllllllllll+li+llllllllllllllll+llllllll+llllllllllllllll
-+'&gt;');document.write('&lt;table border=1&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;id&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name='+lllllllll+llll+' maxlength=5&gt;&lt;/td&gt;&lt;/tr&gt;');document.write('&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;pass&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name='+llllllllllllllll+lllllllllllllllllllllll+' maxlength=10&gt;&lt;/td&gt;&lt;/tr&gt;');document.write('&lt;tr align=center&gt;&lt;td colspan=2&gt;&lt;input type=submit&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;&lt;/table&gt;');}
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Challenge 5<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">body</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">black</span><span class="p">&gt;&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">l</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">;</span><span class="nx">ll</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">;</span><span class="nx">lll</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">;</span><span class="nx">llll</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">;</span><span class="nx">lllll</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">;</span><span class="nx">llllll</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">;</span><span class="nx">lllllll</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">;</span><span class="nx">llllllll</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">;</span><span class="nx">lllllllll</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">;</span><span class="nx">llllllllll</span><span class="o">=</span><span class="s1">&#39;j&#39;</span><span class="p">;</span><span class="nx">lllllllllll</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">;</span><span class="nx">llllllllllll</span><span class="o">=</span><span class="s1">&#39;l&#39;</span><span class="p">;</span><span class="nx">lllllllllllll</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">;</span><span class="nx">llllllllllllll</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">;</span><span class="nx">lllllllllllllll</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">;</span><span class="nx">llllllllllllllll</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;u&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">;</span><span class="nx">I</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">;</span><span class="nx">II</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">;</span><span class="nx">III</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="p">;</span><span class="nx">IIII</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">;</span><span class="nx">IIIII</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">;</span><span class="nx">IIIIII</span><span class="o">=</span><span class="s1">&#39;6&#39;</span><span class="p">;</span><span class="nx">IIIIIII</span><span class="o">=</span><span class="s1">&#39;7&#39;</span><span class="p">;</span><span class="nx">IIIIIIII</span><span class="o">=</span><span class="s1">&#39;8&#39;</span><span class="p">;</span><span class="nx">IIIIIIIII</span><span class="o">=</span><span class="s1">&#39;9&#39;</span><span class="p">;</span><span class="nx">IIIIIIIIII</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">;</span><span class="nx">li</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">;</span><span class="nx">ii</span><span class="o">=</span><span class="s1">&#39;&lt;&#39;</span><span class="p">;</span><span class="nx">iii</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">;</span><span class="nx">lIllIllIllIllIllIllIllIllIllIl</span><span class="o">=</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">llllllllllll</span><span class="o">+</span><span class="nx">llll</span><span class="o">+</span><span class="nx">llllllllllllllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">ll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="p">;</span>
+<span class="nx">lIIIIIIIIIIIIIIIIIIl</span><span class="o">=</span><span class="nx">llll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lll</span><span class="o">+</span><span class="nx">lllllllllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="o">+</span><span class="nx">llllllllllllll</span><span class="o">+</span><span class="nx">llllllllllllllllllll</span><span class="o">+</span><span class="nx">li</span><span class="o">+</span><span class="nx">lll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="p">;</span><span class="k">if</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="nx">lIIIIIIIIIIIIIIIIIIl</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">lIllIllIllIllIllIllIllIllIllIl</span><span class="p">)</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="nx">bye</span><span class="p">;</span> <span class="p">}</span><span class="k">if</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="nx">llll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lll</span><span class="o">+</span><span class="nx">lllllllllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="o">+</span><span class="nx">llllllllllllll</span><span class="o">+</span><span class="nx">llllllllllllllllllll</span><span class="o">+</span><span class="nx">li</span><span class="o">+</span><span class="s1">&#39;U&#39;</span><span class="o">+</span><span class="s1">&#39;R&#39;</span><span class="o">+</span><span class="s1">&#39;L&#39;</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">llll</span><span class="o">+</span><span class="nx">lllll</span><span class="o">+</span><span class="s1">&#39;=&#39;</span><span class="o">+</span><span class="nx">I</span><span class="p">)</span><span class="o">==-</span><span class="mi">1</span><span class="p">){</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;access_denied&#39;</span><span class="p">);</span><span class="nx">history</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);}</span><span class="k">else</span><span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;font size=2 color=white&gt;Join&lt;/font&gt;&lt;p&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;form method=post action=&#39;</span><span class="o">+</span><span class="nx">llllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">llllllllllllll</span><span class="o">+</span><span class="nx">li</span><span class="o">+</span><span class="nx">llllllllllllllll</span><span class="o">+</span><span class="nx">llllllll</span><span class="o">+</span><span class="nx">llllllllllllllll</span>
+<span class="o">+</span><span class="s1">&#39;&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;table border=1&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;id&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name=&#39;</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">llll</span><span class="o">+</span><span class="s1">&#39; maxlength=5&gt;&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;pass&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name=&#39;</span><span class="o">+</span><span class="nx">llllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllllllllllll</span><span class="o">+</span><span class="s1">&#39; maxlength=10&gt;&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;tr align=center&gt;&lt;td colspan=2&gt;&lt;input type=submit&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;&lt;/table&gt;&#39;</span><span class="p">);}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>페이지 소스를 보면 난독화된 Javascript 소스가 들어가 있는 것을 볼 수 있다. 중간에 <code>document.write()</code> 함수가 있고, 조건문으로 감싸져 있는 것으로 보아, 특정 조건을 만족하면 페이지에 내용이 나타남을 알 수 있다.</li>
 <li>난독화된 코드를 일일이 해독할 필요는 없고, 필요한 부분만 웹 브라우저에 내장된 개발자 도구의 자바스크립트 콘솔에서 실행해 보면 된다.</li>
 <li>먼저 조건문 이전 부분의 코드를 실행해 보자. 해당 부분은 아래와 같다.</li>
 </ul>
-<pre><code class="javascript">l='a';ll='b';lll='c';llll='d';lllll='e';llllll='f';lllllll='g';llllllll='h';lllllllll='i';llllllllll='j';lllllllllll='k';llllllllllll='l';lllllllllllll='m';llllllllllllll='n';lllllllllllllll='o';llllllllllllllll='p';lllllllllllllllll='q';llllllllllllllllll='r';lllllllllllllllllll='s';llllllllllllllllllll='t';lllllllllllllllllllll='u';llllllllllllllllllllll='v';lllllllllllllllllllllll='w';llllllllllllllllllllllll='x';lllllllllllllllllllllllll='y';llllllllllllllllllllllllll='z';I='1';II='2';III='3';IIII='4';IIIII='5';IIIIII='6';IIIIIII='7';IIIIIIII='8';IIIIIIIII='9';IIIIIIIIII='0';li='.';ii='&lt;';iii='&gt;';lIllIllIllIllIllIllIllIllIllIl=lllllllllllllll+llllllllllll+llll+llllllllllllllllllllllllll+lllllllllllllll+lllllllllllll+ll+lllllllll+lllll;
-lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+lllllllllllll+lllll+llllllllllllll+llllllllllllllllllll+li+lll+lllllllllllllll+lllllllllllllll+lllllllllll+lllllllll+lllll;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nx">l</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">;</span><span class="nx">ll</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">;</span><span class="nx">lll</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">;</span><span class="nx">llll</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">;</span><span class="nx">lllll</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">;</span><span class="nx">llllll</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">;</span><span class="nx">lllllll</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">;</span><span class="nx">llllllll</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">;</span><span class="nx">lllllllll</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">;</span><span class="nx">llllllllll</span><span class="o">=</span><span class="s1">&#39;j&#39;</span><span class="p">;</span><span class="nx">lllllllllll</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">;</span><span class="nx">llllllllllll</span><span class="o">=</span><span class="s1">&#39;l&#39;</span><span class="p">;</span><span class="nx">lllllllllllll</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">;</span><span class="nx">llllllllllllll</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">;</span><span class="nx">lllllllllllllll</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">;</span><span class="nx">llllllllllllllll</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;t&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;u&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">;</span><span class="nx">lllllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">;</span><span class="nx">llllllllllllllllllllllllll</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">;</span><span class="nx">I</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">;</span><span class="nx">II</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">;</span><span class="nx">III</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="p">;</span><span class="nx">IIII</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">;</span><span class="nx">IIIII</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">;</span><span class="nx">IIIIII</span><span class="o">=</span><span class="s1">&#39;6&#39;</span><span class="p">;</span><span class="nx">IIIIIII</span><span class="o">=</span><span class="s1">&#39;7&#39;</span><span class="p">;</span><span class="nx">IIIIIIII</span><span class="o">=</span><span class="s1">&#39;8&#39;</span><span class="p">;</span><span class="nx">IIIIIIIII</span><span class="o">=</span><span class="s1">&#39;9&#39;</span><span class="p">;</span><span class="nx">IIIIIIIIII</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">;</span><span class="nx">li</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">;</span><span class="nx">ii</span><span class="o">=</span><span class="s1">&#39;&lt;&#39;</span><span class="p">;</span><span class="nx">iii</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">;</span><span class="nx">lIllIllIllIllIllIllIllIllIllIl</span><span class="o">=</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">llllllllllll</span><span class="o">+</span><span class="nx">llll</span><span class="o">+</span><span class="nx">llllllllllllllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">ll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="p">;</span>
+<span class="nx">lIIIIIIIIIIIIIIIIIIl</span><span class="o">=</span><span class="nx">llll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lll</span><span class="o">+</span><span class="nx">lllllllllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="o">+</span><span class="nx">llllllllllllll</span><span class="o">+</span><span class="nx">llllllllllllllllllll</span><span class="o">+</span><span class="nx">li</span><span class="o">+</span><span class="nx">lll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">lllll</span><span class="p">;</span>
+</pre></div>
+
 
 <ul>
 <li>실행 결과로 다음과 같은 것이 나오는데, 이는 코드에서 가장 마지막 구문이 실행된 것의 결과이다. 결과는 <code>documents.cookie</code> 라는 문자열 인 것 으로 보인다.</li>
 </ul>
-<pre><code class="javascript">&quot;document.cookie&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;document.cookie&quot;</span>
+</pre></div>
+
 
 <ul>
 <li>이번에는 조건문의 마지막 부분에 있는 페이지에 내용을 삽입하는 코드를 실행해 보자. 해당 부분은 아래와 같다.</li>
 </ul>
-<pre><code class="javascript">document.write('&lt;font size=2 color=white&gt;Join&lt;/font&gt;&lt;p&gt;');document.write('.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;');document.write('&lt;form method=post action='+llllllllll+lllllllllllllll+lllllllll+llllllllllllll+li+llllllllllllllll+llllllll+llllllllllllllll
-+'&gt;');document.write('&lt;table border=1&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;id&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name='+lllllllll+llll+' maxlength=5&gt;&lt;/td&gt;&lt;/tr&gt;');document.write('&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;pass&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name='+llllllllllllllll+lllllllllllllllllllllll+' maxlength=10&gt;&lt;/td&gt;&lt;/tr&gt;');document.write('&lt;tr align=center&gt;&lt;td colspan=2&gt;&lt;input type=submit&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;&lt;/table&gt;');
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;font size=2 color=white&gt;Join&lt;/font&gt;&lt;p&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;.&lt;p&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;form method=post action=&#39;</span><span class="o">+</span><span class="nx">llllllllll</span><span class="o">+</span><span class="nx">lllllllllllllll</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">llllllllllllll</span><span class="o">+</span><span class="nx">li</span><span class="o">+</span><span class="nx">llllllllllllllll</span><span class="o">+</span><span class="nx">llllllll</span><span class="o">+</span><span class="nx">llllllllllllllll</span>
+<span class="o">+</span><span class="s1">&#39;&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;table border=1&gt;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;id&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name=&#39;</span><span class="o">+</span><span class="nx">lllllllll</span><span class="o">+</span><span class="nx">llll</span><span class="o">+</span><span class="s1">&#39; maxlength=5&gt;&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;tr&gt;&lt;td&gt;&lt;font color=gray&gt;pass&lt;/font&gt;&lt;/td&gt;&lt;td&gt;&lt;input type=text name=&#39;</span><span class="o">+</span><span class="nx">llllllllllllllll</span><span class="o">+</span><span class="nx">lllllllllllllllllllllll</span><span class="o">+</span><span class="s1">&#39; maxlength=10&gt;&lt;/td&gt;&lt;/tr&gt;&#39;</span><span class="p">);</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;tr align=center&gt;&lt;td colspan=2&gt;&lt;input type=submit&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/form&gt;&lt;/table&gt;&#39;</span><span class="p">);</span>
+</pre></div>
+
 
 <ul>
 <li>그리고 나서, 페이지를 보면 회원 가입 입력 폼이 하나 나타나 있는 것을 볼 수 있다.</li>
@@ -1830,8 +1865,9 @@ lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+llllllllllll
 <li>그렇다면, <code>admin</code> 이라는 id 로 가입을 해 보자. 참고로 id 입력칸은 최대 5자까지만 입력 되는 상태이다.</li>
 <li>개발자 콘솔을 열어 요소 검사기를 열고, 해당 입력칸 부분을 보자.</li>
 </ul>
-<pre><code class="html">&lt;input type=&quot;text&quot; name=&quot;id&quot; maxlength=&quot;5&quot;&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;id&quot;</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;5&quot;</span><span class="p">&gt;</span>
+</pre></div>
+
 
 <ul>
 <li>입력 길이가 최대 5로 설정 되어 있음을 볼 수 있다. <code>maxlength="5"</code> 부분을 더블클릭해서 6 이상의 값으로 고친다. 대부분의 웹 브라우저에서는 바로 고쳐서 페이지에 적용이 가능하다.</li>
@@ -1844,20 +1880,21 @@ lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+llllllllllll
 <li>이제 다시 로그인 페이지로 이동해서, 방금 제출한 것으로 로그인 해 보자. 필자의 경우는 <code>admin</code> 과 <code>1111</code> 을 입력하였다.</li>
 <li>문제가 풀리는 것을 볼 수 있다.</li>
 </ul>
-<h3 id="34">34번 문제</h3>
+<h3 id="34">34번 문제<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
 <ul>
 <li>개발자도구로 소스코드를 확인한다.</li>
 <li>복잡한 코드 무시하고 끝 부분 소스코드를 확인하면 아래와 같이 써있다.</li>
 </ul>
-<pre><code>if(document.URL.indexOf('0lDz0mBi2')!=-1){location.href='Passw0RRdd.pww';}else{alert('Wrong');}
-</code></pre>
+<div class="codehilite"><pre><span></span>if(document.URL.indexOf(&#39;0lDz0mBi2&#39;)!=-1){location.href=&#39;Passw0RRdd.pww&#39;;}else{alert(&#39;Wrong&#39;);}
+</pre></div>
+
 
 <ul>
 <li>조건문이 참이 될 경우 <code>Passw0RRdd.pww</code> 주소로 들어감을 알 수 있다.</li>
 <li><code>http://webhacking.kr/challenge/javascript/Passw0RRdd.pww</code> URL에 그냥 바로 주소를 적어준다.</li>
 <li>나오는 패스워드를 <code>Auth</code>에 적어주면 문제가 풀린다.</li>
 </ul>
-<h3 id="52">52번 문제</h3>
+<h3 id="52">52번 문제<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
 <ol>
 <li>일단 보아하니 Header injection 문제 인 것 같다.</li>
 <li>우선 헤더 생성을 눌러보니 헤더에?id=sgs04023하고 정보가 추가되며, response 헤더에도 id: sgs04023하고 내 아이디가 추가되었다.</li>
@@ -1874,7 +1911,7 @@ lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+llllllllllll
 </ul>
 </li>
 </ol>
-<h4 id="_1">추가적으로...</h4>
+<h4 id="_1">추가적으로...<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>필터링 우회를 구글링하다가 다같이 공유하면 좋을듯해서 올리는 몇가지 안되는 것들..</li>
 <li>개행문자</li>
@@ -1882,7 +1919,7 @@ lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+llllllllllll
 <li>Carrige Return ('\r', 0x0D, %0D): (커서가) 다음 줄로 이동</li>
 <li>공백 ' ', %20: 공백</li>
 </ul>
-<h3 id="60">60번 문제</h3>
+<h3 id="60">60번 문제<a class="headerlink" href="#60" title="Permanent link">&para;</a></h3>
 <ul>
 <li>문제를 클릭하면 <code>소스</code> 페이지가 링크 되어있다.</li>
 </ul>
@@ -1893,28 +1930,29 @@ lIIIIIIIIIIIIIIIIIIl=llll+lllllllllllllll+lll+lllllllllllllllllllll+llllllllllll
 <ul>
 <li>소스를 보면 (소스가 길기 때문에 나눠서 해석.)</li>
 </ul>
-<pre><code class="php">&lt;?
-sleep(1);
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?</span>
+<span class="nb">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-if(eregi(&quot;[0-9]&quot;,$_COOKIE[PHPSESSID])) exit(&quot;Access Denied&lt;br&gt;&lt;a href=index.phps&gt;index.phps&lt;/a&gt;&quot;);
+<span class="k">if</span><span class="p">(</span><span class="nb">eregi</span><span class="p">(</span><span class="s2">&quot;[0-9]&quot;</span><span class="p">,</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="nx">PHPSESSID</span><span class="p">]))</span> <span class="k">exit</span><span class="p">(</span><span class="s2">&quot;Access Denied&lt;br&gt;&lt;a href=index.phps&gt;index.phps&lt;/a&gt;&quot;</span><span class="p">);</span>
 
-if($_GET[mode]==&quot;auth&quot;)
-{
-echo(&quot;Auth~&lt;br&gt;&quot;);
-    $f=@file(&quot;readme/$_SESSION[id].txt&quot;);
-    for($i=0;$i&lt;=strlen($f);$i++)
-        {
-        $result.=$f[$i];
-        }
-    if(eregi(&quot;$_SESSION[id]&quot;,$result))
-    {
-    echo(&quot;Done!&quot;);
-    @unlink(&quot;readme/$_SESSION[id].txt&quot;);
-    @clear();
-    exit();
-    }
-}
-</code></pre>
+<span class="k">if</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">mode</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;auth&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Auth~&lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="nv">$f</span><span class="o">=@</span><span class="nb">file</span><span class="p">(</span><span class="s2">&quot;readme/</span><span class="si">$_SESSION[id]</span><span class="s2">.txt&quot;</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;=</span><span class="nb">strlen</span><span class="p">(</span><span class="nv">$f</span><span class="p">);</span><span class="nv">$i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+        <span class="nv">$result</span><span class="o">.=</span><span class="nv">$f</span><span class="p">[</span><span class="nv">$i</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">eregi</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">$_SESSION[id]</span><span class="s2">&quot;</span><span class="p">,</span><span class="nv">$result</span><span class="p">))</span>
+    <span class="p">{</span>
+    <span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Done!&quot;</span><span class="p">);</span>
+    <span class="o">@</span><span class="nb">unlink</span><span class="p">(</span><span class="s2">&quot;readme/</span><span class="si">$_SESSION[id]</span><span class="s2">.txt&quot;</span><span class="p">);</span>
+    <span class="o">@</span><span class="nx">clear</span><span class="p">();</span>
+    <span class="k">exit</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <ul>
 <li><code>sleep</code> 는 지연시키는 함수.</li>
@@ -1958,18 +1996,19 @@ echo(&quot;Auth~&lt;br&gt;&quot;);
 <p>남은 소스를 보면</p>
 </li>
 </ul>
-<pre><code class="php">$f=@fopen(&quot;readme/$_SESSION[id].txt&quot;,&quot;w&quot;);
-@fwrite($f,&quot;$_SESSION[id]&quot;);
-@fclose($f);
+<div class="codehilite"><pre><span></span><span class="x">$f=@fopen(&quot;readme/$_SESSION[id].txt&quot;,&quot;w&quot;);</span>
+<span class="x">@fwrite($f,&quot;$_SESSION[id]&quot;);</span>
+<span class="x">@fclose($f);</span>
 
-if($_SERVER[REMOTE_ADDR]!=&quot;127.0.0.1&quot;)
-{
-sleep(1);
-@unlink(&quot;readme/$_SESSION[id].txt&quot;);
-}
+<span class="x">if($_SERVER[REMOTE_ADDR]!=&quot;127.0.0.1&quot;)</span>
+<span class="x">{</span>
+<span class="x">sleep(1);</span>
+<span class="x">@unlink(&quot;readme/$_SESSION[id].txt&quot;);</span>
+<span class="x">}</span>
 
-?&gt;
-</code></pre>
+<span class="x">?&gt;</span>
+</pre></div>
+
 
 <ul>
 <li><code>fopen</code>을 사용해 <code>txt</code>파일을 만들어 <code>f</code>에 저장.</li>

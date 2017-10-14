@@ -952,11 +952,11 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/studies/docker-study.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="docker-study">Docker Study</h1>
+                <h1 id="docker-study">Docker Study<a class="headerlink" href="#docker-study" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>스터디 구성원 모집이 마감되었습니다.(2016.10.07 11:00PM)</p>
 </blockquote>
-<h2 id="_1">스터디 개요</h2>
+<h2 id="_1">스터디 개요<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>기간 : 2016년 10월 12일 부터 약 5~7주</li>
 <li>스터디 리더 : 한영빈(소프16)</li>
@@ -966,7 +966,7 @@
 <li>스터디 모임 시각 : 수요일 오후 7시 30분 ~ 오후 9시 30분</li>
 <li>모임 장소 : 스스스 랩실</li>
 </ul>
-<h2 id="_2">계획중인 스터디 커리큘럼</h2>
+<h2 id="_2">계획중인 스터디 커리큘럼<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>1주차 : 1~5장</li>
 <li>2주차 : 6~7장</li>
@@ -974,7 +974,7 @@
 <li>4주차 : 10~14장</li>
 <li>5주차 : 16~19장 + Docker Swarm</li>
 </ul>
-<h2 id="1">1주차 모임</h2>
+<h2 id="1">1주차 모임<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.10.12</li>
 <li>진도 : 1~5장</li>
@@ -1011,7 +1011,7 @@
 </li>
 <li>Docker 에서 관리하는 설정, 이미지, 컨테이너 등은 <code>/var/lib/docker</code> 에 보관됨</li>
 </ul>
-<h2 id="2">2주차 모임</h2>
+<h2 id="2">2주차 모임<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.02</li>
 <li>진도 : 6~7장</li>
@@ -1028,8 +1028,9 @@
 <li><code>docker run -v /data &lt;image_name&gt;</code></li>
 <li>호스트의 볼륨 위치</li>
 </ul>
-<pre><code class="bash">docker inspect -f &quot;{{range .Mounts}}{{.Source}}{{end}}&quot; &lt;image_name&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span>docker inspect -f <span class="s2">&quot;{{range .Mounts}}{{.Source}}{{end}}&quot;</span> &lt;image_name&gt;
+</pre></div>
+
 
 <ul>
 <li>archlinux 기준으로 <code>/var/lib/docker/volumes/&lt;image_id&gt;/_data</code>에 위치함</li>
@@ -1042,7 +1043,7 @@ A 를 기반으로 하는 B 의 <code>CMD</code> 로 덮어씌워짐.</li>
 </ul>
 </li>
 </ul>
-<h2 id="3">3주차 모임</h2>
+<h2 id="3">3주차 모임<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.09</li>
 <li>진도 : 8~9장</li>
@@ -1057,15 +1058,16 @@ A 를 기반으로 하는 B 의 <code>CMD</code> 로 덮어씌워짐.</li>
 <ul>
 <li>사용자를 docker 그룹에 추가해서 <code>sudo</code> 없이 사용하려는 경우그룹이 없는 경우없으면 정상적으로 등록되지 않는다.</li>
 </ul>
-<pre><code class="bash">$ sudo groupadd docker
-$ sudo gpasswd -a ${USER} docker
-</code></pre>
+<div class="codehilite"><pre><span></span>$ sudo groupadd docker
+$ sudo gpasswd -a <span class="si">${</span><span class="nv">USER</span><span class="si">}</span> docker
+</pre></div>
+
 
 <ul>
 <li>이렇게 진행하면 그룹을 생성하고 사용자를 추가한다.</li>
 <li>모니터링 서버와 모니터링 되는 서버가 같은 호스트여도 동작한다.(하지만 데이터 수집에 오랜시간이 걸려서 확인하긴 힘들었음)</li>
 </ul>
-<h2 id="4">4주차 모임</h2>
+<h2 id="4">4주차 모임<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.16</li>
 <li>진도 : 10~14장</li>
@@ -1090,13 +1092,13 @@ $ sudo gpasswd -a ${USER} docker
 <li>다양한 언어별 라이브러리가 있음. 자세한 사항은 아래 링크 참조</li>
 <li>https://docs.docker.com/engine/reference/api/remote_api_client_libraries/</li>
 </ul>
-<h2 id="5">5주차 모임</h2>
+<h2 id="5">5주차 모임<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2016.11.16</li>
 <li>진도 : 16~19장 + Docker Swarm</li>
 <li>참석자 : 한영빈, 김준수</li>
 </ul>
-<h3 id="docker-swarm">Docker Swarm 사용하기</h3>
+<h3 id="docker-swarm">Docker Swarm 사용하기<a class="headerlink" href="#docker-swarm" title="Permanent link">&para;</a></h3>
 <p>Docker Swarm 은 컨테이너를 더 쉽고 효율적으로 관리할 수 있게 해 주는 도구이다. 흔히 이런 것들을 컨테이너 오케스트레이션이라고 부른다.
 대부분의 컨테이너 오케스트레이션은 쉬운 클러스터링이나(혹은 다중 호스트 추상화) 간편한 서비스 생성 및 관리와 업데이트, 셀프 힐링(프로세스 죽었을 때 자동으로 다시 시작) 등의 유용한 기능들을 제공한다.
 Docker Swarm 또한 마찬가지로 이러한 기능들을 제공하는데, Docker Swarm 의 경우 Docker 1.12.0 부터 Docker Engine 에 Swarm Mode 로 포함이 되어서, 별도로 설치할 것 없이 빠르게 시작 할 수 있다.
@@ -1106,48 +1108,57 @@ Docker Swarm 또한 마찬가지로 이러한 기능들을 제공하는데, Dock
  - TCP 와 UDP 포트 7946 - 노드 사이 통신에 사용
  - TCP 와 UDP 포트 4789 - 오버레이 네트워크 트레픽을 위한 포트</p>
 <p>다음 명령줄로 Swarm Mode 를 초기화한다. 초기화된 호스트는 swarm 네트워크에서 리더가 된다.</p>
-<pre><code class="bash"> docker swarm init
-</code></pre>
+<div class="codehilite"><pre><span></span> docker swarm init
+</pre></div>
+
 
 <p>호스트에 둘 이상의 IP 가 있는 경우, IP 를 다음과 같이 지정해 줘야 한다. 그래야 노드(리더의 하위 호스트) 가 될 호스트에서 리더를 찾을 수 있다.</p>
-<pre><code class="bash">docker swarm init --advertise-addr &lt;IP 주소&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span>docker swarm init --advertise-addr &lt;IP 주소&gt;
+</pre></div>
+
 
 <p>swarm 을 초기화하면, 아래와 같은 명령어가 결과로 찍힌다. 이 명령어를 swarm 네트워크에 노드로 넣을 호스트에서 실행하면, swarm 네트워크에 노드로 추가된다.</p>
-<pre><code class="bash">docker swarm join \
-    --token SWMTKN-1-3pd5k9k8ydlq41ep6yrfd7kw3567zxg1tqxjt8w75tk5jzaszm-dafqo8ye39otwe19togsixgbc \
-    192.168.0.39:
-</code></pre>
+<div class="codehilite"><pre><span></span>docker swarm join <span class="se">\</span>
+    --token SWMTKN-1-3pd5k9k8ydlq41ep6yrfd7kw3567zxg1tqxjt8w75tk5jzaszm-dafqo8ye39otwe19togsixgbc <span class="se">\</span>
+    <span class="m">192</span>.168.0.39:
+</pre></div>
+
 
 <p>swarm 네트워크의 호스트 목록을 확인하려면, 아래 명령줄을 실행한다.</p>
-<pre><code class="bash">docker node ls
-</code></pre>
+<div class="codehilite"><pre><span></span>docker node ls
+</pre></div>
+
 
 <p>service 를 이용하면, docker swarm 에서 자동으로 컨테이너를 리더 또는 노드에 분배해 주고, 로드 밸런싱 까지 해 준다. 셀프 힐링도 해 준다. 한번 해 보자.</p>
 <p>다음과 같은 명령줄로 서비스를 생성한다. 명령줄에 대한 상세 사항은 <a href="https://docs.docker.com/engine/reference/commandline/service_create/">여기</a> 를 참고하자.</p>
-<pre><code class="bash">docker service create --name &lt;서비스 이름&gt; &lt;도커 이미지 이름&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span>docker service create --name &lt;서비스 이름&gt; &lt;도커 이미지 이름&gt;
+</pre></div>
+
 
 <p>다음과 같은 명령줄로 서비스 설정을 업데이트 할 수 있다. 단순히 하나의 컨테이너를 올렸을때, 컨테이너에 대한 업데이트 기능이 없어, 컨테이너를 부수고 다시 만드는 것과는 다르다.
 명령줄에 대한 자세한 사항은 <a href="https://docs.docker.com/engine/reference/commandline/service_update/">여기</a> 를 참고하자</p>
-<pre><code class="bash">docker service update --image &lt;새 도커 이미지 이름&gt; &lt;업데이트 할 서비스 이름&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span>docker service update --image &lt;새 도커 이미지 이름&gt; &lt;업데이트 할 서비스 이름&gt;
+</pre></div>
+
 
 <p>서비스를 스케일링 할 수도 있다. 스케일링 하면, 스케일 숫자에 따라 컨테이너가 늘어나고 줄어들며, 내장된 로드벨런서가 로드벨런싱 해 준다.</p>
-<pre><code class="bash">docker service scale &lt;서비스 이름&gt;=&lt;스케일&gt; nginx=3
-</code></pre>
+<div class="codehilite"><pre><span></span>docker service scale &lt;서비스 이름&gt;<span class="o">=</span>&lt;스케일&gt; <span class="nv">nginx</span><span class="o">=</span><span class="m">3</span>
+</pre></div>
+
 
 <p>서비스를 지우려면, 아래와 같은 명령줄을 이용한다</p>
-<pre><code class="bash">docker service rm &lt;서비스 이름&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span>docker service rm &lt;서비스 이름&gt;
+</pre></div>
+
 
 <p>swarm 네트워크에서 떠나려면, 다음을 실행한다.</p>
-<pre><code class="bash">docker swarm leave
-</code></pre>
+<div class="codehilite"><pre><span></span>docker swarm leave
+</pre></div>
+
 
 <p>리더의 경우, <code>--force</code> 옵션을 줘야 한다.</p>
-<pre><code class="bash">docker swarm leave --force
-</code></pre>
+<div class="codehilite"><pre><span></span>docker swarm leave --force
+</pre></div>
                 
                   
                 

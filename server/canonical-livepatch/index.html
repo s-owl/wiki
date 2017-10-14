@@ -884,23 +884,23 @@
                   <a href="https://github.com/skhu-sss/wiki/edit/master/docs/server/canonical-livepatch.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="canonical-livepatch-service">캐노니컬 라이브패치 서비스(Canonical Livepatch Service)</h1>
+                <h1 id="canonical-livepatch-service">캐노니컬 라이브패치 서비스(Canonical Livepatch Service)<a class="headerlink" href="#canonical-livepatch-service" title="Permanent link">&para;</a></h1>
 <p>라이브패치 서비스를 사용하면, 우분투에서 중요한 커널 패치를 <strong>재부팅 없이</strong> 적용할 수 있습니다.
 때문에, 우분투를 이용하여 서버를 운영하는 경우, 라이브패치 서비스를 이용하면, 재부팅으로 인해 서비스 중단이 생기는 경우가 없어지는 장점을 얻을 수 있습니다.</p>
-<h2 id="_1">서비스 요금</h2>
+<h2 id="_1">서비스 요금<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>일반 사용자 : 우분투 원 계정이 있는 경우, 최대 3대의 서버/데스크탑/VM 에서 무료로 사용이 가능합니다. 그 이상의 장치에서 사용 하려는 경우, Ubuntu Avantage 프로그램에 구독해야 합니다.</li>
 <li>Ubuntu Advantage 구독자 : 이미 구독중인 경우 추가적으로 비용을 지불하지 않아도 됩니다.</li>
 <li>Ubuntu Advantage for Servers 의 Essential Server 요금은 노드(머신) 1개당 1년에 150USD 입니다.</li>
 <li>Ubuntu Advantage 요금에 대한 상세 사항은 https://buy.ubuntu.com/ 을 참조하세요.</li>
 </ul>
-<h2 id="_2">준비할 것</h2>
+<h2 id="_2">준비할 것<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>우분투 원 계정</li>
 <li>없는 경우, https://login.ubuntu.com 에서 무료로 생성 가능합니다.</li>
 <li>인터넷 연결이 있는 Ubuntu 16.04 LTS x86 64bit 버전이 설치된 머신</li>
 </ul>
-<h2 id="_3">설치 및 설정하기</h2>
+<h2 id="_3">설치 및 설정하기<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>아래 링크로 이동한 다음, <code>Sign up</code> 을 눌러 시작합니다.</li>
 <li>https://www.ubuntu.com/server/livepatch</li>
@@ -923,15 +923,16 @@
   sudo canonical-livepatch enable 45bf098767b84abcspt71d7aedc12345</code></li>
 <li>라이브패치 서비스가 켜졌습니다. 라이브패치 상태를 확인하려면, 아래와 같은 명령줄을 실행하여 확인할 수 있습니다.</li>
 </ul>
-<pre><code class="bash">canonical-livepatch status --verbose
-</code></pre>
+<div class="codehilite"><pre><span></span>canonical-livepatch status --verbose
+</pre></div>
+
 
 <ul>
 <li>라이브패치 서비스를 끄려면, 아래와 같은 명령줄을 실행합니다.
  <code>bash
  sudo canonical-livepatch disable</code></li>
 </ul>
-<h2 id="_4">참고자료 및 유용한 링크</h2>
+<h2 id="_4">참고자료 및 유용한 링크<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://www.webupd8.org/2016/10/update-ubuntu-1604-lts-linux-kernel.html?m=1">UPDATE UBUNTU 16.04 LTS LINUX KERNEL WITHOUT REBOOTING WITH THE CANONICAL LIVEPATCH SERVICE | Web Up8</a></li>
 <li><a href="https://lists.ubuntu.com/archives/ubuntu-announce/2016-October/000214.html">Canonical enterprise kernel livepatch service, free to Ubuntu community!</a></li>
