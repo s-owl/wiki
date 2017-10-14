@@ -8,13 +8,13 @@
 ### 프로젝트 참여자
 
 - 한영빈(소프 16)
- - 프로젝트 총괄, 사용자별 구독 설정 페이지 모듈 개발
+  - 프로젝트 총괄, 사용자별 구독 설정 페이지 모듈 개발
 
 - 김희수(소프 16)
- - 카카오톡 통신부 개발
+  - 카카오톡 통신부 개발
 
 - 한나라(정통 16)
- - 기획, 웹사이트 크롤러 모듈 개발
+  - 기획, 웹사이트 크롤러 모듈 개발
 
 ### 사용 기술
 - Language & Framework : Python, Django
@@ -36,9 +36,9 @@
 - 9.18 ~ 10.13 : 공개 베타테스트 진행 및 개선작업
 - 9.21 : 제8회 성공회대학교 IT 경진대회 본선 진출
 - 10.11 : 제8회 성공회대학교 IT 경진대회 본선 발표
- - 슬라이드 자료
-  - https://www.slideshare.net/hanyoungbin/skhufeeds
-  - https://www.slideshare.net/hanyoungbin/skhufeeds-80738510
- - 사용 시연 영상
-  - https://www.youtube.com/watch?v=Be6mCEfPVzM&feature=youtu.be
+  - 슬라이드 자료
+    - https://www.slideshare.net/hanyoungbin/skhufeeds
+    - https://www.slideshare.net/hanyoungbin/skhufeeds-80738510
+  - 사용 시연 영상
+    - https://www.youtube.com/watch?v=Be6mCEfPVzM&feature=youtu.be
 - 10.21 : 정식 서비스 시작
