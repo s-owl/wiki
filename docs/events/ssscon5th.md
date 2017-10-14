@@ -46,12 +46,14 @@
 ### Web Developer's Roadmap
 - 한영빈 (성공회대학교 소프트웨어공학과)
 - 웹 개발자가 되기 위해 공부해야 하는 것과, 웹 개발의 세부 분야 등에 대해 간단히 알아봅니다.
+- 자료 : https://github.com/kamranahmedse/developer-roadmap
 
 ### About SKHUFEEDS
 - 김희수 (성공회대학교 소프트웨어공학과)
 - SKHUFEEDS 프로젝트에 대해 발표하고, 서비스 기술 스택을 짚어봅시다.
+- 슬라이드 자료 : https://www.slideshare.net/hanyoungbin/skhufeeds
 
 ### 함수형 프로그래밍
 - 김재경 (성공회대학교 소프트웨어공학과)
-- 요약 : 함수형 프로그래밍의 컨셉에 대해 간단히 알아봅니다.
+- 함수형 프로그래밍의 컨셉에 대해 간단히 알아봅니다.
 - 슬라이드 자료 : https://www.slideshare.net/QooJuice/ss-77694612
