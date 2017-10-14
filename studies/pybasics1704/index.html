@@ -1093,10 +1093,11 @@
 <li>파이썬에서 들려쓰기를 할 때 반드시 4칸씩 띄어쓰기 해야 하는가?</li>
 <li>꼭 4칸씩 할 필요는 없지만, 들여쓰기 할때 일관적으로 해야 한다. 한칸씩 띄어쓰기 할거면 모두 한칸씩, Tab 으로 할꺼면 전부다 Tab 으로 해야 한다.
   - 파이썬 여러 줄 주석 달기
-  <code>"""
-  여러줄에 걸쳐서
-  주석 달기
-  """</code></li>
+  <div class="codehilite"><pre><span></span>&quot;&quot;&quot;
+여러줄에 걸쳐서
+주석 달기
+&quot;&quot;&quot;
+</pre></div></li>
 </ul>
 <h2 id="3">3회차 모임<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1108,40 +1109,30 @@
 <h3 id="_3">질문 &amp; 다룬 내용<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>input()</code> 함수를 호출하여, 사용자로 부터 입력을 받을 수 있음.</li>
-<li>인자로 문자열을 넘겨줘서, 안내문을 출력하면서 입력받을 수 있음.(예제 : <code>input("안내문")</code>)</li>
+<li>인자로 문자열을 넘겨줘서, 안내문을 출력하면서 입력받을 수 있음.(예제 : <code>input(&quot;안내문&quot;)</code>)</li>
 <li>사용자로부터 입력받을 것을 리턴함.</li>
 <li><code>format()</code>함수를 이용하여, 문자열을 포맷팅 할 수 있음.</li>
 </ul>
-<p>예제1</p>
+<p>예제1
 <div class="codehilite"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;SSS&#39;</span>
 <span class="n">b</span><span class="o">=</span><span class="s1">&#39;짱&#39;</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
-
-
-<p>예제1 실행 결과</p>
+예제1 실행 결과
 <div class="codehilite"><pre><span></span>SSS짱
 </pre></div>
-
-
-<p>예제2</p>
+예제2
 <div class="codehilite"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;{}{}&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;SSS&quot;</span><span class="p">,</span><span class="s2">&quot;짱&quot;</span><span class="p">))</span>
 </pre></div>
-
-
-<p>예제2 실행 결과</p>
+예제2 실행 결과
 <div class="codehilite"><pre><span></span>SSS짱
 </pre></div>
-
-
-<p>여러줄에 걸쳐 문자열 내용을 입력하려면, 큰 따옴표 3개로(<code>"""</code>) 시작하고 마치면 됨</p>
+여러줄에 걸쳐 문자열 내용을 입력하려면, 큰 따옴표 3개로(<code>&quot;&quot;&quot;</code>) 시작하고 마치면 됨
 <div class="codehilite"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;문자열</span>
 <span class="s2">여러줄에</span>
 <span class="s2">걸쳐서 넣어보기&quot;&quot;&quot;</span>
-</pre></div>
-
-
+</pre></div></p>
 <h2 id="4">4회차 모임<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.05.02</li>
@@ -1166,7 +1157,6 @@
 <span class="k">def</span> <span class="nf">rsp</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;바위&quot;</span><span class="p">,</span><span class="s2">&quot;가위&quot;</span><span class="p">,</span><span class="s2">&quot;보&quot;</span><span class="p">])</span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">rsp</span>
 
@@ -1210,7 +1200,6 @@
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니다.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">win</span><span class="p">,</span><span class="n">draw</span><span class="p">,</span><span class="n">lose</span><span class="p">))</span>
 </pre></div>
 
-
 <h2 id="5">5회차 모임<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.05.16</li>
@@ -1218,7 +1207,7 @@
 <li>결석 : 김문수(학생회)</li>
 <li>진도 : 가위바위보 플레이어 코드</li>
 <li>가위바위보 플레이어 코스 저장소<ul>
-<li>https://github.com/skhu-sss/pyrsp</li>
+<li><a href="https://github.com/skhu-sss/pyrsp">https://github.com/skhu-sss/pyrsp</a></li>
 </ul>
 </li>
 </ul>
@@ -1226,7 +1215,7 @@
 <ul>
 <li>2017.05.30</li>
 <li>참석자 : 한영빈, 한나라, 김희수, 박찬우, 김문수</li>
-<li>결석 : 김규희~~(탈주)~~, 장은애~~(탈주)~~</li>
+<li>결석 : 김규희<sub><sub>(탈주)<del>, 장은애</del>(탈주)</sub></sub></li>
 <li>진도 : 10강 - 딕셔너리와 튜플</li>
 <li>10강 복습을 위한 간단한 코딩.</li>
 </ul>
@@ -1247,7 +1236,6 @@
             <span class="k">return</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="c1">#-*-coding:utf-8-*-</span>
 <span class="kn">import</span> <span class="nn">dictex</span> <span class="kn">as</span> <span class="nn">members</span>
 
@@ -1261,12 +1249,11 @@
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">))</span>
 </pre></div>
 
-
 <h2 id="7">7회차<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.06.08</li>
 <li>참석자 : 한영빈, 김희수</li>
-<li>결석 : 한나라(병결), 김규희~~(탈주)~~, 장은애~~(탈주)~~</li>
+<li>결석 : 한나라(병결), 김규희<sub><sub>(탈주)<del>, 장은애</del>(탈주)</sub></sub></li>
 <li>진도 : 11~12강 - while 반복문과 예외처리(try~except)</li>
 <li>학습한 내용을 이용하여 가위바위보 게임 만들기.</li>
 <li>딕셔너리를 활용하여 승리여부 판단</li>
@@ -1301,12 +1288,11 @@
      <span class="k">print</span><span class="p">(</span><span class="s2">&quot;나:{}, 상대방:{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">selection</span><span class="p">[</span><span class="n">player</span><span class="p">],</span> <span class="n">bot</span><span class="p">))</span>
 </pre></div>
 
-
 <h2 id="8">8회차<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <ul>
 <li>2017.06.24</li>
 <li>참석자 : 한영빈, 김희수, 한나라</li>
-<li>~~진도 : 13~15 강~~</li>
+<li><del>진도 : 13~15 강</del></li>
 <li>플젝과 앞으로의 스터디 일정에 관한 토론</li>
 </ul>
 <h2 id="9">9회차<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>

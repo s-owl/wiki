@@ -911,7 +911,6 @@
 <div class="codehilite"><pre><span></span>git clone https://github.com/skhu-sss/wiki.git
 </pre></div>
 
-
 <ul>
 <li>원하는 문서를 수정합니다.</li>
 <li>아래 파일들은 위키 페이지 생성 밒 배포 설정을 수정하는 경우가 아니라면, 수정하지 않도록 합니다.</li>
@@ -926,7 +925,6 @@
  * [&lt;사이드바에 표시할 제목&gt;](문서_파일_경로&lt;상대경로&gt;.md)
 </pre></div>
 
-
 <ul>
 <li>커밋하고 <code>master</code> 가지에 푸시 합니다. <code>gh-pages</code> 가지에는 푸시 하시면 안 됩니다. 웹 사이트 갱신중 오류가 발생 할 수 있습니다.</li>
 </ul>
@@ -934,7 +932,6 @@
  git commit -m <span class="s2">&quot;변경 사항에 대한 설명&quot;</span>
  git push origin master
 </pre></div>
-
 
 <ul>
 <li><a href="https://skhu-sss.github.io/wiki">위키 사이트</a>에 접속하여, 변경 사항이 적용 되었는지 확인합니다.</li>
@@ -952,7 +949,6 @@
 &gt; - Linus Torvalds
 </pre></div>
 
-
 <h1 id="1">제목1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
 <h2 id="2">제목2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h3 id="3">제목3<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
@@ -969,16 +965,14 @@
 [예시 : GitHub](https://github.com)
 </pre></div>
 
-
 <p><strong>굵은 글씨</strong> <em>기울인 글씨</em><br />
-~~레드준표 曰, “야들아 내가 너희들의 롤 모델이다. 그런데 왜 나를 싫어하냐?” 젊은이들 曰 “지랄 염병”~~<br />
+<del>레드준표 曰, “야들아 내가 너희들의 롤 모델이다. 그런데 왜 나를 싫어하냐?” 젊은이들 曰 “지랄 염병”</del><br />
 <a href="../여기에 링크를">여기에는 링크를 걸 텍스트를</a><br />
 <a href="https://github.com">예시 : GitHub</a></p>
 <hr />
 <div class="codehilite"><pre><span></span>이미지 삽입
 ![이미지 설명](https://octodex.github.com/images/yaktocat.png)
 </pre></div>
-
 
 <p>이미지 삽입
 <img alt="이미지 설명" src="https://octodex.github.com/images/yaktocat.png" /></p>
@@ -989,7 +983,6 @@
 한번 띄어씌기 하거나, 띄어씌기 없이 줄바꿈 하면,
 이렇게 그냥 한 줄에 나옵니다.
 </pre></div>
-
 
 <p>줄바꿈을 하려면, 그 줄의 가장 끝에서 두번 띄어쓰기 하고, 줄바꿈을 합니다.<br />
 그러면 이렇게 줄바꿈이 되어 표시됩니다.</p>
@@ -1008,8 +1001,7 @@
   ```
 </pre></div>
 
-
-<p>아래와 같은 방식으로, <code>코드 스니펫</code>을 넣을 수 있습니다.</p>
+<p>아래와 같은 방식으로, <code>코드 스니펫</code>을 넣을 수 있습니다.
 <div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
@@ -1017,9 +1009,7 @@
 
  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
-
-
+</pre></div></p>
 <hr />
 <div class="codehilite"><pre><span></span>### 순서 없는 목록A
 - 순서 없는 목록0
@@ -1040,7 +1030,6 @@
 2. 순서 있는 목록2
 3. 순서 있는 목록3
 </pre></div>
-
 
 <h3 id="a">순서 없는 목록A<a class="headerlink" href="#a" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1074,10 +1063,9 @@
 코딩 | 미완성 | 디버깅 거지같...
 </pre></div>
 
-
-<ul>
-<li>[x] 이건 이미 다 한것 같고</li>
-<li>[ ] 이제 이걸 해야 하나</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 이건 이미 다 한것 같고</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 이제 이걸 해야 하나</li>
 </ul>
 <table>
 <thead>

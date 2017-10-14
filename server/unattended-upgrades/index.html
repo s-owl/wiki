@@ -876,29 +876,30 @@
 <h2 id="_1">준비할 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Debian 개열 리눅스가 설치된 인터넷에 연결된 머신</li>
-<li>~~타이핑이 가능한 손~~</li>
+<li><del>타이핑이 가능한 손</del></li>
 </ul>
 <h2 id="_2">적용 방법<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>unattended-upgrades</code> 패키지를 설치한다.
- <code>bash
- sudo apt install unattended-upgrades</code></li>
+ <div class="codehilite"><pre><span></span>sudo apt install unattended-upgrades
+</pre></div></li>
 <li>다음을 실행하여, <code>unattended-upgrades</code> 설정을 시작한다.
- <code>bash
- sudo dpkg-reconfigure unattended-upgrades</code></li>
+ <div class="codehilite"><pre><span></span>sudo dpkg-reconfigure unattended-upgrades
+</pre></div></li>
 <li>다음과 같은 메시지가 나타난다, 기능을 켜겠냐는 소리이다. 당연히 <code>&lt;Yes&gt;</code> 를 선택한다.</li>
 </ul>
-<p>~~~
- Applying updates on a frequent basis is an important part of keeping systems secure. By default, updates need to be applied manually using package management tools. Alternatively, you can choose to have this system automatically download and install important updates.</p>
-<p>Automatically download and install stable updates?</p>
-<p><Yes> <No>                                              <br />
- ~~~
+<p><div class="codehilite"><pre><span></span>Applying updates on a frequent basis is an important part of keeping systems secure. By default, updates need to be applied manually using package management tools. Alternatively, you can choose to have this system automatically download and install important updates.
+
+Automatically download and install stable updates?
+
+&lt;Yes&gt; &lt;No&gt;                                                
+</pre></div>
  - 자동으로 업그레이드 할 패키지들의 <code>Origin-Pattern</code> 값을 작성하라는 화면이 나온다. 기본값으로도 적당하고, 추후에 설정 수정이 가능하므로. <code>&lt;Ok&gt;</code> 를 선택한다.
  - 기능이 켜졌다.
  - 설정을 수정하려면, <code>/etc/apt/apt.conf.d/50unattended-upgrades</code> 파일을 수정한다.
  - 기능을 끄려면, 다음을 실행 후, <code>&lt;No&gt;</code> 를 선택한다.
- <code>bash
- sudo dpkg-reconfigure unattended-upgrades</code></p>
+ <div class="codehilite"><pre><span></span>sudo dpkg-reconfigure unattended-upgrades
+</pre></div></p>
 <h2 id="_3">참고자료<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://insights.ubuntu.com/2016/10/31/dirty-cow-was-livepatched-in-ubuntu-within-hours-of-publication/">Dirty COW was livepatched in Ubuntu within hours of publication - Ubuntu Insights</a></li>

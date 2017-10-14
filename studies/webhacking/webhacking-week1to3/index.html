@@ -1280,55 +1280,39 @@
 <li>페이지 우클릭 하여 나오는 컨텍스트 메뉴에서 <code>페이지 소스 보기</code> 선택</li>
 <li>페이지 소스에서 아래와 같은 주석을 볼 수 있음. 회원 가입 버튼 코드를 주석으로 달아둔 것임. <code>===========================================</code> 로 감싸진 소스 부분을 복사함.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c">&lt;!--</span>
+<p><div class="codehilite"><pre><span></span><span class="c">&lt;!--</span>
 <span class="c">Register</span>
 <span class="c">===========================================</span>
 <span class="c">&lt;input type=button value=&#39;Register&#39; onclick=location.href=&#39;join/includ2_join__frm__0001.php?mode=2d8d9c1703e9df8f1e8b7d0ba1578ce0&#39; style=width:50pt;height:20pt;border:0;background:black;color:lightgreen&gt;&lt;/td&gt;&lt;/tr&gt;</span>
 <span class="c">===========================================</span>
 <span class="c">--&gt;</span>
 </pre></div>
-
-
-<ul>
-<li>로그인 페이지로 돌아가서, 개발자 콘솔을 염(크롬에서는 <code>F12</code>)를 누르면 열림</li>
-<li><code>body</code> 태그 내부 아무곳이나 마우스 커서 대고 우클릭, 컨텍스트 메뉴에서 <code>Edit as HTML</code> 선택</li>
-<li>페이지에 코드를 삽입할 수 있음.(입력칸이 생김) 조금 전 복사한 소스를 붙여넣고, 입력칸 밖을 마우슬 누르던가 하여, 코드 삽입을 마침</li>
-<li>그러면 페이지에 <code>Register</code> 버튼이 나타나는 것을 볼 수 있음. 눌러서 회원가입 진행.</li>
-<li>ID, PW, EMAIL 칸 체우고, decode me 항목에 임의의 값(?) 이 적혀 있는데, 이는 base64 로 3~4회정도 인코딩되어 나온 값임.</li>
-<li>decode me 의 값을, base64 인코딩/디코딩 사이트나 프로그램으로 디코딩.</li>
-<li>예를 들면 이 사이트 : http://www.convertstring.com/ko/EncodeDecode/Base64Decode</li>
-<li>입력 받는 칸에, 원래의 인코딩된 값을 넣고, 디코딩 버튼을 눌러 디코딩 함. 출력 칸에 나온 값을 입력칸에 넣고 다시 디코딩.</li>
-<li>이러한 작업을 3번정도 반복하면, IP주소 같이 생긴 값이 나옴. 이제 이를 회원가입 창으로 돌아가서, decode me 칸의 값을 지우고 넣는다.</li>
-<li><code>[Submit]</code> 을 눌러 계속한다.</li>
-<li>가입 완료. 이제 로그인 하여 워게임 문제를 풀어보면 된다.</li>
-</ul>
+- 로그인 페이지로 돌아가서, 개발자 콘솔을 염(크롬에서는 <code>F12</code>)를 누르면 열림
+- <code>body</code> 태그 내부 아무곳이나 마우스 커서 대고 우클릭, 컨텍스트 메뉴에서 <code>Edit as HTML</code> 선택
+- 페이지에 코드를 삽입할 수 있음.(입력칸이 생김) 조금 전 복사한 소스를 붙여넣고, 입력칸 밖을 마우슬 누르던가 하여, 코드 삽입을 마침
+- 그러면 페이지에 <code>Register</code> 버튼이 나타나는 것을 볼 수 있음. 눌러서 회원가입 진행.
+- ID, PW, EMAIL 칸 체우고, decode me 항목에 임의의 값(?) 이 적혀 있는데, 이는 base64 로 3~4회정도 인코딩되어 나온 값임.
+- decode me 의 값을, base64 인코딩/디코딩 사이트나 프로그램으로 디코딩.
+ - 예를 들면 이 사이트 : <a href="http://www.convertstring.com/ko/EncodeDecode/Base64Decode">http://www.convertstring.com/ko/EncodeDecode/Base64Decode</a>
+- 입력 받는 칸에, 원래의 인코딩된 값을 넣고, 디코딩 버튼을 눌러 디코딩 함. 출력 칸에 나온 값을 입력칸에 넣고 다시 디코딩.
+ - 이러한 작업을 3번정도 반복하면, IP주소 같이 생긴 값이 나옴. 이제 이를 회원가입 창으로 돌아가서, decode me 칸의 값을 지우고 넣는다.
+- <code>[Submit]</code> 을 눌러 계속한다.
+- 가입 완료. 이제 로그인 하여 워게임 문제를 풀어보면 된다.</p>
 <h3 id="1_1">1번 문제<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>쿠키값을 조작하여 문제를 문제를 해결한다.</li>
 <li>문제 1번 페이지에서 <code>index.phps</code> 를 클릭하면, 소스코드가 힌트로 나타난다.</li>
 <li>소스코드에 나와있는 힌트를 보면, 쿠키의 <code>user_lv</code> 값이 6 이상이면, 값이 1로 변경되고, 5이상이면, 답이 나옴을 알 수 있다.</li>
 <li>개발자 콘솔에서 스크립트를 실행하여 쿠키값을 조작할 수 있다.</li>
-<li>다음을 개발자 콘솔의 콘솔 탭에서 입력하여, 쿠키값을 조회한다.</li>
-</ul>
+<li>다음을 개발자 콘솔의 콘솔 탭에서 입력하여, 쿠키값을 조회한다.
 <div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span>
-</pre></div>
-
-
-<ul>
-<li>아래와 같은 사항이 출력됨을 볼 수 있다.</li>
-</ul>
+</pre></div></li>
+<li>아래와 같은 사항이 출력됨을 볼 수 있다.
 <div class="codehilite"><pre><span></span><span class="s2">&quot;user_lv=1; PHPSESSID=&lt;임의의 세션 값&gt;&quot;</span>
-</pre></div>
-
-
-<ul>
-<li>다음과 같은 방법으로 페이지의 쿠키값을 조작한다. 여기서는 <code>user_lv</code> 값을 5와 6 사이인 5.1 로 조작한다.</li>
-</ul>
+</pre></div></li>
+<li>다음과 같은 방법으로 페이지의 쿠키값을 조작한다. 여기서는 <code>user_lv</code> 값을 5와 6 사이인 5.1 로 조작한다.
 <div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span> <span class="o">=</span> <span class="s2">&quot;user_lv=5.1&quot;</span>
-</pre></div>
-
-
-<ul>
+</pre></div></li>
 <li>페이지를 새로고침 하면 문제가 풀리는 것을 볼 수 있다.</li>
 </ul>
 <h3 id="4">4번 문제<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
@@ -1343,7 +1327,7 @@
 </ol>
 <h3 id="6">6번 문제<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <ul>
-<li>http://webhacking.kr/challenge/web/web-06/index.phps 페이지로 들어간다.</li>
+<li><a href="http://webhacking.kr/challenge/web/web-06/index.phps">http://webhacking.kr/challenge/web/web-06/index.phps</a> 페이지로 들어간다.</li>
 <li>쿠키를 확인해보면 user와 password라는 쿠키가 생성되어있다.</li>
 <li>admin을 base64로 20번 인코딩하여 user, password 쿠키에 값으로 저장해준다.</li>
 <li>새로고침하면 문제가 풀린다.</li>
@@ -1355,17 +1339,15 @@
 <p>그 소스코드를 복사하여 콘솔창에 입력해주고 alert를 이용해 (아스키코드를 해석한)소스코드를 확인한다.</p>
 </li>
 <li>
-<p>콘솔창 입력 예</p>
-</li>
-</ul>
+<p>콘솔창 입력 예
 <div class="codehilite"><pre><span></span>WorkTimeFun=String.fromCharCode(118,97,114,32,101,...(생략)...,34,41,41,59,13,10,125,13,10);
 alert(WorkTimeFun);
-</pre></div>
-
-
-<ul>
-<li>후에 소스코드를 분석해보면, ck 값이 패스워드라는 것을 알 수 있다.("="은 ""으로 바꿔줬으므로, "=" 제외)</li>
-<li>위와 똑같은 방법으로 콘솔창에 String.from~~~ 부분을 입력하여 alert 해주면 패스워드를 확인할 수 있다.</li>
+</pre></div></p>
+</li>
+<li>
+<p>후에 소스코드를 분석해보면, ck 값이 패스워드라는 것을 알 수 있다.("="은 ""으로 바꿔줬으므로, "=" 제외)</p>
+</li>
+<li>위와 똑같은 방법으로 콘솔창에 String.from<sub>~</sub> 부분을 입력하여 alert 해주면 패스워드를 확인할 수 있다.</li>
 <li>Auth에 패스워드를 입력해주면 문제가 해결된다.</li>
 </ul>
 <h3 id="15">15번 문제<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
@@ -1387,7 +1369,6 @@ alert(WorkTimeFun);
 <span class="kd">function</span> <span class="nx">sub</span><span class="p">(){</span> <span class="k">if</span><span class="p">(</span><span class="nx">login</span><span class="p">.</span><span class="nx">pw</span><span class="p">.</span><span class="nx">value</span><span class="o">==</span><span class="nx">unlock</span><span class="p">){</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Password is &quot;</span><span class="o">+</span><span class="nx">unlock</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span> <span class="p">}</span><span class="k">else</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">);</span>  <span class="p">}}</span>
 </pre></div>
 
-
 <ul>
 <li><code>unlock</code> 변수에 저장된 값에 해당되는 값을 입력칸에 넣고 체크 바튼을 누르면, <code>Password is &lt;비밀번호?&gt;</code> 가 나오는 것을 알 수 있다.</li>
 <li>콘솔 탭에서 바로 위의 코드에서 <code>unlock=...</code>　부분에서 <code>...</code> 에 해당하는 부분(<code>100*10...1*10+9999999999</code>) 콘솔에 붙여넣고 실행하면 아래와 같이 계산된 값이 나온다.</li>
@@ -1395,13 +1376,11 @@ alert(WorkTimeFun);
 <div class="codehilite"><pre><span></span><span class="mi">9997809307</span>
 </pre></div>
 
-
 <ul>
 <li>이를 입력칸에 넣고 체크 버튼을 누르면 다음과 같은 내용의 팝업이 나타난다.</li>
 </ul>
 <div class="codehilite"><pre><span></span>Password is 999780930.7
 </pre></div>
-
 
 <ul>
 <li><code>webhacking.kr</code> 의 Auth 메뉴로 들어가서, <code>Flag</code> 칸에 <code>999780930.7</code> 를 넣고 제출한다.</li>
@@ -1413,7 +1392,6 @@ alert(WorkTimeFun);
 </ul>
 <div class="codehilite"><pre><span></span>&lt;?if(eregi(&quot;admin&quot;,$_GET[id])) { echo(&quot;&lt;p&gt;no!&quot;); exit();}$_GET[id]=urldecode($_GET[id]);if($_GET[id]==&quot;admin&quot;){@solve(26,100);}?&gt;       
 </pre></div>
-
 
 <ul>
 <li><code>id</code>의 값이 <code>admin</code>이면 문제 해결된다.       </li>
@@ -1450,7 +1428,6 @@ alert(WorkTimeFun);
 <span class="p">}</span>
 </pre></div>
 
-
 <ul>
 <li><code>ck()</code> 함수에서, 화면상의 입력칸에 입력한 값과. 현재 페이지 url 문자열에서 <code>.kr</code> 의 인덱스 값에 30 을 곱한 것이 동일한 경우, 비밀번호를 팝업으로 보여주는 것을 알 수 있다.</li>
 <li>콘솔 메뉴에 들어간다. 콘솔에서 <code>document.URL</code> 을 입력하면, 현제 페이지에 입력된 <code>URL</code> 을 알 수 있다.</li>
@@ -1459,14 +1436,12 @@ alert(WorkTimeFun);
 -&gt; &quot;http://webhacking.kr/challenge/javascript/js1.html&quot;
 </pre></div>
 
-
 <ul>
 <li>그렇다면, 다음을 콘솔에서 실행하여, 현재 페이지 <code>URL</code> 에서 <code>.kr</code> 의 인덱스를 알 수 있다.</li>
 </ul>
 <div class="codehilite"><pre><span></span>&lt;- document.URL.indexOf(&#39;.kr&#39;)
 -&gt; 17
 </pre></div>
-
 
 <ul>
 <li>여기에 인덱스 값은 <code>17</code> 이다. 여기에 <code>30</code> 을 곱하면, <code>ck()</code> 함수 내 조건문의 조건을 만족하는 값이 나온다.</li>
@@ -1475,13 +1450,11 @@ alert(WorkTimeFun);
 -&gt; 510
 </pre></div>
 
-
 <ul>
 <li><code>510</code> 을 입력칸에 넣고 <code>check</code> 를 넣으면, 다음과 같은 내용으로 플래그가 팝업에 나타나는 것을 볼 수 있다.</li>
 </ul>
 <div class="codehilite"><pre><span></span>Password is 260100
 </pre></div>
-
 
 <blockquote>
 <p>굳이 입력칸에 넣고 버튼을 누르지 않고도 플래그를 구할 수 있다. <code>ck()</code> 의 코드를 보면, 입력받은 값과, 임의로 만든 값을 곱해 팝업으로 보여주고 있는데, 입력받은 값과 임의로 만든 값이 같을 때 서로 곱하므로, 함수가 임의로 만드는 값인 <code>510</code> 을 제곱하면 플래그인 <code>260100</code> 이 된다.</p>
@@ -1514,14 +1487,12 @@ alert(WorkTimeFun);
 <span class="p">}</span>
 </pre></div>
 
-
 <ul>
 <li><code>mv()</code> 함수 내부를 보면, 함수 인자인 <code>cd</code> 가 <code>124</code> 일때, <code>124</code> 로 이동하는 것을 볼 수 있다.</li>
 <li>개발자 도구 콘솔 메뉴에서 다음 코드를 실행한다.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nx">mv</span><span class="p">(</span><span class="mi">124</span><span class="p">);</span>
 </pre></div>
-
 
 <ul>
 <li>화면이 변경되면서, 플래그 값이 나오는 것을 볼 수 있다. 이를 webhacking.kr 의 Auth 에 제출하면, 문제가 풀리는 것을 볼 수 있다.</li>
@@ -1536,7 +1507,7 @@ alert(WorkTimeFun);
 </ol>
 <h3 id="24">24번 문제<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
 <ul>
-<li>http://webhacking.kr/challenge/bonus/bonus-4/index.phps 페이지로 들어간다.</li>
+<li><a href="http://webhacking.kr/challenge/bonus/bonus-4/index.phps">http://webhacking.kr/challenge/bonus/bonus-4/index.phps</a> 페이지로 들어간다.</li>
 <li>소스코드를 분석해보면 REMOTE_ADDR이란 쿠키값에 저장된 값을 ip 변수에 저장한다. ip 값을 127.0.0.1로 만들어줘서 문제를 풀면 된다.</li>
 <li>우선 REMOTE_ADDR 쿠키를 생성해주고,</li>
 </ul>
@@ -1548,14 +1519,13 @@ alert(WorkTimeFun);
 <span class="x">}</span>
 </pre></div>
 
-
 <ul>
 <li>이 부분에 걸리지 않도록 값을 조정하여 112277..00..00..1 을 쿠키값으로 저장해준다.</li>
 <li>후에 새로고침 해주면 문제가 풀린다.</li>
 </ul>
 <h3 id="27">27번 문제<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
 <ul>
-<li>http://webhacking.kr/challenge/web/web-12/index.phps 페이지로 들어간다.</li>
+<li><a href="http://webhacking.kr/challenge/web/web-12/index.phps">http://webhacking.kr/challenge/web/web-12/index.phps</a> 페이지로 들어간다.</li>
 <li>필터링 된 문자들을 우회해서 sql 인젝션 해주면 된다.</li>
 <li>no에 1을 입력했을 때 guest가 나오므로, admin은 0이나 2를 입력해야한다고 추측하여 시도해줬다.</li>
 <li>입력창에 0) or no=2 을 넣어주면 필터링이 걸리므로 우회하여 0) or no like 2 -- 로 입력해준다.</li>
@@ -1566,11 +1536,9 @@ alert(WorkTimeFun);
 <li>웹 해킹 페이지 38번에 들어가면 login과 admin의 버튼이 등장한다</li>
 <li>우선 소스를 확인해보자</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c">&lt;!--admin.php--&gt;</span>
+<p><div class="codehilite"><pre><span></span><span class="c">&lt;!--admin.php--&gt;</span>
 </pre></div>
-
-
-<p>이렇게 주석처리로 적혀있다. 그러므로 admin.php로 들어가보자.
+이렇게 주석처리로 적혀있다. 그러므로 admin.php로 들어가보자.
 - 바로 admin으로 들어가면 login plz라는 문구가 뜬다      <br />
 - 다시 돌아가서 아무 값을 먼저 넣고 login을 해보자      <br />
 - 값을 넣고 로그인 버튼을 넣어도 아무변화가 없다.     <br />
@@ -1638,10 +1606,9 @@ alert(WorkTimeFun);
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 
-
 <p>이라고 뜨는데 <code>function answer(i)</code>부분을 조금만 수정하면 될 것처럼 보였다.
 2. <code>aview.innerHTML=x.responseText;</code>여기를 <code>aview.innerHTML+=x.responseText;</code>이렇게 부호만 바꾸고,
-3. <code>if(x.responseText=="") aview.innerHTML="?";</code> 여기를 <code>if(x.responseText=="") alert(aview.innerHTML);</code>이렇게 바꾸어서 반영시켜보면 간단하게 해결된다!</p>
+3. <code>if(x.responseText==&quot;&quot;) aview.innerHTML=&quot;?&quot;;</code> 여기를 <code>if(x.responseText==&quot;&quot;) alert(aview.innerHTML);</code>이렇게 바꾸어서 반영시켜보면 간단하게 해결된다!</p>
 <h3 id="56">56번 문제<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>readme</code> 눌렀을때 <code>access denied</code> 등장 (접근 거부)</li>
@@ -1683,26 +1650,30 @@ alert(WorkTimeFun);
 <li>예를 들어 1, 2 이면. 한칸 칠하고 최소 한칸 띄어서 두칸을 연속해서 칠해야 함</li>
 <li>해당 칸을 클릭해 칠하는 방식으로, 퍼즐을 풀면 아래와 같은 모양이 나온다. 그리고 <code>gogo</code> 를 눌러 다음 단계로 간다.</li>
 </ul>
-<p><code>■□■□■
- □□□□□
- □■■■□
- □■□■□
- ■■■■■</code></p>
+<div class="codehilite"><pre><span></span>■□■□■
+□□□□□
+□■■■□
+□■□■□
+■■■■■
+</pre></div>
+
 <ul>
 <li>일일이 클릭하기 싫다면, 다음을 개발자콘솔의 콘솔 탭에서 실행한 후, <code>gogo</code> 를 눌러 다음 단계로 갈 수도 있다</li>
 </ul>
-<p><code>javascript
- let one = [kk._1, kk._3, kk._5, kk._12, kk._13, kk._14, kk._17, kk._19, kk._21, kk._22, kk._23, kk._24, kk._25]
- one.forEach((item)=&gt;{item.value=1})</code></p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">one</span> <span class="o">=</span> <span class="p">[</span><span class="nx">kk</span><span class="p">.</span><span class="nx">_1</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_3</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_5</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_12</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_13</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_14</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_17</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_19</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_21</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_22</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_23</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_24</span><span class="p">,</span> <span class="nx">kk</span><span class="p">.</span><span class="nx">_25</span><span class="p">]</span>
+<span class="nx">one</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">)=&gt;{</span><span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="mi">1</span><span class="p">})</span>
+</pre></div>
+
 <ul>
 <li>이름 입력칸이 나오는데, 아무가나 넣고 클릭하면 아래와 같은 내용이 담긴 페이지가 나타난다.</li>
 </ul>
-<p>```
- Puzzle</p>
-<p>name : nnnn
- answer : 1010100000011100101011111
- ip : <IP Address>
- ```</p>
+<div class="codehilite"><pre><span></span>Puzzle
+
+name : nnnn
+answer : 1010100000011100101011111
+ip : &lt;IP Address&gt;
+</pre></div>
+
 <ul>
 <li><code>answer</code> 값이 플래그인가? 하고 <code>Auth</code> 에 제출해 볼 수 있으나, 이는 플래그가 아니므로 틀렸다고 나온다.</li>
 <li><code>burpsuite</code> 를 이용해서 어떤 값이 전달되는지 알아보자.</li>
@@ -1715,39 +1686,41 @@ alert(WorkTimeFun);
 <li>이제 다시 페이지로 돌아가서, 아까 입력칸에 나온 페이지에서 아무 값이나 넣고 버튼을 눌러보자. 필자는 <code>admin</code> 을 넣었다</li>
 <li>다음과 같은 <code>HTTP</code> 헤더와 바디가 <code>burpsuite</code> 에서 잡히는 것을 볼 수 있다.</li>
 </ul>
-<p>```
- POST /challenge/web/web-03/index.php HTTP/1.1
- Host: webhacking.kr
- Content-Length: 41
- Cache-Control: max-age=0
- Origin: http://webhacking.kr
- Upgrade-Insecure-Requests: 1
- User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36
- Content-Type: application/x-www-form-urlencoded
- Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,<em>/</em>;q=0.8
- Referer: http://webhacking.kr/challenge/web/web-03/index.php?_1=1&amp;_2=0&amp;_3=1&amp;_4=0&amp;_5=1&amp;_6=0&amp;_7=0&amp;_8=0&amp;_9=0&amp;_10=0&amp;_11=0&amp;_12=1&amp;_13=1&amp;_14=1&amp;_15=0&amp;_16=0&amp;_17=1&amp;_18=0&amp;_19=1&amp;_20=0&amp;_21=1&amp;_22=1&amp;_23=1&amp;_24=1&amp;_25=1&amp;_answer=1010100000011100101011111
- Accept-Encoding: gzip, deflate
- Accept-Language: ko,en-US;q=0.8,en;q=0.6,zh;q=0.4,zh-CN;q=0.2,zh-TW;q=0.2
- Cookie: PHPSESSID=660d2c9c6785948e67bf8851ed4eeea6
- Connection: close</p>
-<p>answer=1010100000011100101011111&amp;id=admin
- ```</p>
+<div class="codehilite"><pre><span></span>POST /challenge/web/web-03/index.php HTTP/1.1
+Host: webhacking.kr
+Content-Length: 41
+Cache-Control: max-age=0
+Origin: http://webhacking.kr
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.100 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://webhacking.kr/challenge/web/web-03/index.php?_1=1&amp;_2=0&amp;_3=1&amp;_4=0&amp;_5=1&amp;_6=0&amp;_7=0&amp;_8=0&amp;_9=0&amp;_10=0&amp;_11=0&amp;_12=1&amp;_13=1&amp;_14=1&amp;_15=0&amp;_16=0&amp;_17=1&amp;_18=0&amp;_19=1&amp;_20=0&amp;_21=1&amp;_22=1&amp;_23=1&amp;_24=1&amp;_25=1&amp;_answer=1010100000011100101011111
+Accept-Encoding: gzip, deflate
+Accept-Language: ko,en-US;q=0.8,en;q=0.6,zh;q=0.4,zh-CN;q=0.2,zh-TW;q=0.2
+Cookie: PHPSESSID=660d2c9c6785948e67bf8851ed4eeea6
+Connection: close
+
+answer=1010100000011100101011111&amp;id=admin
+</pre></div>
+
 <ul>
 <li><code>answer=1010100000011100101011111&amp;id=admin</code> 부분에서 <code>...111</code> 과 <code>&amp;id=admin</code> 사이에 뭔가를 삽입해서 SQL Injection 을 시도해 보자.</li>
-<li><code>"</code>,<code>'</code>,<code>or 1=1</code>, 등을 조합하여 넣어 시도해 보자.</li>
-<li><code>answer=1010100000011100101011111"&amp;id=admin</code> -&gt; <code>query error!</code></li>
+<li><code>&quot;</code>,<code>'</code>,<code>or 1=1</code>, 등을 조합하여 넣어 시도해 보자.</li>
+<li><code>answer=1010100000011100101011111&quot;&amp;id=admin</code> -&gt; <code>query error!</code></li>
 <li><code>answer=1010100000011100101011111'&amp;id=admin</code> -&gt; <code>no hack</code></li>
-<li><code>answer=1010100000011100101011111" or 1&amp;id=admin</code> -&gt; <code>no hack</code></li>
-<li><code>answer=1010100000011100101011111" or 1=1 &amp;id=admin</code> -&gt; <code>no hack</code></li>
+<li><code>answer=1010100000011100101011111&quot; or 1&amp;id=admin</code> -&gt; <code>no hack</code></li>
+<li><code>answer=1010100000011100101011111&quot; or 1=1 &amp;id=admin</code> -&gt; <code>no hack</code></li>
 <li><code>answer=1010100000011100101011111=&amp;id=admin</code> -&gt; <code>no hack</code></li>
 <li>
 <p><code>answer=1010100000011100101011111 || 1&amp;id=admin</code> -&gt; 플래그가 나옴</p>
 </li>
 <li>
 <p>SQL Injection 에 성공한 경우, 아래과 같은 내용이 나타난다. 그 중 <code>answer</code> 값이 플래그 이므로 제출하면 된다.
- <code>name : admin
- answer : &lt;flag&gt;
- ip : localhost</code></p>
+ <div class="codehilite"><pre><span></span>name : admin
+answer : &lt;flag&gt;
+ip : localhost
+</pre></div></p>
 </li>
 </ul>
 <h3 id="10">10번 문제<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
@@ -1775,7 +1748,6 @@ alert(WorkTimeFun);
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 
-
 <ul>
 <li><code>id</code>가 <code>hackme</code>인 <code>a</code> 태그를 보면, <code>a</code> 태그 클릭시, 해당 태그의 <code>style</code> 속성에서, <code>posLeft</code> 가 <code>1</code>씩 늘어나고, 값이 <code>800</code> 이면, 정해진 작업이 실행되는 것을 볼 수 있다.</li>
 <li><code>posLeft</code> 값을 <code>799</code> 로 바꾸고 클릭 해보자. 개발자 콘솔을 열고, 콘솔 탭에서 다음을 실행한다.</li>
@@ -1783,7 +1755,6 @@ alert(WorkTimeFun);
 </ul>
 <div class="codehilite"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;hackme&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">posLeft</span><span class="o">=</span><span class="mi">799</span>
 </pre></div>
-
 
 <ul>
 <li>그리고, 회색 사각형 위의 <code>O</code> 글자를 누른다.(참고로 마우스를 올리면 <code>yOu</code> 라고 바뀌었다가, 때면 다시 <code>O</code> 로 바뀐다.)</li>
@@ -1860,7 +1831,6 @@ alert(WorkTimeFun);
 <div class="codehilite"><pre><span></span><span class="c">&lt;!-- index.phps--&gt;</span>
 </pre></div>
 
-
 <ul>
 <li>주석에 index.phps가 있으므로 현주소 뒤에 붙여준다  </li>
 <li>index 페이지를 보면 새로운 코드들이 있다  </li>
@@ -1874,7 +1844,6 @@ alert(WorkTimeFun);
 <span class="x">$_POST[id]=substr($_POST[id],0,15);</span>
 </pre></div>
 
-
 <ul>
 <li>여기서 입력값에 대해 replace와 substr이 된다고 한다  </li>
 <li>replace는 대체라는 소리인것 같고 substr이 뭔지 몰라서 구글링을 했다.  </li>
@@ -1885,15 +1854,11 @@ alert(WorkTimeFun);
 <li>replace에서 싱글 쿼터는 필터링이 된다. (자만하고 소스를 제대로 확인을 안한 벌을 받았다)</li>
 <li>보면 (' )를 (" )로 replace 하고 있었다.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="x">$_POST[id]=substr($_POST[id],0,15);</span>
+<p><div class="codehilite"><pre><span></span><span class="x">$_POST[id]=substr($_POST[id],0,15);</span>
 </pre></div>
-
-
-<ul>
-<li>replace랑 substr이 15자리까지만 id를 받는다고 적혀있으니까 우선 15번째는 (' )를 적어주면 된다는 사실을 발견했다.</li>
-<li>빈칸~~~~~하고나서 <code>'</code>만 하면 솔브가 되지 않는다.</li>
-<li>웹해킹 문제를 풀어보면 <code>admin</code>을 너무 좋아하길래 혹시나하고 <code>admin         '</code>를 적었더니 솔브가 된다(운이 좋았ㄷ...)</li>
-</ul>
+- replace랑 substr이 15자리까지만 id를 받는다고 적혀있으니까 우선 15번째는 (' )를 적어주면 된다는 사실을 발견했다.
+- 빈칸<sub>~</sub>~~하고나서 <code>'</code>만 하면 솔브가 되지 않는다.
+- 웹해킹 문제를 풀어보면 <code>admin</code>을 너무 좋아하길래 혹시나하고 <code>admin         '</code>를 적었더니 솔브가 된다(운이 좋았ㄷ...)</p>
 <h3 id="46">46번 문제<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
 <ul>
 <li>46번에 들어가면 level값에 1이 적혀있고 제출버튼이 보인다.</li>
@@ -1911,7 +1876,7 @@ alert(WorkTimeFun);
 <h3 id="49">49번 문제<a class="headerlink" href="#49" title="Permanent link">&para;</a></h3>
 <ul>
 <li>level에 1을 입력하면 <code>zzibong</code>이 뜬다.</li>
-<li>http://webhacking.kr/challenge/web/web-24/index.phps 에서 소스코드를 확인한다.</li>
+<li><a href="http://webhacking.kr/challenge/web/web-24/index.phps">http://webhacking.kr/challenge/web/web-24/index.phps</a> 에서 소스코드를 확인한다.</li>
 <li><code>id</code>를 <code>admin</code>으로 만들면 문제가 풀리는 것을 알 수 있다.</li>
 <li>필터링 되는 문자들을 우회하여 <code>id</code>를 <code>admin</code>으로 만드는 값을 <code>lv</code>에 입력해준다.</li>
 <li><code>0 or id=admin</code> 을 필터링을 우회하여 입력</li>
@@ -1928,7 +1893,6 @@ alert(WorkTimeFun);
 <span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
 </pre></div>
 
-
 <ul>
 <li>여기서 js는 Java Script 코드를 가지고 있는 text 파일이라는 것을 구글링을 통해 알 수 있었다.</li>
 <li>swf를 구글링하자 플래시 파일이라는 것을 알 수 있었다.</li>
@@ -1939,7 +1903,6 @@ alert(WorkTimeFun);
 <span class="nx">kk</span><span class="o">=</span><span class="nx">kk</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
 </pre></div>
 
-
 <ul>
 <li>이것은 <code>kk</code>에 <code>document.URL</code>을 저장시키고 저장된 값에서 10번쨰 다음 숫자부터 4개의 값을 뽑고 다시 kk에 저장한다는 소리이다.</li>
 <li><code>kk2.js</code>를 넣으면 아래와 같이 나온다</li>
@@ -1947,7 +1910,6 @@ alert(WorkTimeFun);
 <div class="codehilite"><pre><span></span><span class="nx">kk</span><span class="o">=</span><span class="nx">kk</span><span class="o">+</span><span class="s2">&quot;me.swf&quot;</span><span class="p">;</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;embed src=&quot;</span><span class="o">+</span><span class="nx">kk</span><span class="o">+</span><span class="s2">&quot; width=500 height=400&gt;&lt;/embed&gt;&quot;</span><span class="p">);</span>
 </pre></div>
-
 
 <ul>
 <li><code>kk</code>에 <code>me.swf</code>를 더한 값을 <code>kk</code>에 저장시키고 그다음 <code>embed</code>태그(플래시를 재생하게 해주는 태그라고 합니다)와 <code>kk</code>를 적어 출력시킨다</li>
@@ -1962,7 +1924,6 @@ alert(WorkTimeFun);
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 
-
 <ul>
 <li>이렇게 적고 동영상.html 저장을 해주었다.</li>
 <li>이것을 실행하면 하이퍼 링크가 나온다.</li>
@@ -1970,7 +1931,7 @@ alert(WorkTimeFun);
 <li>동영상 글자위에 커서를 두고 오른쪽 마우스로 다른이름으로 대상을 저장한다.</li>
 <li>메모장으로 동영상을 메모장에다가 끌여놓으면</li>
 <li>정말 이상한 문자들이 미친듯이 적혀있다.</li>
-<li>마지막에 보면 http://webhacking.kr.challenge/web/web-35/g1v2n2passw0r라고 적혀있고 줄바꿈뒤에 d.php가 있다.</li>
+<li>마지막에 보면 <a href="http://webhacking.kr.challenge/web/web-35/g1v2n2passw0r라고">http://webhacking.kr.challenge/web/web-35/g1v2n2passw0r라고</a> 적혀있고 줄바꿈뒤에 d.php가 있다.</li>
 <li>연결해서 주소창에 적으면 문제가 솔브된다.</li>
 <li>(필자는 문법부터 모르는것이 많아서 시간이 오래걸리긴 했지만 그닥 어려운 문제는 아니었고 조금 귀찮은 유형이었다.)</li>
 </ul>
