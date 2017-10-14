@@ -3,6 +3,10 @@ theme: material
 repo_name: 'skhu-sss/wiki'
 repo_url: 'https://github.com/skhu-sss/wiki'
 edit_uri: edit/master/docs/
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
 
 pages:
   - SSS Wiki: index.md
