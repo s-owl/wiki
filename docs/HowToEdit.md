@@ -3,7 +3,7 @@
 위키를 컨텐츠를 처음 수정한다면, 이 문서를 먼저 읽어보세요.
 
 !!! info "권한을 먼저 얻으세요!"
-    위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/s-owl/wiki)에 대한 쓰기 권한이 먼저 필요합니다. SSS 운영진에 문의하여 쓰기 권한을 먼저 얻으세요.
+    위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/s-owl/wiki)에 대한 쓰기 권한이 먼저 필요합니다. S.OWL 운영진에 문의하여 쓰기 권한을 먼저 얻으세요.
 
 ## 기본적인 컨텐츠 수정 방법
 
@@ -35,7 +35,7 @@ git clone https://github.com/s-owl/wiki.git
 ```markdown
 ...
 pages:
-  - SSS Wiki: index.md
+  - S.OWL Wiki: index.md
   - 위키 수정 가이드: HowToEdit.md
   - (제목): 파일경로.md
   - 그룹:
