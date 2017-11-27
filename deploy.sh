@@ -14,7 +14,7 @@ git config --global user.email "we.sss.you@gmail.com"
 
 export COMMITID = git rev-parse --short HEAD
 
-git clone git@github.com:skhu-sss/wiki.git deploy && ls
+git clone git@github.com:s-owl/wiki.git deploy && ls
 cd deploy && ls
 git checkout gh-pages
 ls

@@ -3,7 +3,7 @@
 위키를 컨텐츠를 처음 수정한다면, 이 문서를 먼저 읽어보세요.
 
 !!! info "권한을 먼저 얻으세요!"
-    위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/skhu-sss/wiki)에 대한 쓰기 권한이 먼저 필요합니다. SSS 운영진에 문의하여 쓰기 권한을 먼저 얻으세요.
+    위키의 컨텐츠를 수정하려면, 위키 컨텐츠를 보관하는 [저장소](https://github.com/s-owl/wiki)에 대한 쓰기 권한이 먼저 필요합니다. SSS 운영진에 문의하여 쓰기 권한을 먼저 얻으세요.
 
 ## 기본적인 컨텐츠 수정 방법
 
@@ -20,7 +20,7 @@
   - `gh-pages` 가지에는 접근하지 않도록 합니다. 생성된 위키 페이지가 보관되는 가지입니다.
 
 ``` bash
-git clone https://github.com/skhu-sss/wiki.git
+git clone https://github.com/s-owl/wiki.git
 ```
 
  - 원하는 문서를 수정합니다.
@@ -50,8 +50,8 @@ pages:
  git push origin master
 ```
 
- - [위키 사이트](https://skhu-sss.github.io/wiki)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
- - [여기](https://travis-ci.org/skhu-sss/wiki)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
+ - [위키 사이트](https://s-owl.github.io/wiki)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
+ - [여기](https://travis-ci.org/s-owl/wiki)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
 
 ## 마크다운 문법
 ---

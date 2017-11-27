@@ -145,7 +145,7 @@ print("a는 총 {}번 승리하고 {}번 무승부하고 {}번 패배했습니�
  - 결석 : 김문수(학생회)
  - 진도 : 가위바위보 플레이어 코드
  - 가위바위보 플레이어 코스 저장소
- 	- https://github.com/skhu-sss/pyrsp
+ 	- https://github.com/s-owl/pyrsp
 
 ## 6회차
  - 2017.05.30

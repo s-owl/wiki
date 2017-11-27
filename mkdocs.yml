@@ -1,7 +1,7 @@
 site_name: SSS Wiki
 theme: material
-repo_name: 'skhu-sss/wiki'
-repo_url: 'https://github.com/skhu-sss/wiki'
+repo_name: 's-owl/wiki'
+repo_url: 'https://github.com/s-owl/wiki'
 edit_uri: edit/master/docs/
 markdown_extensions:
   - admonition
