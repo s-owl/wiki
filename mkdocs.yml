@@ -34,6 +34,7 @@ pages:
   - 개인 운영 블로그 목록: blogs.md
   - 행사 목록:
     - Index: events/index.md
+    - 2018년 4월 정기세미나: events/seminar201804.md
     - 제5회 SSSCON: events/ssscon5th.md
     - 제4회 SSSCON: events/ssscon4th.md
     - 제3회 SSSCON: events/ssscon3rd.md
