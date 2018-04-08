@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>/manual/rule/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/manual/admins/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -34,7 +34,7 @@
     
     <url>
      <loc>/HowToEdit/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -42,7 +42,7 @@
     
     <url>
      <loc>/blogs/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -51,43 +51,49 @@
         
     <url>
      <loc>/events/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/events/seminar201804/</loc>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/ssscon5th/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/ssscon4th/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/ssscon3rd/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/ssscon2nd/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/softworkshop2016ssstrack/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/events/ssscon1st/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -97,43 +103,43 @@
         
     <url>
      <loc>/studies/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/django-studies/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/pybasics1704/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/java-studies/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/c_study/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/algorithm_study/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/studies/python-basics-study/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -145,7 +151,7 @@
         
     <url>
      <loc>/studies/docker-study/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -155,13 +161,13 @@
         
     <url>
      <loc>/projects/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/projects/2017-07-skhufeeds/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -171,19 +177,19 @@
         
     <url>
      <loc>/interview/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/interview/sinchon-severance/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/interview/sw-maestro-8th/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -193,19 +199,19 @@
         
     <url>
      <loc>/server/canonical-livepatch/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/server/unattended-upgrades/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/letsencrypt/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -215,13 +221,13 @@
         
     <url>
      <loc>/package-manager/choco/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/package-manager/homebrew/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -231,7 +237,7 @@
         
     <url>
      <loc>/skhu-forest-with-firefox/</loc>
-     <lastmod>2018-04-06</lastmod>
+     <lastmod>2018-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
