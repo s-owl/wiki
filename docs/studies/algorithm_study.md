@@ -25,7 +25,7 @@
 - <https://www.acmicpc.net/>
 
 ## 스터디 깃 저장소
-- <https://github.com/skhu-sss/algossstudy>
+- <https://github.com/s-owl/algossstudy>
 
 ---
 
@@ -56,10 +56,10 @@
 ## 알고리즘 발표
 - 안두현 : 버블정렬&ensp;( python )
 &ensp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/Doo/Algo/BubbleSort.py)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/Doo/Algo/BubbleSort.py)
 - 공원배 : 선택정렬&ensp;( java )
 &ensp;&ensp;&ensp;&nbsp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/blackhead/1%EC%A3%BC%EC%B0%A8%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC/SelectionSort.java)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/blackhead/1%EC%A3%BC%EC%B0%A8%20%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%84%A0%ED%83%9D%EC%A0%95%EB%A0%AC/SelectionSort.java)
 
 ## 도전과제
 - [2557](https://www.acmicpc.net/problem/2557) &ensp;&ensp;Hello World
@@ -90,10 +90,10 @@
 ## 알고리즘 발표
 - 추건우 : 퀵정렬&ensp;( typescript )
 &ensp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/chu/algorithm/quickSort.ts)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/chu/algorithm/quickSort.ts)
 - 김준수 : 병합정렬&ensp;( python )
 &ensp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/harvey/algo/mergesort.py)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/harvey/algo/mergesort.py)
 
 ## 도전과제
 - [2750](https://www.acmicpc.net/problem/2750) &ensp;&ensp;	수 정렬하기
@@ -148,10 +148,10 @@
 ## 알고리즘 발표
 - 안두현 : 카운팅소트&ensp;( python )
 &ensp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/Doo/Algo/CountingSort.py)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/Doo/Algo/CountingSort.py)
 - 공원배 : DES 알고리즘&ensp;( c )
 &ensp;
-[클릭](https://github.com/skhu-sss/algossstudy/blob/master/blackhead/DES%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/DES_Algorithm.c)
+[클릭](https://github.com/s-owl/algossstudy/blob/master/blackhead/DES%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/DES_Algorithm.c)
 
 ## 도전과제
 - [1874](https://www.acmicpc.net/problem/1874) &ensp;	스택 수열
