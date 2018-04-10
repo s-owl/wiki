@@ -30,6 +30,7 @@ pages:
     - S.OWL 활동 핸드북:
       - Index: manual/handbook/index.md
       - Slack 사용하기: manual/handbook/using-slack.md
+      - 동아리 운영에 대한 건의사항 제출하기: manual/handbook/propose-opinion.md
   - 위키 수정 가이드: HowToEdit.md
   - 개인 운영 블로그 목록: blogs.md
   - 행사 목록:

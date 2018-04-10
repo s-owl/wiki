@@ -5,3 +5,7 @@
 ## 동아리 가입 직후
 
 - [Slack 사용하기](using-slack.md)
+
+## 동아리 활동
+
+- [동아리 운영에 대한 건의사항 제출하기](propose-opinion.md)
