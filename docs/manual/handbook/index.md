@@ -9,3 +9,4 @@
 ## 동아리 활동
 
 - [동아리 운영에 대한 건의사항 제출하기](propose-opinion.md)
+- [동아리 일정 확인하기](check-schedules.md)
