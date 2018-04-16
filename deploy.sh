@@ -10,7 +10,7 @@ eval `ssh-agent -s`
 ssh-add wiki_deploy_key
 
 git config --global user.name "WikiUpdater"
-git config --global user.email "we.sss.you@gmail.com"
+git config --global user.email "s.owl.contact@gmail.com"
 
 export COMMITID = git rev-parse --short HEAD
 
