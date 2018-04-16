@@ -1,5 +1,8 @@
 # 동아리 회칙
 
+> 최종 수정일 : 2018.04.16  
+> [수정 기록 열람하기](https://github.com/s-owl/wiki/commits/master/docs/manual/rule.md)
+
 !!! info "동아리의 회칙은 필요에 따라 수정될 수 있습니다."
     **7. 기타 의 1항** 을 참고할 것.
 
