@@ -27,7 +27,7 @@ git clone https://github.com/s-owl/wiki.git
 
 !!! warning "아래와 같은 파일은 수정하면 안됩니다!"
     아래와 같은 파일들은 위키 페이지 빌드 및 배포에 사용됩니다, 잘못 수정하면 빌드에 문제가 생기므로 수정하지 마세요.
-    `.travis.yml`, `deploy.sh`, `wiki_deploy_key.enc`
+    `requirements.txt`
  - 문서는 마크다운 문법으로 작성하도록 합니다.
  - 새로운 문서를 추가한 경우에는 사이드바에 보이도록 `mkdocs.yml` 파일을 수정합니다.
 
@@ -50,8 +50,8 @@ pages:
  git push origin master
 ```
 
- - [위키 사이트](https://s-owl.github.io/wiki)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
- - [여기](https://travis-ci.org/s-owl/wiki)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
+ - [위키 사이트](https://wiki.sleepy-owl.com)에 접속하여, 변경 사항이 적용 되었는지 확인합니다.
+ - [여기](https://app.netlify.com/sites/s-owl-wiki/deploys)에서 사이트 업데이트 현황을 확인 하실 수 있습니다.
 
 ## 마크다운 문법
 ---
