@@ -11,6 +11,6 @@ S.OWL Wiki 에 오신것을 환영합니다. 위키를 처음 수정 하신다�
 - [위키 페이지 빌드 현황 및 빌드 내역](https://app.netlify.com/sites/s-owl-wiki/deploys)
 
 ## 기타
- - [S.OWL 홈페이지](https://s-owl.github.io)
+ - [S.OWL 홈페이지](https://sleepy-owl.com)
  - [S.OWL Slack (채팅)](https://s-owl.slack.com/)
  - [S.OWL GitHub](https://github.com/s-owl)
