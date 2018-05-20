@@ -8,7 +8,7 @@
 - [연사(발표자) 지원](https://goo.gl/forms/buWANdUooV2MZ3NE3)
     - 성공회대 재학생/휴학생/졸업생 및 그 외 학내구성원 이면 누구나 지원 가능
     - 컨퍼런스 목표에 부합하는 내용의 발표를 지원해야 함
-    - 6월 14일 마감
+    - 6월 10일 마감
 - [참가 등록](https://goo.gl/forms/crYYboIJLpN2j4gp2)
     - S.OWL 회원은 등록 불필요.
 
