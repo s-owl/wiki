@@ -5,10 +5,16 @@ S.OWL 에서는 중요한 공지사항을 전달하거나 프로젝트나 스터
 ## Slack 이란?
 기업 또는 커뮤니티 등을 위한 팀 메신저 입니다. 우리가 많이 사용하는 카카오톡이나 페이스북 메신저가 개인간 의사소통에 초점이 맟춰진 것과 달리, Slack 은 팀 내에서 팀원간 의사소통을 하는 데 초점이 맟춰진 메신저 입니다. 최근에는 이메일 대신 Slack 을 이용해 직원간 의사소통을 하는 기업도 많이 있습니다.
 
+## 설치
+- Desktop : [Windows](https://slack.com/downloads/windows) / [MacOS](https://slack.com/downloads/osx) / [Linux](https://slack.com/downloads/linux)
+- Mobile : [Android](https://slack.com/downloads/android) / [iOS](https://slack.com/downloads/ios)
+- Web : [S.OWL Slack Link](s-owl.slack.com)
+
 ## Slack 워크스페이스(Workspace) 에 가입하기
 Slack 은 기본적으로 워크스페이스(Workspace) 단위로 계정이 관리되며, 특정 조직의 워크스페이스에서 활동하려면 해당 워크스페이스 계정이 필요합니다. 조직 내부적으로 사용하는 메신저 이기 때문에 각 워크스페이스 별로 초대를 받아서 가입해야 합니다.
 
 S.OWL 의 Slack 워크스페이스에 가입하려 하는 경우, 운영진에 문의하여 안내를 받아 가입할 수 있습니다.
+초대 URL 또는 이메일 초대장을 통해 가입이 가능한데, 초대 URL 의 경우 운영진으로부터 전달받은 URL에 접속하여 가입을 진행하며, 이메일 초대장의 경우 본인이 운영진에 전달한 본인의 이메일로 수신된 초대 메일에서 링크를 눌러 가입을 진행합니다.
 
 ## 알림 설정하기
 하나의 Slack 워크스페이스 전체 또는 각 채널별로 알림 설정을 직접 하는것을 권장합니다. 가입 후 알림 기본 설정 때문에 중요 공지사항 등을 놓치는 경우가 많습니다.
