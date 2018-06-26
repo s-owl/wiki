@@ -51,6 +51,7 @@ pages:
     - 제1회 SSSCON: events/ssscon1st.md
   - 스터디 목록:
     - Index: studies/index.md
+    - Docker Study(2018.06): studies/docker-2018.md
     - 장고 스터디: studies/django-studies.md
     - 파이썬 기초 스터디(2017.04): studies/pybasics1704.md
     - java스터디(2017.04): studies/java-studies.md
