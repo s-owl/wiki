@@ -98,7 +98,7 @@
       - Node.js로 웹 서버 작성
       - Dockerfile 작성
       - SSH키 생성
-        '''
+        '''python
         ~$ssh-keygen
         '''
     - 서버
