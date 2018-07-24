@@ -145,9 +145,11 @@
         ~/exampleapp$ git push origin master
         ```
     - 웹 브라우저에서 서버IP주소로 접속
+    
 - 서버 여러 대에서 배포하기
   - ~~할 필요 없음~~
   - Kubernetes , docker-swarm을 쓰도록 하자.  
+  
 - cAdvisor 를 이용한 도커 컨테이너 모니터링
     - cAdvisor = Container Advisor: 구글에서 개발한 컨테이너 모니터링 도구.
     - 간단히 cAdvisor 이미지 받아서 컨테이너 실행하면 바로 모니터링 가능.
