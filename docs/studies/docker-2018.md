@@ -72,7 +72,7 @@
 - 출석 : 한영빈, 고다경, 김희수, 김남수
 - 결석 : 김유진(집안 경조사로 인해 불참), 김경현(무단결석)
 
-
+- [슬라이드 자료 링크](docker-2018-slides/docker-week-3.pptx)
 - dorkerfile 명령어(.dokerignore,FROM,MAINTAINER,RUN,CMD,ENTRYPOINT,EXPOSE,ENV,ADD,COPY,VOLUME,USER,WORKDIR,ONBUILD)
   - entrypoint 와 cmd 의 차이점
       - entrypoint: 컨테이너안에 명령어들을 넣어놓고 그 명령어들을 실행할때 사용
