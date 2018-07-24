@@ -72,7 +72,7 @@
 - 출석 : 한영빈, 고다경, 김희수, 김남수
 - 결석 : 김유진(집안 경조사로 인해 불참), 김경현(무단결석)
 
-- [슬라이드 자료 링크](docker-2018-slides/docker-week-3.pptx)
+- [슬라이드 자료 링크](docker-2018-slides/docker-study-week-3.pptx)
 - dorkerfile 명령어(.dokerignore,FROM,MAINTAINER,RUN,CMD,ENTRYPOINT,EXPOSE,ENV,ADD,COPY,VOLUME,USER,WORKDIR,ONBUILD)
   - entrypoint 와 cmd 의 차이점
       - entrypoint: 컨테이너안에 명령어들을 넣어놓고 그 명령어들을 실행할때 사용
@@ -83,3 +83,32 @@
    - `--link` option 사용과 네트워크를 생성해 연결하는 방법 두가지가 있다.
    - 교재와 다르게 `docker ps`로 조회시 연결 상태를 확인할 수 없음.
 - 다른 컨테이너와 연결하는것은 오케스트레이션이 더편함
+
+## 4주차
+
+- 발표자 : 고다경 / 기록자 : 김희수
+- 출석 : 한영빈, 고다경, 김희수, 김문수, 김경현(화상)
+- 결석 : 김유진(식중독), 김남수(개인 일정)
+
+- [슬라이드 자료 링크]()
+- Docker로 애플리케이션 배포하기
+  - 서버 한 대에 배포하기
+    - 개발자 PC
+      - Git 설치 및 저장소 생성
+      - Node.js로 웹 서버 작성
+      - Dockerfile 작성
+      - SSH키 생성
+        '''
+        ~$ssh-keygen
+        '''
+    - 서버
+      - Git 설치 및 저장소 생성
+      - Docker 설치
+      - SSH키 설정
+        - 서버의 /home/<서버 사용자 계정> 디렉터리 아래에 .ssh 디렉터리를 생성하고, 권한을 설정합니다.
+        '''
+        ~$ mkdir .ssh # .ssh 디렉터리 생성
+        ~$ chmod 700 .ssh # .ssh 디렉터리 권한 설정
+        '''
+      - Git Hook 설정
+    - 개발자 PC에서 소스 Push하기
