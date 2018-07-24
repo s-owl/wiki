@@ -109,6 +109,11 @@
         ```bash
         ~$ mkdir .ssh # .ssh 디렉터리 생성
         ~$ chmod 700 .ssh # .ssh 디렉터리 권한 설정
+        ```
+        - authorized_keys파일 불러오고 권한 설정
         ```bash
+        $ chmod 600 authorized_keys
+        ```
       - Git Hook 설정
+        - <exampleapp> 저장소 디렉터리로 이동한 뒤 git remote add 명령으로 origin 주소를 설정합니다.
     - 개발자 PC에서 소스 Push하기
