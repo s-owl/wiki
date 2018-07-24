@@ -98,17 +98,17 @@
       - Node.js로 웹 서버 작성
       - Dockerfile 작성
       - SSH키 생성
-        '''python
+        ```bash
         ~$ssh-keygen
-        '''
+        ```
     - 서버
       - Git 설치 및 저장소 생성
       - Docker 설치
       - SSH키 설정
         - 서버의 /home/<서버 사용자 계정> 디렉터리 아래에 .ssh 디렉터리를 생성하고, 권한을 설정합니다.
-        '''
+        ```bash
         ~$ mkdir .ssh # .ssh 디렉터리 생성
         ~$ chmod 700 .ssh # .ssh 디렉터리 권한 설정
-        '''
+        ```bash
       - Git Hook 설정
     - 개발자 PC에서 소스 Push하기
