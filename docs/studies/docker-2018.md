@@ -90,7 +90,9 @@
 - 출석 : 한영빈, 고다경, 김희수, 김문수, 김경현(화상)
 - 결석 : 김유진(식중독), 김남수(개인 일정)
 
-- [슬라이드 자료 링크]()
+### 스터디에서 다룬 내용
+
+- [슬라이드 자료 링크](docker-2018-slides/docker-study-week-4.pptx)
 - Docker로 애플리케이션 배포하기
   - 서버 한 대에 배포하기
     - 개발자 PC
@@ -101,19 +103,103 @@
         ```bash
         ~$ssh-keygen
         ```
-    - 서버
+    - 서버 PC
       - Git 설치 및 저장소 생성
       - Docker 설치
       - SSH키 설정
         - 서버의 /home/<서버 사용자 계정> 디렉터리 아래에 .ssh 디렉터리를 생성하고, 권한을 설정합니다.
-        ```bash
-        ~$ mkdir .ssh # .ssh 디렉터리 생성
-        ~$ chmod 700 .ssh # .ssh 디렉터리 권한 설정
-        ```
+          ```bash
+          ~$ mkdir .ssh # .ssh 디렉터리 생성
+          ~$ chmod 700 .ssh # .ssh 디렉터리 권한 설정
+          ```
         - authorized_keys파일 불러오고 권한 설정
-        ```bash
-        $ chmod 600 authorized_keys
-        ```
+          ```bash
+          $ chmod 600 authorized_keys
+          ```
       - Git Hook 설정
-        - <exampleapp> 저장소 디렉터리로 이동한 뒤 git remote add 명령으로 origin 주소를 설정합니다.
+        - post-receive 파일 생성
+          ```bash
+          #!/bin/bash
+
+          APP_NAME=exampleapp
+          APP_DIR=$HOME/$APP_NAME
+          REVISION=$(expr substr $(git rev-parse --verify HEAD) 1 7)
+
+          GIT_WORK_TREE=$APP_DIR git checkout -f
+
+          cd $APP_DIR
+          docker build --tag $APP_NAME:$REVISION .
+          docker stop $APP_NAME
+          docker rm $APP_NAME
+          docker run -d --name $APP_NAME -p 80:80 $APP_NAME:$REVISION
+          ```
+
     - 개발자 PC에서 소스 Push하기
+      - <exampleapp> 저장소 디렉터리로 이동한 뒤 git remote add 명령으로 origin 주소를 설정합니다.
+        ```bash
+        ~/exampleapp$ git remote add origin <서버 사용자 계정>@<서버 IP 주소 또는 도메인>:exampleapp
+        ```
+
+      - git push 명령으로 소스를 서버에 올립니다.
+        ```bash
+        ~/exampleapp$ git push origin master
+        ```
+    - 웹 브라우저에서 서버IP주소로 접속
+- 서버 여러 대에서 배포하기
+  - ~~할 필요 없음~~
+  - Kubernetes , docker-swarm을 쓰도록 하자.  
+- cAdvisor 를 이용한 도커 컨테이너 모니터링
+    - cAdvisor = Container Advisor: 구글에서 개발한 컨테이너 모니터링 도구.
+    - 간단히 cAdvisor 이미지 받아서 컨테이너 실행하면 바로 모니터링 가능.
+    - 최근 1분간의 자료만 보여주므로, 긴 시간동안의 자료를 보려면 몇가지 프로그램 더 붙여야 함.
+    - InfluxDB(시계열 데이터용 데이터베이스), Grafana(대시보드) 등을 같이 사용. InfluxDB 대신 Elastic 많이 사용하기도 함.
+    - 아래 Docker Compose 파일을 이용하여 셋을 한번에 배포 가능.
+    ```yaml
+    version: "3"
+
+    services:
+      influx:
+        image: influxdb
+        volumes:
+          - influx:/var/lib/influxdb
+        environment:
+          INFLUXDB_DB: cadvisor
+          INFLUXDB_USER: cadvisor
+          INFLUXDB_USER_PASSWORD: cadvisor
+
+      cadvisor:
+        image: google/cadvisor:latest
+        ports:
+          - 8080:8080
+        volumes:
+          - /:/rootfs:ro
+          - /var/run:/var/run:rw
+          - /sys:/sys:ro
+          - /var/lib/docker/:/var/lib/docker:ro
+          - /dev/disk/:/dev/disk:ro
+        links:
+          - influx
+        command: -logtostderr -docker_only -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influx:8086
+        restart: unless-stopped
+
+      grafana:
+        image: grafana/grafana:latest
+        ports:
+          - 4000:3000
+        volumes:
+          - grafana:/var/lib/grafana
+        links:
+          - influx
+
+    volumes:
+      influx:
+        driver: local
+      grafana:
+        driver: local
+    ```
+    - Compose 파일 배포
+        - `docker-compose up`
+    - Compose 파일 배포(백그라운드)
+        - `docker-compose up -d`
+    - Compose 파일 문법 참조자료
+        - https://docs.docker.com/compose/compose-file/
