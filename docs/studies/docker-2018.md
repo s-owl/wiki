@@ -92,7 +92,7 @@
 
 ### 스터디에서 다룬 내용
 
-- [슬라이드 자료 링크](docker-2018-slides/docker-study-week-4.pptx)
+- [슬라이드 자료 링크](docker-2018-slides/docker-study-week-4.pdf)
 - Docker로 애플리케이션 배포하기
   - 서버 한 대에 배포하기
     - 개발자 PC
@@ -145,11 +145,11 @@
         ~/exampleapp$ git push origin master
         ```
     - 웹 브라우저에서 서버IP주소로 접속
-    
+
 - 서버 여러 대에서 배포하기
   - ~~할 필요 없음~~
   - Kubernetes , docker-swarm을 쓰도록 하자.  
-  
+
 - cAdvisor 를 이용한 도커 컨테이너 모니터링
     - cAdvisor = Container Advisor: 구글에서 개발한 컨테이너 모니터링 도구.
     - 간단히 cAdvisor 이미지 받아서 컨테이너 실행하면 바로 모니터링 가능.
