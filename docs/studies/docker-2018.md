@@ -23,7 +23,7 @@
 - 2주차 : 3~5장 / 발표자 - 김유진, 기록자 - 고다경
 - 3주차 : 6~7장 / 발표자 - 김희수, 기록자 - 김문수
 - 4주차 : 8~9장 / 발표자 - 고다경, 기록자 - 김희수
-- 5주차 : 10~14장 / 발표자 - 김남수, 기록자 - 김유진
+- 5주차 : 10~14장 / 발표자 - 김남수, 기록자 - 김경현
 - 6주차 : 16~19장 / 발표자 - 김문수, 기록자 - 김남수
 
 ## 1주차
@@ -205,3 +205,29 @@
         - `docker-compose up -d`
     - Compose 파일 문법 참조자료
         - https://docs.docker.com/compose/compose-file/
+
+## 5주차
+
+- 발표자 : 김남수 / 기록자 : 김경현(?)
+- 출석 : 한영빈, 김희수, 김남수, 김문수
+- 지각 : 고다경, 김경현
+- 결석 : 김유진(무단결석)
+
+google cloud에서 Docker 사용
+-compute engine
+  https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
+  보고 docker 설치
+  sudo systemctl enable docker
+  sudo systemctl start docker
+  sudo systemctl status docker
+  Kubernetes로 구축
+  (AWS는 간단히 하는 경우 Beanstalk 사용 가능)
+
+-Docker remote API
+: Docker를 원격에서 TCP 소켓을 사용하는 경우 사용함
+: HTTP REST 형식으로 구현된 API
+  docker 데몬을 제어할 수 있음
+  http rest 형식
+  curl 명령어를 통해 쉽게 사용가능 (page 205 참고)
+  (유닉스 계열 : 서버에 요청을 보내는 명령어)
+  pip을 이용하여 api 라이브러리를 받을 수 있음
