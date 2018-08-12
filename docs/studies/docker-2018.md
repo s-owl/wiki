@@ -212,22 +212,22 @@
 - 출석 : 한영빈, 김희수, 김남수, 김문수
 - 지각 : 고다경, 김경현
 - 결석 : 김유진(무단결석)
+### 다룬 내용
+- google cloud에서 Docker 사용
+- Google Compute Engine
+    - [이 문서](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository) 를 참고하여 직접 도커 설치
+    - 도커 활성화 작업
+        - `sudo systemctl enable docker` - 도커 데몬 활성화(시스템 시작시 도커 시작)
+        - `sudo systemctl start docker` - 도커 데몬 시작
+        - `sudo systemctl status docker` - 도커 데몬 상태 확인
+    - Kubernetes로 구축
+        - (AWS는 간단히 하는 경우 Beanstalk 사용 가능)
 
-google cloud에서 Docker 사용
--compute engine
-  https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository
-  보고 docker 설치
-  sudo systemctl enable docker
-  sudo systemctl start docker
-  sudo systemctl status docker
-  Kubernetes로 구축
-  (AWS는 간단히 하는 경우 Beanstalk 사용 가능)
-
--Docker remote API
-: Docker를 원격에서 TCP 소켓을 사용하는 경우 사용함
-: HTTP REST 형식으로 구현된 API
-  docker 데몬을 제어할 수 있음
-  http rest 형식
-  curl 명령어를 통해 쉽게 사용가능 (page 205 참고)
-  (유닉스 계열 : 서버에 요청을 보내는 명령어)
-  pip을 이용하여 api 라이브러리를 받을 수 있음
+- Docker remote API
+    - `:` Docker를 원격에서 TCP 소켓을 사용하는 경우 사용함
+    - `:` HTTP REST 형식으로 구현된 API
+    - docker 데몬을 제어할 수 있음
+    - http rest 형식
+    - curl 명령어를 통해 쉽게 사용가능 (page 205 참고)
+        - (유닉스 계열 : 서버에 요청을 보내는 명령어)
+    - pip을 이용하여 api 라이브러리를 받을 수 있음
